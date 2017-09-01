@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    ios关于Core SpotLight的使用 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>ios关于Core SpotLight的使用</h1>
+        <h2>2017-6-9</h2>
+        <hr>
+        <div class="content markdown"><p>SpotLight已经推出来很久了， 从ios9苹果推出了一些新的API之后，我们可以将App的部分内容通过建立索引，然后在Spotlight上搜索结果， 并且完全可以根据你的需求来设定跳转的页面， 以及Spotlight页面显示的内容设置 。</p>
+<a id="more"></a>
+<p>为了给小白同学科普一下SpotLight的作用，SpotLight简单的说就是在ios系统的（桌面滑到最左端的搜索页面），在搜索栏中输入一些信息，<br>我们希望输入的这些信息，可以点击后进入到我们APP对应的页面中。</p>
+<p>可以参考国外<a href="http://www.appcoda.com/core-spotlight-framework/" target="_blank" rel="external">关于SpotLight的英文版 for swift的介绍</a>的使用</p>
+<p>我们这里使用的代码是Objective-C语言来介绍说明，  这些借用上面blog中的图片，来综合说明一下：</p>
+<p>###下图是我们的App界面， 点击列表的cell（电影信息），可以进入该电影的详情页<br><img src="https://www.appcoda.com.tw/wp-content/uploads/2015/12/t46_1_app_working-compressor.gif" alt=""></p>
+<p>###退出APP后，在手机的搜索页面中输入一个电影名</p>
+<p><img src="http://www.appcoda.com/wp-content/uploads/2015/12/t46_2_final_sample-compressor.gif" alt=""></p>
+<p>点击搜索出来的内容，直接进入电影的详情页</p>
+<p>好了，接下来我们来一下实现的教程吧</p>
+<p>##开始教程</p>
+<p>####1、项目中加入CoreSpotlight.framework</p>
+<p>####2、创建索引–所需要的元数据内容</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fgf1yor0vtj20p40ekn0r.jpg" alt=""></p>
+<p>上图中我标记出来的这几个信息内容都是可以自定义的。</p>
+<ul>
+<li>标题对应的属性:  <font color="#FF7F50">attributeset.title</font></li>
+<li>简介对应的属性:  <font color="#FF7F50">attributeset.contentDescription</font></li>
+<li>图片对应的属性:  <font color="#FF7F50">attributest.thumbnailData或thumbnailURL</font></li>
+</ul>
+<p>如果默认不填写图片的属性值，则直接显示的是APP的icon</p>
+<p>#####（1）创建一个元数据的属性内容</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">CSSearchableItemAttributeSet *attributeSet = [[CSSearchableItemAttributeSet alloc] initWithItemContentType:<span class="string">@"contact"</span>];</div><div class="line">attributeSet.title = <span class="string">@"标题"</span>;</div><div class="line">attributeSet.contentDescription = <span class="string">@"内容"</span>;</div><div class="line">attributeSet.keywords = @[<span class="string">@"关键字1"</span>, <span class="string">@"关键字2"</span>];</div><div class="line">attributeSet.thumbnailData = <span class="built_in">UIImagePNGRepresentation</span>([<span class="built_in">UIImage</span> imageNamed:<span class="string">@"缩略图"</span>]);</div></pre></td></tr></table></figure>
+<p>#####（2）创建一个元数据的对象，将这些属性需添加到这个对象中，并设置UniqueIdentifier值</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CSSearchableItem *searchableItem = [[CSSearchableItem alloc] initWithUniqueIdentifier:<span class="string">@"carid"</span> domainIdentifier:<span class="string">@"com.car"</span> attributeSet:attributeSet];</div></pre></td></tr></table></figure>
+<p>这里的<code>initWithUniqueIdentifier</code>是我们将来点击搜索结果后能获取的到值，一般这里填写我们的关键数据（<font color="#DC143C">比如车的id值，注意是值，不是carid这个名字，并且这个值一定要是唯一的</font>），<br><code>domainIdentifier</code>一个可选的标识符，用来表示item的域</p>
+<p>#####（3） 也可以设置一个指定的过期日期， 一般默认的过期时间是一个月</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">searchableItem.expirationDate = [<span class="built_in">NSDate</span> dateWithTimeIntervalSinceNow:<span class="number">3600</span>];</div></pre></td></tr></table></figure>
+<p>#####（4）如果有一组这样车的信息，可以先将创建好的CSSearchableItem的对象保存到一个数组中</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableArray</span> *carArray = [[<span class="built_in">NSMutableArray</span> alloc] initWithObjects: searchableItem,<span class="literal">nil</span>];</div></pre></td></tr></table></figure>
+<p>这里根据实际需求，可以创建多个对象。</p>
+<p>#####（5）将创建的item信息，添加到CoreSpotlight的索引对象中</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[[CSSearchableIndex defaultSearchableIndex] indexSearchableItems:carArray completionHandler:^(<span class="built_in">NSError</span> * _Nullable error) &#123;</div><div class="line">	<span class="keyword">if</span>(error) &#123;</div><div class="line">		<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [error localizedDescription]);</div><div class="line">	&#125;</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<p>####3、创建好索引之后，在AppDelegate文件中配置点击搜索结果的处理</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application continueUserActivity:(<span class="built_in">NSUserActivity</span> *)userActivity restorationHandler:(<span class="keyword">void</span>(^)(<span class="built_in">NSArray</span> * __<span class="keyword">nullable</span> restorableObjects))restorationHandler &#123;</div><div class="line">    <span class="built_in">UIViewController</span> *rootViewController = <span class="keyword">self</span>.window.rootViewController;</div><div class="line">    <span class="keyword">if</span> (rootViewController &amp;&amp; [rootViewController isKindOfClass:[ViewController <span class="keyword">class</span>]]) &#123;</div><div class="line">        ViewController *viewController = (ViewController *)rootViewController;</div><div class="line">        [viewController showCarDetailViewController:userActivity];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在ViewController的showCarDetailViewController方法中， 先获取userActivity的值</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *spotlightIdentifier = userActivity.userInfo[<span class="string">@"kCSSearchableItemActivityIdentifier"</span>];</div></pre></td></tr></table></figure>
+<p>比如，这些携带的是车的id， 可以通过id信息，请求服务器端接口，获取整个页面的详细信息；</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

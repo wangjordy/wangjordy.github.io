@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    MapReduce实战练习: 使用搜狗实验数据对搜词热度排序（二） - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>MapReduce实战练习: 使用搜狗实验数据对搜词热度排序（二）</h1>
+        <h2>2017-8-30</h2>
+        <hr>
+        <div class="content markdown"><p>我们接着上一篇《<a href="http://wangjordy.github.io/blog/2017/08/30/hadoop-sougou-search-data-example/" target="_blank" rel="external">MapReduce实战练习: 使用搜狗实验数据对数据去重</a>》 接着讲解关于对keyword（热搜词）的top100计算</p>
+<a id="more"></a>
+<p>###第一步，我们得到每个词的搜索次数</p>
+<p>我们将上篇项目中的输出文件，作为本篇的输入源</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2ok1rnzyj20kc0m243c.jpg" alt=""></p>
+<p>#####计算每个关键词出现的次数，新建 KeyWordCount.java</p>
+<p>源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">package</span> com.au.example;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;  </div><div class="line"><span class="keyword">import</span> java.util.StringTokenizer;  </div><div class="line">  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.TextInputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KeyWordCount</span> </span>&#123;</div><div class="line"></div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Map</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt; </span>&#123;  </div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> IntWritable one = <span class="keyword">new</span> IntWritable(<span class="number">1</span>);  </div><div class="line">          </div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            <span class="comment">// 将输入的纯文本文件的数据转化成String  </span></div><div class="line">            String line = value.toString();  </div><div class="line">            <span class="comment">// 将输入的数据首先按行进行分割  </span></div><div class="line">            StringTokenizer tokenizerArticle = <span class="keyword">new</span> StringTokenizer(line, <span class="string">"\n"</span>);  </div><div class="line">            <span class="comment">// 分别对每一行进行处理  </span></div><div class="line">            <span class="keyword">while</span> (tokenizerArticle.hasMoreElements()) &#123;  </div><div class="line">                <span class="comment">// 每行按空格划分  </span></div><div class="line">                StringTokenizer tokenizerLine = <span class="keyword">new</span> StringTokenizer(tokenizerArticle.nextToken());  </div><div class="line">                String c1 = tokenizerLine.nextToken();<span class="comment">//  </span></div><div class="line">                String c2 = tokenizerLine.nextToken();<span class="comment">// 关键词  </span></div><div class="line">                String c3 = tokenizerLine.nextToken();<span class="comment">// 关键词  </span></div><div class="line">                Text newline = <span class="keyword">new</span> Text(c3);  </div><div class="line">                context.write(newline, one);  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Reduce</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">IntWritable</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt; </span>&#123;  </div><div class="line">        <span class="keyword">private</span> IntWritable result =<span class="keyword">new</span> IntWritable();  </div><div class="line">          </div><div class="line">        <span class="comment">// 实现reduce函数  </span></div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;IntWritable&gt; values,Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            <span class="keyword">int</span> count = <span class="number">0</span>;  </div><div class="line">             <span class="keyword">for</span>(IntWritable val:values)&#123;  </div><div class="line">                  count += val.get();  </div><div class="line">             &#125;  </div><div class="line">            result.set(count);  </div><div class="line">            context.write(key, result);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		Configuration conf = <span class="keyword">new</span> Configuration();  </div><div class="line">        <span class="comment">//设置输入输出文件目录  </span></div><div class="line">        String[] ioArgs = <span class="keyword">new</span> String[] &#123; <span class="string">"hdfs://localhost:9000/clean_same_out"</span>, <span class="string">"hdfs://localhost:9000/Key_out"</span> &#125;;  </div><div class="line">        String[] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, ioArgs).getRemainingArgs();  </div><div class="line">        <span class="keyword">if</span> (otherArgs.length != <span class="number">2</span>) &#123;  </div><div class="line">            System.err.println(<span class="string">"Usage:  &lt;in&gt; &lt;out&gt;"</span>);  </div><div class="line">            System.exit(<span class="number">2</span>);  </div><div class="line">        &#125;  </div><div class="line">        <span class="comment">//设置一个job  </span></div><div class="line">        Job job = Job.getInstance(conf, <span class="string">"key Word count"</span>);  </div><div class="line">        job.setJarByClass(KeyWordCount.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job.setMapperClass(KeyWordCount.Map.class);  </div><div class="line">        job.setCombinerClass(KeyWordCount.Reduce.class);  </div><div class="line">        job.setReducerClass(KeyWordCount.Reduce.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job.setOutputKeyClass(Text.class);  </div><div class="line">        job.setOutputValueClass(IntWritable.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job.setInputFormatClass(TextInputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置输入和输出目录  </span></div><div class="line">        FileInputFormat.addInputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));  </div><div class="line">        FileOutputFormat.setOutputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));  </div><div class="line">        System.exit(job.waitForCompletion(<span class="keyword">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);  </div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出的数据文件，如下图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2oozw7lgj20k30iyn04.jpg" alt=""></p>
+<p>###第二步，根据统计每一词的count，按照做从小到大的排序， 前100的热搜词</p>
+<p>#####计算每个关键词出现的次数，新建 KeyWordCount.java</p>
+<p>源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.autohome.example;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.util.TreeMap;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.TextInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopKeyword</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> K = <span class="number">100</span>;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">KMap</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>, <span class="title">Text</span>&gt; </span>&#123;  </div><div class="line">        </div><div class="line">        TreeMap&lt;Integer, String&gt; map = <span class="keyword">new</span> TreeMap&lt;Integer, String&gt;();   </div><div class="line">          </div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            String line = value.toString();  </div><div class="line">            <span class="keyword">if</span>(line.trim().length() &gt; <span class="number">0</span> &amp;&amp; line.indexOf(<span class="string">"\t"</span>) != -<span class="number">1</span>) &#123;  </div><div class="line">                String[] arr = line.split(<span class="string">"\t"</span>, <span class="number">2</span>);  </div><div class="line">                String name = arr[<span class="number">0</span>];  </div><div class="line">                Integer num = Integer.parseInt(arr[<span class="number">1</span>]);  </div><div class="line">                map.put(num, name);  </div><div class="line">                <span class="keyword">if</span>(map.size() &gt; K) &#123;  </div><div class="line">                    map.remove(map.firstKey());  </div><div class="line">                &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">        </div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">cleanup</span><span class="params">(Mapper&lt;LongWritable, Text, IntWritable, Text&gt;.Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            <span class="keyword">for</span>(Integer num : map.keySet()) &#123;  </div><div class="line">                context.write(<span class="keyword">new</span> IntWritable(num), <span class="keyword">new</span> Text(map.get(num)));  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">        </div><div class="line">    &#125;  </div><div class="line">        </div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">KReduce</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">IntWritable</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>, <span class="title">Text</span>&gt; </span>&#123;  </div><div class="line">        TreeMap&lt;Integer, String&gt; map = <span class="keyword">new</span> TreeMap&lt;Integer, String&gt;();  </div><div class="line">          </div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(IntWritable key, Iterable&lt;Text&gt; values, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            map.put(key.get(), values.iterator().next().toString());  </div><div class="line">            <span class="keyword">if</span>(map.size() &gt; K) &#123;  </div><div class="line">                map.remove(map.firstKey());  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">cleanup</span><span class="params">(Reducer&lt;IntWritable, Text, IntWritable, Text&gt;.Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            <span class="keyword">for</span>(Integer num : map.keySet()) &#123;  </div><div class="line">                context.write(<span class="keyword">new</span> IntWritable(num), <span class="keyword">new</span> Text(map.get(num)));  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		</div><div class="line">		Configuration conf = <span class="keyword">new</span> Configuration();  </div><div class="line">        <span class="comment">//设置输入输出文件目录  </span></div><div class="line">        String[] ioArgs = <span class="keyword">new</span> String[] &#123; <span class="string">"hdfs://localhost:9000/Key_out"</span>, <span class="string">"hdfs://localhost:9000/top_out"</span> &#125;;  </div><div class="line">        String[] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, ioArgs).getRemainingArgs();  </div><div class="line">        <span class="keyword">if</span> (otherArgs.length != <span class="number">2</span>) &#123;  </div><div class="line">            System.err.println(<span class="string">"Usage:  &lt;in&gt; &lt;out&gt;"</span>);  </div><div class="line">            System.exit(<span class="number">2</span>);  </div><div class="line">        &#125;  </div><div class="line">        <span class="comment">//设置一个job  </span></div><div class="line">        Job job = Job.getInstance(conf, <span class="string">"top Keyword"</span>);  </div><div class="line">          </div><div class="line">        job.setJarByClass(TopKeyword.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job.setMapperClass(KMap.class);  </div><div class="line">        job.setCombinerClass(KReduce.class);  </div><div class="line">        job.setReducerClass(KReduce.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job.setOutputKeyClass(IntWritable.class);  </div><div class="line">        job.setOutputValueClass(Text.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job.setInputFormatClass(TextInputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置输入和输出目录  </span></div><div class="line">        FileInputFormat.addInputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));  </div><div class="line">        FileOutputFormat.setOutputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));  </div><div class="line">        System.exit(job.waitForCompletion(<span class="keyword">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);  </div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2orrtyhgj20eu0h8mzp.jpg" alt=""></p>
+<p>我们可以看到前面是搜索的次数， 后面是搜索的关键词，  按照搜索的热度，取最高的100名， 按从小到大的顺序。</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

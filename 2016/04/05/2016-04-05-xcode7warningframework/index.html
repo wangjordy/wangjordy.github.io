@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Xcode7 打包静态.a文件或framework产生大量警告 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>Xcode7 打包静态.a文件或framework产生大量警告</h1>
+        <h2>2016-4-5</h2>
+        <hr>
+        <div class="content markdown"><p>在升级使用Xcode7工具之后， 之前我们集成第三方的framework或者静态.a文件， 编译会报大量的警告， 具体如下:</p>
+<p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f93jlm5vkcj20ws03edkg.jpg" alt=""></p>
+<p><code>warning:  /var/folders/    .pcm: No such file or directory</code></p>
+<a id="more"></a>
+<p>第三方的framework中的类文件， 会被警告找不到pcm文件或者文件夹</p>
+<p>解决的方法， 打开第三方的framework的源码，在Build Settings中，设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">* Precompile Prefix (GCC_PRECOMPILE_PREFIX_HEADER) = NO</div><div class="line"></div><div class="line">* Debug Information Format (DEBUG_INFORMATION_FORMAT) = DWARF with dSYM</div><div class="line"></div><div class="line">* Enable Modules (C and Objective-C) (CLANG_ENABLE_MODULES) = NO</div></pre></td></tr></table></figure>
+<p>如果对这三个属性不明白， 可以参考下图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f93jlxidudj20ei02jjrh.jpg" alt=""></p>
+<p>设置好以上3个属性后， 重新编译制作新的framework后， 再集成到自己的项目中，验收是否还有以上的警告！</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

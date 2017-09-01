@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    xcode自动打包与shell脚本 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>xcode自动打包与shell脚本</h1>
+        <h2>2015-6-25</h2>
+        <hr>
+        <div class="content markdown"><p>在xcode5以后，一般在选择自动打包时， 经常会提示选择证书情况， 如果想要绕过选择证书，可以通过xcodebuild命令实现<br>在持续集成中：</p>
+<ul>
+<li>第一步，使用命令行打ipa包；</li>
+<li>第二步，可以使用svn或git工具 hook实现自动发布；</li>
+</ul>
+<p>本篇只说明一下如果使用命令行以及shell来打ipa包</p>
+<p>###项目工程为*.xcodeproj</p>
+<p>对于这种工程来说， 只需要在当前工程目录下，运行命令xcodebuild就可以了， 这时，xcodebuild命令运行之后，会在项目目录下新建一个build文件夹，在build/Release-iphoneos/xxx.app 这个目录下会生成一个与Target相同名的.app文件。</p>
+<p>执行的命令：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xcodebuild</div></pre></td></tr></table></figure>
+<p>接下来， 将xxx.app文件使用命令生成ipa包</p>
+<p>执行的命令：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xcrun -sdk iphoneos PackageApplication -v build/Release-iphoneos/xxx.app -o build/Release-iphoneos/xxx.ipa</div></pre></td></tr></table></figure>
+<p>解释：</p>
+<ul>
+<li>-v参数之后的路径是刚刚使用xcodebuild命令生成的xxx.app的路径；</li>
+<li>-o参数之后的路径是存放.ipa包的路径；<br>(备注，xxx是你起的ipa包名)</li>
+</ul>
+<p>###项目工程为*.xcworkspace</p>
+<p>对于像使用了CocoaPods工具之类的工程来说， 在第一步使用xcodebuild命令时，需要加几个参数，</p>
+<p>执行的命令：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xcodebuild -workspace xxx.xcworkspace -scheme xxx -sdk iphoneos -configuration Release -derivedDataPath build</div></pre></td></tr></table></figure>
+<p>解释：</p>
+<ul>
+<li>-workspace 之后的参数 xxx.xcworkspace表示需要打包的项目名；</li>
+<li>-scheme 后边的xxx表示选择的scheme是什么（对于多个target来说）<br>如果，不知道scheme都包括什么，可以运行命令</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xcodebuild -list</div></pre></td></tr></table></figure>
+<p>查看， 项目中都包括哪些target，选择合适的target（一般scheme后的名称与项目名相同）</p>
+<ul>
+<li>-sdk表示编辑后的包为iphone device使用，而非Simulator使用</li>
+<li>-configuration后面的Release表示打的包为Release版本， 当然也可以选择Debug版本；</li>
+<li>-derivedDataPath表示的生成的.app文件的路径</li>
+</ul>
+<p>最后生成的ipa包的命令与上述打.xcodeproj工程文件的命令相同</p>
+<p>###关于使用shell脚本的编写</p>
+<p>1.对于*.xcodeproj来说， 代码如下：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#! /bin/bash</span></div><div class="line"></div><div class="line"></div><div class="line">echo <span class="string">"准备开始打ipa包...................."</span></div><div class="line"></div><div class="line"><span class="comment">#工程环境路径</span></div><div class="line">workspace_path=<span class="regexp">/Users/jordy</span><span class="regexp">/Desktop/testbao</span></div><div class="line"><span class="comment">#项目名称</span></div><div class="line">project_name=TestProject</div><div class="line"></div><div class="line"><span class="comment">#build的路径</span></div><div class="line">build_path=$workspace_path/$project_name</div><div class="line"></div><div class="line">echo <span class="string">"第一步，进入项目工程文件: $build_path"</span></div><div class="line"></div><div class="line">cd $build_path</div><div class="line"></div><div class="line">echo <span class="string">"第二步，执行build clean命令"</span></div><div class="line"></div><div class="line">xcodebuild clean</div><div class="line"></div><div class="line">echo <span class="string">"第三步，执行编译生成.app命令"</span></div><div class="line"></div><div class="line">xcodebuild</div><div class="line"></div><div class="line">echo <span class="string">"在项目工程文件内生成一个build子目录，里面有$&#123;project_name&#125;.App程序"</span></div><div class="line"></div><div class="line">echo <span class="string">"第四步, 导出ipa包"</span></div><div class="line"></div><div class="line"><span class="comment">#.app生成后的路径</span></div><div class="line">app_name_path=$build_path/build/Release-iphoneos/$&#123;project_name&#125;.app</div><div class="line"><span class="comment">#.ipa生成后的路径</span></div><div class="line">ipa_name_path=$build_path/build/Release-iphoneos/$&#123;project_name&#125;.ipa</div><div class="line"></div><div class="line"><span class="comment">#生成ipa包</span></div><div class="line">xcrun -sdk iphoneos PackageApplication -v $app_name_path -o $ipa_name_path</div><div class="line"></div><div class="line">echo <span class="string">"制作ipa包完成......................."</span></div></pre></td></tr></table></figure>
+<p>2.对于*.xcworkspace来说， 代码如下：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#! /bin/bash</span></div><div class="line"></div><div class="line"></div><div class="line">echo <span class="string">"准备开始打ipa包...................."</span></div><div class="line"></div><div class="line"><span class="comment">#工程环境路径</span></div><div class="line">workspace_path=<span class="regexp">/Users/xingchaowang</span><span class="regexp">/Desktop/testbao</span></div><div class="line"><span class="comment">#项目名称</span></div><div class="line">project_name=TestProject</div><div class="line"></div><div class="line"><span class="comment">#build的路径</span></div><div class="line">build_path=$workspace_path/$project_name</div><div class="line"></div><div class="line">echo <span class="string">"第一步，进入项目工程文件: $build_path"</span></div><div class="line"></div><div class="line">cd $build_path</div><div class="line"></div><div class="line">echo <span class="string">"第二步，执行build clean命令"</span></div><div class="line"></div><div class="line">xcodebuild clean</div><div class="line"></div><div class="line">echo <span class="string">"第三步，执行编译生成.app命令"</span></div><div class="line"></div><div class="line">xcodebuild -workspace $project_name.xcworkspace -scheme $project_name -sdk iphoneos -configuration Release -derivedDataPath build</div><div class="line"></div><div class="line">echo <span class="string">"在项目工程文件内生成一个build子目录，里面有$&#123;project_name&#125;.App程序"</span></div><div class="line"></div><div class="line">echo <span class="string">"第四步, 导出ipa包"</span></div><div class="line"></div><div class="line"><span class="comment">#.app生成后的路径</span></div><div class="line">app_name_path=$build_path/build/Build/Products/Release-iphoneos/$&#123;project_name&#125;.app</div><div class="line"><span class="comment">#.ipa生成后的路径</span></div><div class="line">ipa_name_path=$build_path/build/Build/Products/Release-iphoneos/$&#123;project_name&#125;.ipa</div><div class="line"></div><div class="line"><span class="comment">#生成ipa包</span></div><div class="line">xcrun -sdk iphoneos PackageApplication -v $app_name_path -o $ipa_name_path</div><div class="line"></div><div class="line">echo <span class="string">"制作ipa包完成......................."</span></div></pre></td></tr></table></figure>
+<p>上述文件中都有备注说明这里就不在重复解释了， 如果你粘贴使用的话，记得修改最上面的worspace_path和project_name的为你自己的工程路径与工程名，另外</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xcodebuild clean</div></pre></td></tr></table></figure>
+<p>表示在打包前，先clean一下工程。</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

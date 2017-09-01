@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+    
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+    <ul class="options">
+      
+        <li class="mode" default-mode="summary">
+          <a mode="summary">SUMMARY</a> / <a mode="list">LIST</a>
+        </li>
+      
+      
+    </ul>
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <div class="main">
+      
+  
+
+
+<link rel="stylesheet" href="/css/post-list.css">
+<link rel="stylesheet" href="/css/markdown.css">
+<link rel="stylesheet" href="/css/highlight/print-code.css">
+
+<ul class="post-list" mode="summary">
+  
+  <li>
+    <h1><a href="/2016/10/26/2016-10-26-hadoop-cluster-for-ubuntu/">Ubuntu 安装Hadoop2.7《四》集群的安装配置</a></h1>
+    <h2>2016-10-26</h2>
+    <hr>
+    <div class="post markdown"><p>在前3节我们分别介绍了单机和伪分布的方式教程， 这一节开始讲述如何配置Hadoop集群， 如果没看过前3节的，建议可以先看看之前的配置，为了方便理解，本教程使用的两个节点：</p>
+<p>第一个作为Master节点， 内网的IP地址：<font color="#006400">10.168.13.166 </font></p>
+<p>第二个作为Slave节点，  内网的IP地址：<font color="#006400">10.168.13.167</font></p>
+<p>这个IP地址可以自行定义，常见的有192.168网段的IP地址， 只要2台主机可以互相Ping通即可；</p></div>
+  </li>
+  
+  <li>
+    <h1><a href="/2016/10/25/2016-10-25-hadoop-yarn-startup/">Ubuntu 安装Hadoop2.7《三》YARN的启动配置</a></h1>
+    <h2>2016-10-25</h2>
+    <hr>
+    <div class="post markdown"><p>###一、简介</p>
+<p>我们Hadoop早期的版本是JobTracker和TraskTracker，那么在2.0版本之后，使用新的MapReduce框架，加入（YARN—Yet Another Resource Negotiator）, YARN是运行在MapReduce之上，负责资源的管理和任务调度，从MapReduce分离出来的YARN,提供了高可用性、高扩展性。</p>
+<p>在上一节中我们通过伪分布式只是启动了MapReduce， 现在我们通过启动YARN，来看看YARN的配置吧。</p></div>
+  </li>
+  
+  <li>
+    <h1><a href="/2016/10/24/2016-10-24-hadoop-for-ubuntu-install-two/">Ubuntu 安装Hadoop2.7《二》单机伪分布配置</a></h1>
+    <h2>2016-10-24</h2>
+    <hr>
+    <div class="post markdown"><p>上一节我们介绍了Hadoop的单机运行配置，这里我们继续采用单节点以伪分布式的方式来运行，Hadoop进程是以分离的Java进程来运行的，<br>节点即可以作为NameNode也可以作为DataNode， 同时，读取的是HDFS中的文件。</p></div>
+  </li>
+  
+  <li>
+    <h1><a href="/2016/10/24/2016-10-24-hadoop-for-ubuntu-install/">Ubuntu 安装Hadoop2.7《一》单机配置</a></h1>
+    <h2>2016-10-24</h2>
+    <hr>
+    <div class="post markdown"><p>###一、环境介绍<br>使用Ubuntu16.04， Hadoop2.7版本， JDK使用1.7版本 （这里可以选择自己的Hadoop2.x版本，或者JDK 1.x版本）</p>
+<p>本教程是在VMware Fusion上安装的Ubuntu16.04桌面版系统，</p></div>
+  </li>
+  
+</ul>
+
+<script src="/js/markdown.js"></script>
+      <link rel="stylesheet" href="/css/paginator.css">
+<div class="paginator">
+  <span class="page-number current">1</span>
+</div>
+    </div>
+  
+  </div>
+</body>
+</html>

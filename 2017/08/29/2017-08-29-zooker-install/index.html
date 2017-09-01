@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Zookeeper的安装教程 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>Zookeeper的安装教程</h1>
+        <h2>2017-8-29</h2>
+        <hr>
+        <div class="content markdown"><p>Zookeeper是一个面向分布式系统的协调服务， 它本身也是一个分布式的应用程序， 用于管理大型主机。<br>在分布式环境中协调和管理服务是一个复杂的过程， Zookeeper通过其简单的架构和API解决了这个问题。</p>
+<p>它的一个设计模型如下图：</p>
+<a id="more"></a>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj0fzsscwoj20fw04zdfp.jpg" alt=""></p>
+<p>Zookeeper采用了简单的 客户端–服务器的模型， 在Client使用服务的节点（机器）， 在Server是提供服务的节点。</p>
+<p>Zookeeper的服务器的组合成了一个Zookeeper集合体（ensemble）。  在任何给定的时间内， 一个Zookeeper客户端可以连接到一个<br>Zookeeper的服务器。 </p>
+<p>每个客户端会定期发送ping到它连接的服务器，让服务器知道它还处在活动连接状态。  同时，客户端发送的ping连接也在确认服务器是否处在活跃连接状态，如果客户端在设定的时间内没有收到服务器的确认， 那么客户端会连接到 Zookeeper集合体的 另一台服务器上，</p>
+<p>并且客户端的会话也会被透明的转移到新的服务器上。</p>
+<p>##安装教程</p>
+<p>###1、官方下载最新的Zookeeper</p>
+<p>官网<a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="external">下载地址</a>.<br>目前最新的包是  zookeeper-3.4.10.tar.gz</p>
+<p>下载好之后，解压tar包</p>
+<p>###2、将zookeeper放在指定的目录</p>
+<p>因之前hadoop放在了/usr/local/目录下，  这里我们将zookeeper也放在/usr/local/目录下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mv zookeeper-3.4.10 /usr/<span class="built_in">local</span>/</div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/</div><div class="line">mv zookeeper-3.4.10 zookeeper</div></pre></td></tr></table></figure>
+<p>###3、设置环境变量</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/profile</div></pre></td></tr></table></figure>
+<p>在文件中配置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> ZOOKEEPER_HOME=/usr/<span class="built_in">local</span>/zookeeper</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;ZOOKEEPER_HOME&#125;</span>/bin</div></pre></td></tr></table></figure>
+<p>退出保存后， 执行命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure>
+<p>让配置生效</p>
+<p>###4、修改zookeeper的配置文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/zookeeper/conf/</div><div class="line">cp zoo_sample.cfg zoo.cfg</div></pre></td></tr></table></figure>
+<p>编辑zoo.cfg文件，在文件中加入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dataDir=/usr/<span class="built_in">local</span>/zookeeper/zkdata</div><div class="line">dataLogDir=/usr/<span class="built_in">local</span>/zookeeper/zkdatalog</div></pre></td></tr></table></figure>
+<p>退出并保存文件， 接着文件中的文件夹</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /usr/<span class="built_in">local</span>/zookeeper/zkdata</div><div class="line">mkdir /usr/<span class="built_in">local</span>/zookeeper/zkdatalog</div></pre></td></tr></table></figure>
+<p>注意这2个文件要都存在，否则启动zkserver会失败。</p>
+<p>###5、启动Zookeeper</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/zookeeper/bin</div><div class="line">./zkServer.sh start</div></pre></td></tr></table></figure>
+<p>启动成功后，如下图</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj0fzc8d5ij20w60dkdjj.jpg" alt=""></p>
+<p>能看到有上图绿色框的进程，就说明你已经配置成功了。</p>
+<p>###6、其他命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./zkServer.sh stop    <span class="comment">#关闭</span></div><div class="line">./zkServer.sh restart  <span class="comment">#重启</span></div></pre></td></tr></table></figure>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

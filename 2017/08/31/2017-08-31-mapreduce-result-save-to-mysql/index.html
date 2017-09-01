@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    MapReduce实战练习: MapReduce计算结果保存到Mysql数据库（三） - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>MapReduce实战练习: MapReduce计算结果保存到Mysql数据库（三）</h1>
+        <h2>2017-8-31</h2>
+        <hr>
+        <div class="content markdown"><p>书接上文，上篇我们介绍了hadoop获取了排名前100的热搜词， 这里我们将介绍关于计算结果保存到Mysql数据库中。</p>
+<a id="more"></a>
+<p>上一篇，我们计算出来排名前100的热搜词为：<br><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2orrtyhgj20eu0h8mzp.jpg" alt=""></p>
+<p>####新建数据库</p>
+<p>#####1.新建sougou的数据库“sougouinfo”</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">create database sougouinfo;</div><div class="line">use sougouinfo;</div></pre></td></tr></table></figure>
+<p>#####2.新建sougou的数据表“key_word”</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">CREATE TABLE `key_word` (  </div><div class="line">  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,  </div><div class="line">  `word` varchar(255),  </div><div class="line">  `total` bigint(20),  </div><div class="line">  PRIMARY KEY (`id`)  </div><div class="line">) ENGINE=InnoDB  DEFAULT CHARSET=utf8;</div></pre></td></tr></table></figure>
+<p>####相关的代码</p>
+<p>源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.au.example;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.DataInput;</div><div class="line"><span class="keyword">import</span> java.io.DataOutput;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</div><div class="line"><span class="keyword">import</span> java.sql.ResultSet;</div><div class="line"><span class="keyword">import</span> java.sql.SQLException;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Writable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBConfiguration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SaveToMysql</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TblsWritable</span> <span class="keyword">implements</span> <span class="title">Writable</span>, <span class="title">DBWritable</span> </span>&#123;</div><div class="line"></div><div class="line">		String tbl_name;</div><div class="line">		<span class="keyword">int</span> tbl_age;</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="title">TblsWritable</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="title">TblsWritable</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">			<span class="keyword">this</span>.tbl_name = name;</div><div class="line">			<span class="keyword">this</span>.tbl_age = age;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readFields</span><span class="params">(ResultSet resultset)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line"></div><div class="line">			<span class="keyword">this</span>.tbl_name = resultset.getString(<span class="number">1</span>);</div><div class="line">			<span class="keyword">this</span>.tbl_age = resultset.getInt(<span class="number">2</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(PreparedStatement statement)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line"></div><div class="line">			statement.setString(<span class="number">1</span>, <span class="keyword">this</span>.tbl_name);</div><div class="line">			statement.setInt(<span class="number">2</span>, <span class="keyword">this</span>.tbl_age);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readFields</span><span class="params">(DataInput dataInput)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line"></div><div class="line">			<span class="keyword">this</span>.tbl_name = dataInput.readUTF();</div><div class="line">			<span class="keyword">this</span>.tbl_age = dataInput.readInt();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(DataOutput dataOutput)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line"></div><div class="line">			dataOutput.writeUTF(tbl_name);</div><div class="line">			dataOutput.writeInt(tbl_age);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">new</span> String(<span class="keyword">this</span>.tbl_name + <span class="string">" "</span> + <span class="keyword">this</span>.tbl_age);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span> &lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">LongWritable</span>, <span class="title">Text</span>&gt;</span>&#123;</div><div class="line">		</div><div class="line">		<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</div><div class="line">			context.write(key, value);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentReducer</span> <span class="keyword">extends</span> <span class="title">Reducer</span> &lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">TblsWritable</span>, <span class="title">TblsWritable</span>&gt; </span>&#123;</div><div class="line">		</div><div class="line">		<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(LongWritable key, Iterable&lt;Text&gt; values, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException</span>&#123;</div><div class="line">			</div><div class="line">			StringBuilder value = <span class="keyword">new</span> StringBuilder();</div><div class="line">			<span class="keyword">for</span> (Text text : values) &#123;</div><div class="line">				value.append(text);</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			String [] studentArr = value.toString().split(<span class="string">"\t"</span>);</div><div class="line">			</div><div class="line">			</div><div class="line">			<span class="keyword">if</span> (studentArr[<span class="number">0</span>] != <span class="keyword">null</span>) &#123;</div><div class="line">				String name = studentArr[<span class="number">1</span>].trim();</div><div class="line">				</div><div class="line">				<span class="keyword">int</span> age = <span class="number">0</span>;</div><div class="line">				<span class="keyword">try</span> &#123;</div><div class="line">					age = Integer.parseInt(studentArr[<span class="number">0</span>].trim());</div><div class="line">				&#125;<span class="keyword">catch</span>(NumberFormatException e) &#123;</div><div class="line">					</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">				context.write(<span class="keyword">new</span> TblsWritable(name, age), <span class="keyword">null</span>);</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line"></div><div class="line">		Configuration conf = <span class="keyword">new</span> Configuration();</div><div class="line">		</div><div class="line">		DBConfiguration.configureDB(conf, <span class="string">"com.mysql.jdbc.Driver"</span>, <span class="string">"jdbc:mysql://localhost:3306/sougouinfo?characterEncoding=utf8&amp;amp;useSSL=false"</span>, <span class="string">"root"</span>, <span class="string">"root"</span>);</div><div class="line">		</div><div class="line">		<span class="comment">//设置输入输出文件目录 </span></div><div class="line">		String [] ioArgs = <span class="keyword">new</span> String[] &#123;<span class="string">"hdfs://localhost:9000/top_out"</span>&#125;;</div><div class="line">		</div><div class="line">		String [] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, ioArgs).getRemainingArgs();</div><div class="line">		</div><div class="line">		<span class="keyword">if</span> (otherArgs.length != <span class="number">1</span>) &#123;</div><div class="line">			System.err.println(<span class="string">"Usage: &lt;in&gt;&lt;out&gt;"</span>);</div><div class="line">			System.exit(<span class="number">2</span>);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="comment">//设置一个job </span></div><div class="line">		Job job = Job.getInstance(conf, <span class="string">"SaveResult"</span>);</div><div class="line">		job.setJarByClass(SaveToMysql.class);</div><div class="line">		</div><div class="line">		<span class="comment">// 输入路径</span></div><div class="line">		FileInputFormat.addInputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));</div><div class="line">		</div><div class="line">		<span class="comment">//Mapper  </span></div><div class="line">		job.setMapperClass(StudentMapper.class);</div><div class="line">		<span class="comment">// Reducer</span></div><div class="line">		job.setReducerClass(StudentReducer.class);</div><div class="line">		</div><div class="line">		<span class="comment">// mapper输出格式</span></div><div class="line">		job.setOutputKeyClass(LongWritable.class);</div><div class="line">		job.setOutputValueClass(Text.class);</div><div class="line">		</div><div class="line">		<span class="comment">// 输入格式，默认就是TextInputFormat  </span></div><div class="line">		job.setOutputFormatClass(DBOutputFormat.class);</div><div class="line">		</div><div class="line">		<span class="comment">// 输出到哪些表、字段 </span></div><div class="line">		DBOutputFormat.setOutput(job, <span class="string">"key_word"</span>, <span class="string">"word"</span>, <span class="string">"total"</span>);  </div><div class="line">		System.exit(job.waitForCompletion(<span class="keyword">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);  </div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在项目中添加mysql-connector-java-5.1.14-bin.jar</p>
+<p>执行后的结果，如图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2xjtdbw7j20eg0jvaej.jpg" alt=""></p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

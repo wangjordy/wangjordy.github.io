@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Ubuntu 安装Hadoop2.7《二》单机伪分布配置 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>Ubuntu 安装Hadoop2.7《二》单机伪分布配置</h1>
+        <h2>2016-10-24</h2>
+        <hr>
+        <div class="content markdown"><p>上一节我们介绍了Hadoop的单机运行配置，这里我们继续采用单节点以伪分布式的方式来运行，Hadoop进程是以分离的Java进程来运行的，<br>节点即可以作为NameNode也可以作为DataNode， 同时，读取的是HDFS中的文件。</p>
+<a id="more"></a>
+<p>###一、 配置Hadoop伪分布式环境</p>
+<p>####1. 编辑hadoop-env.sh环境配置文件</p>
+<p>执行的命令：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh</div></pre></td></tr></table></figure>
+<p>打开后注释原来的JAVA_HOME,改为绝对路径，如图：</p>
+<p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f93marha6qj20dq0240t0.jpg" alt=""></p>
+<p>注：这个文件中其他的配置暂时还不需要</p>
+<p>####2. 编辑core-site.xml和hdfs-site.xml<br>这2个文件也都位于 /usr/local/hadoop/etc/hadoop/中，</p>
+<p>修改core-site.xml，编辑文件，在configuration标签修改为：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;hadoop.tmp.dir&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;file:/usr</span><span class="regexp">/local/hadoop</span><span class="regexp">/tmp&lt;/value</span>&gt;</div><div class="line">             &lt;description&gt;Abase <span class="keyword">for</span> other temporary directories.&lt;<span class="regexp">/description&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;fs.defaultFS&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;hdfs:/</span><span class="regexp">/localhost:9000&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
+<p>同理修改hdfs-site.xml</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;dfs.replication&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;1&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">             &lt;name&gt;dfs.namenode.name.dir&lt;/name</span>&gt;</div><div class="line">             &lt;value&gt;<span class="symbol">file:</span>/usr/local/hadoop/tmp/dfs/name&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;file:/usr</span><span class="regexp">/local/hadoop</span><span class="regexp">/tmp/dfs</span><span class="regexp">/data&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
+<p>解说： 由于Hadoop的运行方式都是由xml配置文件决定的，如果需要从伪分布式切换回非分布式模式，需要删除core-site.xml的配置项</p>
+<p>另外，伪分布式虽然只需要配置<code>fs.defaultFS</code>和<code>dfs.replication</code>就可以运行了，不过如果没有配置<code>hadoop.tmp.dir</code>参数项的话，则默认使用的临时文件目录为<code>/tmp/hadoo-hadoop</code>, 然后这个目录在重启时有可能被系统清理掉，导致必须重新执行format才行，所以这里进行了设置，同时，指定了<code>dfs.namenode.name.dir</code> 和 <code>dfs.datanode.data.dir</code>。</p>
+<p>配置完成之后，执行NameNode的格式化:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs namenode -format</div></pre></td></tr></table></figure>
+<p>注意： 我们当前是在/usr/local/hadoop/目录操作的命令， 成功的话会看到如下图的提示：</p>
+<p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f93mstw8ctj20v0053aef.jpg" alt=""></p>
+<p>如果出现Error:JAVA_HOME is not set and could not be found. 就说明之前你的JAVA_HOME变量没配置对，</p>
+<p>####3. 开启NameNode和DataNode守护进程</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/start-dfs.sh</div></pre></td></tr></table></figure>
+<p>执行命令，如果提示SSH输入yes即可，</p>
+<p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f93mwdfsjqj20ju04676q.jpg" alt=""></p>
+<p>启动时可能会出现如下 WARN 提示：WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform… using builtin-java classes where applicable。该 WARN 提示可以忽略，并不会影响正常使用（该 WARN 可以通过编译 Hadoop 源码解决）。</p>
+<p>启动完之后，输入命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jps</div></pre></td></tr></table></figure>
+<p>查看NameNode，DataNode SecondaryNameNode有没有启动 ，正常启动如图：</p>
+<p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f93mz4iwdvj20a102p0tb.jpg" alt=""></p>
+<p>这时候，通过浏览器访问地址 <a href="http://localhost:50070" target="_blank" rel="external">http://localhost:50070</a> 可以查看NameNode和DataNode的具体信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f93n0q5xcbj20wd0r1n3z.jpg" alt=""></p>
+<p>###二、 运行Hadoop伪分布式实例<br>在上一节中，我们使用单机模式grep例子中读取的是本地的数据， 而伪分布式读取的则是HDFS上的数据。 要使用HDFS，首先需要再HDFS中创建用户目录</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -mkdir -p /user/hadoop</div></pre></td></tr></table></figure>
+<p>接着将 ./etc/hadoop 中的 xml 文件作为输入文件复制到分布式文件系统中（也就是将 /usr/local/hadoop/etc/hadoop 上传到HDFS中的 /user/hadoop/input中）</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -mkdir input</div><div class="line">./bin/hdfs dfs -put ./etc/hadoop/*.xml input</div></pre></td></tr></table></figure>
+<p>复制完成后，可以通过如下命令查看文件列表：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -ls input</div></pre></td></tr></table></figure></p>
+<p>这时，我们的运行的文件与上一节中的运行文件是相同的， 区别仅是在HDFS中（单机的是本地input中）， 同时，我们也都输出到output文件夹中，</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep input output <span class="string">'dfs[a-z.]+'</span></div></pre></td></tr></table></figure>
+<p>查看运行结果的命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -cat output/*</div></pre></td></tr></table></figure>
+<p>运行的结果如下图：</p>
+<p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f93n8v1rcmj20gb03ldgq.jpg" alt=""></p>
+<p>如果将HDFS中的结果，取到本地，执行命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -get output ./output   将HDFS的outputcopy到本地的./output目录下，如果本地有output文件夹请先删除</div><div class="line">cat ./output/*</div></pre></td></tr></table></figure>
+<p>如果想要删除HDFS中的output文件目录</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -rm -r output</div></pre></td></tr></table></figure>
+<p>若要关闭 Hadoop，则运行</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/stop-dfs.sh</div></pre></td></tr></table></figure>
+<p>同理，如果下次运行hadoop，无需再次format NameNode了， 直接运行</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/start-dfs.sh</div></pre></td></tr></table></figure>
+<p>即可！</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

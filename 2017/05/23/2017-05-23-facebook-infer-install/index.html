@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    ios使用Facebook的Infer工具 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>ios使用Facebook的Infer工具</h1>
+        <h2>2017-5-23</h2>
+        <hr>
+        <div class="content markdown"><p>上一节我们提到了Facebook的一个关于检测内存泄漏的重要工具是<code>FBRetainCycleDetector</code>， 今天我们继续介绍Facebook的另一个重要工具  <font color="#008B8B" size="4">Infter</font>  <br></p>
+<p><font color="#008B8B" size="4">Infter</font>是一个静态分析工具， 它可以分析的编程语言有： Objective-C， Java还有C，</p>
+<p>通过它对代码的静态分析，来报告潜在的问题。</p>
+<a id="more"></a>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffveblwpmzj20pv0c9mxe.jpg" alt=""></p>
+<p>关于Infer的介绍可以参考官网 <a href="https://infer.liaohuqiu.net/" target="_blank" rel="external">Infer官网</a></p>
+<p>##Infer的优势</p>
+<ul>
+<li>静态扫描效率很高</li>
+<li>支持增量分析和全量分析</li>
+<li>也可以分解分析局部范围，再整合为统一结果输出</li>
+<li>在ios和C中，可以帮助我们排查内存泄露</li>
+</ul>
+<p>###Infer捕获的ios中的bug类型</p>
+<ul>
+<li>循环引用</li>
+<li>参数不为null的校验</li>
+<li>Ivar不为null的校验</li>
+</ul>
+<p>###Infer安装教程</p>
+<p>安装Infer的方法常用的有2种：</p>
+<p>第一种， 通过<a href="https://github.com/facebook/infer" target="_blank" rel="external">Infer github代码</a> ，下载里面的release的最新版本，然后安装命令方式安装；</p>
+<p>第二种，是我比较推荐的方式，通过homebrew的方式安装；</p>
+<p>这里重点介绍第二种方式:</p>
+<p>###安装infer</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install infer</div></pre></td></tr></table></figure>
+<p>安装好之后，可以通过<code>info --version</code>校验是否安装成功；</p>
+<p>###配置到环境变量中</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH=\"\$PATH:pwd/infer/infer/bin\""</span> \ &gt;&gt; ~/.bash_profile &amp;&amp;<span class="built_in">source</span> ~/.bash_profile</div></pre></td></tr></table></figure>
+<p>###安装好Infer工具之后， 下载Demo代码</p>
+<p>facebook已经为我们提供好了测试的Demo， 下载地址<a href="https://github.com/facebook/infer" target="_blank" rel="external">github代码</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/facebook/infer.git</div></pre></td></tr></table></figure>
+<p>下载好之后，进入工程的examples文件夹中， </p>
+<p>###输入以下命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">infer -- clang -c Hello.m</div></pre></td></tr></table></figure>
+<p>会提示给我们Hello.m这个文件中的那些语法有问题，  详细如下图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvf4p24yzj20se0eyjtf.jpg" alt=""></p>
+<p>我们可以看到在代码中 <code>return  hello-&gt;s</code>;  执行这行代码之前，hello已经设置为nil了</p>
+<p>修改的方法设置改为 </p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> hello.s;</div></pre></td></tr></table></figure>
+<p>同时代码中也强调声明s变量时，应该用strong或者weak的方式， 因为默认修饰关键字是assign</p>
+<p>我们还需要修改为：</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSString</span>* s;</div></pre></td></tr></table></figure>
+<p>###对工程的分析</p>
+<p>进入上述demo中的ios_hello文件夹中， 里面有HelloWorldApp，然后编译执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ios_hello</div><div class="line">infer -- xcodebuild -target HelloWorldApp -configuration Debug -sdk iphonesimulator</div></pre></td></tr></table></figure>
+<p>如果此时，终端提示如下错误：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvfheamfsj20nb042wf2.jpg" alt=""></p>
+<p>提示没有按照xcpretty， 可通过以下命令安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install xcpretty</div></pre></td></tr></table></figure>
+<p>安装好之后，重新执行上一条命令，就会在终端提示出这个工程中分析的结果，如图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvfk3m100j20um0qsjwa.jpg" alt=""></p>
+<p>在一堆错误的最底部会有一个综合整理报告： 如图</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvfl7w8xlj20c505amxg.jpg" alt=""></p>
+<p>此时，我们可以根据上述提示的问题， 找到具体的行去做具体的修复。 但是，且慢着急修复bug， 我们还需要接着这个先讲下去。</p>
+<ul>
+<li><p>我们在控制台已经看到了这些错误信息，但其实这个看起来还是不太方便， 其实我们发现在原工程中多了<code>build</code>和<code>infer-out</code>2个文件夹</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvfpbjiilj20bg066aao.jpg" alt=""></p>
+</li>
+<li><p>build文件夹： <font color="#FF7F50">捕获阶段</font>    Infer 捕获编译命令(上面介绍的编译器命令)，将文件翻译成 Infer 内部的中间语言</p>
+</li>
+<li><p>infer-out文件夹： <font color="#FF7F50">分析阶段</font>   Infer将分析bugs结果输出到不同格式文件中，如csv、txt、json 方便对分析结果进行加工分析</p>
+</li>
+</ul>
+<p>好了，介绍完这些后， 我们还没有修复一个这个工程里的bug；</p>
+<p>接着我们再重复执行命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">infer -- xcodebuild -target HelloWorldApp -configuration Debug -sdk iphonesimulator</div></pre></td></tr></table></figure>
+<p>这时候，我们发现控制台居然不报错了，如图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffvfui48j3j20on07x3zn.jpg" alt=""></p>
+<p>这是因为默认infer工具，采用的是增量更新，对于之前已经提示出错的信息，则不再报告了</p>
+<p>###增量更新-&gt;非增量更新</p>
+<p>执行命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcodebuild -target HelloWorldApp -configuration Debug -sdk iphonesimulator clean</div></pre></td></tr></table></figure>
+<p>然后再执行之前命令，就可以看到错误信息了。</p>
+<p>好了， 以上就是关于facebook的infer工具的简单介绍， 详细还是看看上面写的文档吧。</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>

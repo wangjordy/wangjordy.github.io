@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Ubuntu 安装Eclipse,并执行MapReduce的实例 - 
+    Jordy攻城狮的时光感言
+  </title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="sidebar">
+  
+  <div class="face">
+    <div img-src=""></div>
+  </div>
+
+  <h1 class="author">Jordy</h1>
+  <p class="desc">非淡泊无以明志，非宁静无以致远</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pages">
+    <a class="" href="/about-me">ABOUT ME</a>
+    <a class="" href="/links">LINKS</a>
+  </div>
+  
+  <div class="categories">
+  
+    
+    
+    <a class="" href="/">All Categories</a>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+  </div>
+
+  
+  
+  <div class="sns">
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/weibo.png">
+        
+      </a>
+    
+    <a href="" target="_blank">
+        
+          <img src="/img/github.png">
+        
+      </a>
+    
+    <a href="mailto:wangjordy@gmail.com" target="_blank">
+        
+          <img src="/img/mail.png">
+        
+      </a>
+    
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  
+</div>
+    
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/highlight/print-code.css">
+    
+    <div class="main">
+      <div class="post">
+        <h1>Ubuntu 安装Eclipse,并执行MapReduce的实例</h1>
+        <h2>2016-11-16</h2>
+        <hr>
+        <div class="content markdown"><p>在前几节中，我们主要介绍了在ubuntu环境上安装部署hadoop的环境， 本节将通过一个实例来介绍在eclipse下编写程序，并在hadoop下执行。</p>
+<a id="more"></a>
+<p>###一、 ubuntu安装eclipse</p>
+<p>方法一： 从ubuntu的软件中心</p>
+<p>方法二： 对于网络不太好的用户，可以直接在eclipse官网上下载<br>下载eclipse的地址 : <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz" target="_blank" rel="external">http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz</a>  </p>
+<p>下载好直接接下到 /opt目录下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo tar zxvf eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz -C /opt</div></pre></td></tr></table></figure>
+<p>###二、 eclipse安装Hadoop-Eclipse-Plugin</p>
+<p>在配置之前请先参考之前的关于介绍伪分布式的教程安装Hadoop， 并启动hadoop服务。</p>
+<p>在Eclipse上编译运行MapReduce程序需要安装Hadoop-Eclipse-Plugin，可以在Github上<a href="https://github.com/winghc/hadoop2x-eclipse-plugin" target="_blank" rel="external">https://github.com/winghc/hadoop2x-eclipse-plugin</a> 下载， 下载后将hadoop-eclipse-kepler-plugin-2.6.0.jar包赋值到Eclipse的安装目录plugins文件夹下，</p>
+<p>如果是通过软件中心安装的eclipse应该是在/usr/lib/eclipse目录下</p>
+<p>复制好jar包之后，重启eclipse即可，打开后，会看到</p>
+<p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f9u19kosp7j20dm03dq36.jpg" alt=""></p>
+<p>在这个步骤请一定要先确保之前的hadoop服务已经开启，并且配置好了伪分布式的相关配置；</p>
+<p>####1.  在eclipse的菜单栏选择Window-&gt;Preference</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f9u1j4zcu8j20ih0i176q.jpg" alt=""></p>
+<p>注意上图步骤2中，要填写你自己的hadoop路径；</p>
+<p>####2.  切换至Map/Reduce的开发模式视图<br>选择Window-&gt;Open Perspective -&gt; Other 在弹出框中选择Map/Reduce选项；</p>
+<p>####3.  建立Hadoop的连接<br>点击Eclipse右下角的Map/Reduce Locations控制面板， 在面板上点击右键选择New Hadoop Location<br>在弹出来的General选项面板中， General的设置要与Hadoop中的配置一致，  这里使用的伪分布式，填写localhost即可，<br>设置 fs.defaultFS 为 hdfs://localhost:9000， 最终配置如下图：</p>
+<p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f9u1qbk2k3j20jh0d9jtm.jpg" alt=""></p>
+<p>Advanced parameters 选项面板是对Hadoop参数进行配置，目前还用不到，直接点击Finish即可；</p>
+<p>###三、 在Eclipse中创建MapReduce的工程</p>
+<p>点击File-&gt;New-&gt; Project 选择Map/Reduce Project, 然后点击Next</p>
+<p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f9u1w4wqe2j20nh0hgmzk.jpg" alt=""></p>
+<p>这里创建一个WordCount的项目名，点击Finish就创建完工程了；</p>
+<p>在项目的src目录下创建一个类， Package为：  org.apache.hadoop.examples；在Name处填写 WordCount。</p>
+<p>打开刚刚创建的WordCount.java文件， 将以下代码复制到该文件中：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">package org.apache.hadoop.examples;</div><div class="line"> </div><div class="line">import java.io.IOException;</div><div class="line">import java.util.StringTokenizer;</div><div class="line"> </div><div class="line">import org.apache.hadoop.conf.Configuration;</div><div class="line">import org.apache.hadoop.fs.Path;</div><div class="line">import org.apache.hadoop.io.IntWritable;</div><div class="line">import org.apache.hadoop.io.Text;</div><div class="line">import org.apache.hadoop.mapreduce.Job;</div><div class="line">import org.apache.hadoop.mapreduce.Mapper;</div><div class="line">import org.apache.hadoop.mapreduce.Reducer;</div><div class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line">import org.apache.hadoop.util.GenericOptionsParser;</div><div class="line"> </div><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">WordCount</span> &#123;</span></div><div class="line"> </div><div class="line">  public static <span class="class"><span class="keyword">class</span> <span class="title">TokenizerMapper</span> </span></div><div class="line">       extends Mapper&lt;Object, Text, Text, IntWritable&gt;&#123;</div><div class="line"> </div><div class="line">    private final static IntWritable one = new IntWritable(<span class="number">1</span>);</div><div class="line">    private Text word = new Text();</div><div class="line"> </div><div class="line">    public void map(Object key, Text value, Context context</div><div class="line">                    ) throws IOException, InterruptedException &#123;</div><div class="line">      StringTokenizer itr = new StringTokenizer(value.toString());</div><div class="line">      <span class="keyword">while</span> (itr.hasMoreTokens()) &#123;</div><div class="line">        word.set(itr.nextToken());</div><div class="line">        context.write(word, one);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  public static <span class="class"><span class="keyword">class</span> <span class="title">IntSumReducer</span> </span></div><div class="line">       extends Reducer&lt;Text,IntWritable,Text,IntWritable&gt; &#123;</div><div class="line">    private IntWritable result = new IntWritable();</div><div class="line"> </div><div class="line">    public void reduce(Text key, Iterable&lt;IntWritable&gt; values, </div><div class="line">                       Context context</div><div class="line">                       ) throws IOException, InterruptedException &#123;</div><div class="line">      int sum = <span class="number">0</span>;</div><div class="line">      <span class="keyword">for</span> (IntWritable val : values) &#123;</div><div class="line">        sum += val.get();</div><div class="line">      &#125;</div><div class="line">      result.set(sum);</div><div class="line">      context.write(key, result);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  public static void main(String[] args) throws Exception &#123;</div><div class="line">    Configuration conf = new Configuration();</div><div class="line">    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();</div><div class="line">    <span class="keyword">if</span> (otherArgs.length != <span class="number">2</span>) &#123;</div><div class="line">      System.err.println(<span class="string">"Usage: wordcount &lt;in&gt; &lt;out&gt;"</span>);</div><div class="line">      System.exit(<span class="number">2</span>);</div><div class="line">    &#125;</div><div class="line">    Job job = new Job(conf, <span class="string">"word count"</span>);</div><div class="line">    job.setJarByClass(WordCount.<span class="keyword">class</span>);</div><div class="line">    job.setMapperClass(TokenizerMapper.<span class="keyword">class</span>);</div><div class="line">    job.setCombinerClass(IntSumReducer.<span class="keyword">class</span>);</div><div class="line">    job.setReducerClass(IntSumReducer.<span class="keyword">class</span>);</div><div class="line">    job.setOutputKeyClass(Text.<span class="keyword">class</span>);</div><div class="line">    job.setOutputValueClass(IntWritable.<span class="keyword">class</span>);</div><div class="line">    FileInputFormat.addInputPath(job, new Path(otherArgs[<span class="number">0</span>]));</div><div class="line">    FileOutputFormat.setOutputPath(job, new Path(otherArgs[<span class="number">1</span>]));</div><div class="line">    System.exit(job.waitForCompletion(<span class="literal">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>需资源文件copy到src目录下，如：<br>将/usr/local/hadoop/etc/hadoop的xml文件以及log4j.properties 复制到WordCount工程的src文件夹下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp /usr/local/hadoop/etc/hadoop/core-site.xml ~<span class="regexp">/workspace/</span>WordCount/src</div><div class="line">cp /usr/local/hadoop/etc/hadoop/hdfs-site.xml ~<span class="regexp">/workspace/</span>WordCount/src</div><div class="line">cp /usr/local/hadoop/etc/hadoop/log4j.properties ~<span class="regexp">/workspace/</span>WordCount/src</div></pre></td></tr></table></figure>
+<p>复制完之后，在eclipse中选中WordCount工程名，右键选择Refresh，就可以看到刚刚添加的文件结构了，如图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f9u321t8ulj206904n3z0.jpg" alt=""></p>
+<p>点击WordCount.java文件选择Run As -&gt; Run Configurations, 在这里可以设置运行时的相关参数（如果Java Application下面没有 WordCount工程名，那么需要先双击 Java Application），在右侧窗体切换“Arguments”栏， 在 Program arguments 处填写 “input output” 就OK了，如图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f9u36yciw7j20po0khq78.jpg" alt=""></p>
+<p>当然也可以直接在代码中设置好输入的参数， 可以在代码main()中的第二行，替换为</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/<span class="regexp">/ String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();</span></div><div class="line"><span class="regexp">String[] otherArgs=new String[]&#123;"input","output"&#125;;  /</span><span class="regexp">/直接设置输入参数input和output</span></div></pre></td></tr></table></figure>
+<p>设置好参数后，选择 Run As -&gt; Run on Hadoop运行程序，在Console栏会看到输出的output的文件夹，如图：</p>
+<p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f9u3ay6sa7j20mu0b5tbt.jpg" alt=""></p>
+<p>现在就可以使用Eclipse做MapReduce的程序开发了。</p>
+<div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/post.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="//kid-wumeng.disqus.com/embed.js"></script>
+    
+</body>
+</html>
