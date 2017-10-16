@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,97 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Python/">Python</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -206,7 +101,7 @@
         
       
     
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -221,7 +116,22 @@
         
       
     
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -251,7 +161,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -266,7 +176,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -343,8 +328,7 @@
         <hr>
         <div class="content markdown"><p>书接上文，我们将前3篇文章中创建的几个job，综合在一起顺序执行：</p>
 <a id="more"></a>
-<p>###新建SougouMapReduce.java</p>
-<p>源码</p>
+<h3 id="新建SougouMapReduce-java"><a href="#新建SougouMapReduce-java" class="headerlink" title="新建SougouMapReduce.java"></a>新建SougouMapReduce.java</h3><p>源码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.au.example;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBConfiguration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.TextInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.jobcontrol.ControlledJob;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.jobcontrol.JobControl;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.au.example.SaveToMysql.StudentMapper;</div><div class="line"><span class="keyword">import</span> com.au.example.SaveToMysql.StudentReducer;</div><div class="line"><span class="keyword">import</span> com.au.example.TopKeyword.KMap;</div><div class="line"><span class="keyword">import</span> com.au.example.TopKeyword.KReduce;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SougouMapReduce</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line"></div><div class="line">		Configuration conf = <span class="keyword">new</span> Configuration();</div><div class="line"></div><div class="line">		DBConfiguration.configureDB(conf, Constrants.JDBC_DRIVE, Constrants.JDBC_URL, Constrants.JDBC_USER,</div><div class="line">				Constrants.JDBC_PASSWORD);</div><div class="line"></div><div class="line">		<span class="comment">// 设置输入输出文件目录</span></div><div class="line">		String[] ioArgs = <span class="keyword">new</span> String[] &#123; Constrants.HDFS_PATH + <span class="string">"data_in"</span>, Constrants.HDFS_PATH + <span class="string">"cleanSame_out"</span>,</div><div class="line">				Constrants.HDFS_PATH + <span class="string">"wordCount_out"</span>, Constrants.HDFS_PATH + <span class="string">"result_out"</span> &#125;;</div><div class="line">		String[] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, ioArgs).getRemainingArgs();</div><div class="line">		<span class="keyword">if</span> (otherArgs.length != <span class="number">4</span>) &#123;</div><div class="line">			System.err.println(<span class="string">"Usage:  &lt;in&gt; &lt;out&gt;"</span>);</div><div class="line">			System.exit(<span class="number">2</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">/***********************************去除重复数据作业***********************************/</span> </div><div class="line">		<span class="comment">// 设置一个job  </span></div><div class="line">        Job job0 = Job.getInstance(conf, <span class="string">"clean same data"</span>);  </div><div class="line">        job0.setJarByClass(CleanSameData.class);  </div><div class="line">        </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job0.setMapperClass(CleanSameData.Map.class);  </div><div class="line">        job0.setCombinerClass(CleanSameData.Reduce.class);  </div><div class="line">        job0.setReducerClass(CleanSameData.Reduce.class);  </div><div class="line">        </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job0.setOutputKeyClass(Text.class);  </div><div class="line">        job0.setOutputValueClass(Text.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job0.setInputFormatClass(TextInputFormat.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job0.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 设置输入和输出目录  </span></div><div class="line">        FileInputFormat.addInputPath(job0, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));  </div><div class="line">        FileOutputFormat.setOutputPath(job0, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));  </div><div class="line">          </div><div class="line">        <span class="comment">//加入控制容器   </span></div><div class="line">        ControlledJob ctrljob0=<span class="keyword">new</span>  ControlledJob(conf);   </div><div class="line">        ctrljob0.setJob(job0);   </div><div class="line">		</div><div class="line">        <span class="comment">/***********************************统计搜索词次数作业***********************************/</span> </div><div class="line">        <span class="comment">//设置一个job  </span></div><div class="line">        Job job1 = Job.getInstance(conf, <span class="string">"key Word count"</span>);  </div><div class="line">        job1.setJarByClass(KeyWordCount.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job1.setMapperClass(KeyWordCount.Map.class);  </div><div class="line">        job1.setCombinerClass(KeyWordCount.Reduce.class);  </div><div class="line">        job1.setReducerClass(KeyWordCount.Reduce.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job1.setOutputKeyClass(Text.class);  </div><div class="line">        job1.setOutputValueClass(IntWritable.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job1.setInputFormatClass(TextInputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job1.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">          </div><div class="line">        <span class="comment">//加入控制容器   </span></div><div class="line">        ControlledJob ctrljob1=<span class="keyword">new</span>  ControlledJob(conf);   </div><div class="line">        ctrljob1.setJob(job1);   </div><div class="line">        <span class="comment">//设置多个作业直接的依赖关系         </span></div><div class="line">        ctrljob1.addDependingJob(ctrljob0);   </div><div class="line">          </div><div class="line">        <span class="comment">// 设置job1输入和输出目录  </span></div><div class="line">        FileInputFormat.addInputPath(job1, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));  </div><div class="line">        FileOutputFormat.setOutputPath(job1, <span class="keyword">new</span> Path(otherArgs[<span class="number">2</span>]));  </div><div class="line">          </div><div class="line">        <span class="comment">/***********************************统计top k作业***********************************/</span>  </div><div class="line">        <span class="comment">//设置一个job  </span></div><div class="line">        Job job2 = Job.getInstance(conf, <span class="string">"top K"</span>);  </div><div class="line">        job2.setJarByClass(TopKeyword.class);  </div><div class="line">              </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job2.setMapperClass(KMap.class);  </div><div class="line">        job2.setCombinerClass(KReduce.class);  </div><div class="line">        job2.setReducerClass(KReduce.class);  </div><div class="line">              </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job2.setOutputKeyClass(IntWritable.class);  </div><div class="line">        job2.setOutputValueClass(Text.class);  </div><div class="line">              </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job2.setInputFormatClass(TextInputFormat.class);  </div><div class="line">              </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job2.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">        <span class="comment">//job2.setOutputFormatClass(DBOutputFormat.class);  </span></div><div class="line">          </div><div class="line">        <span class="comment">//作业2加入控制容器   </span></div><div class="line">        ControlledJob ctrljob2=<span class="keyword">new</span> ControlledJob(conf);   </div><div class="line">        ctrljob2.setJob(job2);   </div><div class="line">          </div><div class="line">        <span class="comment">//设置多个作业直接的依赖关系         </span></div><div class="line">        ctrljob2.addDependingJob(ctrljob1);   </div><div class="line">          </div><div class="line">        <span class="comment">//输入路径是上一个作业的输出路径，因此这里填args[2],要和上面对应好  </span></div><div class="line">        FileInputFormat.addInputPath(job2, <span class="keyword">new</span> Path(otherArgs[<span class="number">2</span>]));  </div><div class="line">          </div><div class="line">        <span class="comment">//输出路径从新传入一个参数，这里需要注意，因为我们最后的输出文件一定要是没有出现过得  </span></div><div class="line">        <span class="comment">//因此我们在这里new Path(args[3])因为args[3]在上面没有用过，只要和上面不同就可以了  </span></div><div class="line">        FileOutputFormat.setOutputPath(job2,<span class="keyword">new</span> Path(otherArgs[<span class="number">3</span>]));  </div><div class="line">        </div><div class="line">        <span class="comment">/***********************************保存到数据库作业***********************************/</span>  </div><div class="line">        <span class="comment">//第四个作业，将结果保存到mysql  </span></div><div class="line">        Job job3 = Job.getInstance(conf, <span class="string">"SaveResult"</span>);  </div><div class="line">        job3.setJarByClass(SaveToMysql.class);  </div><div class="line">              </div><div class="line">        <span class="comment">// 输入路径  </span></div><div class="line">        FileInputFormat.addInputPath(job3, <span class="keyword">new</span> Path(otherArgs[<span class="number">3</span>]));  </div><div class="line">                </div><div class="line">        <span class="comment">// Mapper  </span></div><div class="line">        job3.setMapperClass(StudentMapper.class);  </div><div class="line">        <span class="comment">// Reducer  </span></div><div class="line">        job3.setReducerClass(StudentReducer.class);  </div><div class="line">                </div><div class="line">        <span class="comment">// mapper输出格式  </span></div><div class="line">        job3.setOutputKeyClass(LongWritable.class);  </div><div class="line">        job3.setOutputValueClass(Text.class);  </div><div class="line">                </div><div class="line">        <span class="comment">// 输入格式，默认就是TextInputFormat  </span></div><div class="line">        job3.setOutputFormatClass(DBOutputFormat.class);    </div><div class="line">                </div><div class="line">        <span class="comment">// 输出到哪些表、字段  </span></div><div class="line">        DBOutputFormat.setOutput(job3, <span class="string">"key_word"</span>, <span class="string">"word"</span>, <span class="string">"total"</span>);  </div><div class="line">          </div><div class="line">        <span class="comment">//作业2加入控制容器   </span></div><div class="line">        ControlledJob ctrljob3=<span class="keyword">new</span> ControlledJob(conf);   </div><div class="line">        ctrljob3.setJob(job3);   </div><div class="line">          </div><div class="line">        <span class="comment">//设置多个作业直接的依赖关系         </span></div><div class="line">        ctrljob3.addDependingJob(ctrljob2);   </div><div class="line">          </div><div class="line">  </div><div class="line">        <span class="comment">//主的控制容器，控制上面的总的两个子作业   </span></div><div class="line">        JobControl jobCtrl=<span class="keyword">new</span> JobControl(<span class="string">"myctrl"</span>);   </div><div class="line">        </div><div class="line">        <span class="comment">//添加到总的JobControl里，进行控制  </span></div><div class="line">        jobCtrl.addJob(ctrljob0);   </div><div class="line">        jobCtrl.addJob(ctrljob1);   </div><div class="line">        jobCtrl.addJob(ctrljob2);   </div><div class="line">        jobCtrl.addJob(ctrljob3);   </div><div class="line">              </div><div class="line">       <span class="comment">//在线程启动，记住一定要有这个  </span></div><div class="line">        Thread  t=<span class="keyword">new</span> Thread(jobCtrl);   </div><div class="line">        t.start();   </div><div class="line">        </div><div class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;   </div><div class="line">            <span class="keyword">if</span>(jobCtrl.allFinished())&#123;<span class="comment">//如果作业成功完成，就打印成功作业的信息   </span></div><div class="line">               System.out.println(jobCtrl.getSuccessfulJobList());   </div><div class="line">               jobCtrl.stop();   </div><div class="line">               <span class="keyword">break</span>;   </div><div class="line">             &#125;  </div><div class="line">        &#125;  </div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>###新建配置类Constrants.java</p>
 <p>源码</p>

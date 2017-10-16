@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,7 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -101,7 +86,22 @@
         
       
     
-      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -129,101 +129,11 @@
         
       
         
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
           
         
       
     
-      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="active" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -268,7 +178,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -341,47 +326,40 @@
         <h1>Ubuntu 安装Hadoop2.7《一》单机配置</h1>
         <h2>2016-10-24</h2>
         <hr>
-        <div class="content markdown"><p>###一、环境介绍<br>使用Ubuntu16.04， Hadoop2.7版本， JDK使用1.7版本 （这里可以选择自己的Hadoop2.x版本，或者JDK 1.x版本）</p>
+        <div class="content markdown"><h3 id="一、环境介绍"><a href="#一、环境介绍" class="headerlink" title="一、环境介绍"></a>一、环境介绍</h3><p>使用Ubuntu16.04， Hadoop2.7版本， JDK使用1.7版本 （这里可以选择自己的Hadoop2.x版本，或者JDK 1.x版本）</p>
 <p>本教程是在VMware Fusion上安装的Ubuntu16.04桌面版系统，</p>
 <a id="more"></a>
-<p>###二、 创建Hadoop用户</p>
-<p>如果之前安装的Ubuntu系统不是hadoop用户， 需先添加一个hadoop的用户。</p>
-<p>####1. 打开终端，添加账户</p>
-<p>执行的命令：</p>
+<h3 id="二、-创建Hadoop用户"><a href="#二、-创建Hadoop用户" class="headerlink" title="二、 创建Hadoop用户"></a>二、 创建Hadoop用户</h3><p>如果之前安装的Ubuntu系统不是hadoop用户， 需先添加一个hadoop的用户。</p>
+<h4 id="1-打开终端，添加账户"><a href="#1-打开终端，添加账户" class="headerlink" title="1. 打开终端，添加账户"></a>1. 打开终端，添加账户</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m hadoop -s /bin/bash</div></pre></td></tr></table></figure>
 <p>这条命令创建了可以登陆hadoop账户，并且，使用 /bin/bash 作为shell。</p>
-<p>####2. 修改hadoop账户的密码<br>执行的命令：</p>
+<h4 id="2-修改hadoop账户的密码"><a href="#2-修改hadoop账户的密码" class="headerlink" title="2. 修改hadoop账户的密码"></a>2. 修改hadoop账户的密码</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo passwd hadoop</div></pre></td></tr></table></figure>
 <p>按照上面的提示，需要输入2次相同的密码。</p>
-<p>####3. 设置hadoop账户为管理员权限</p>
-<p>执行的命令：</p>
+<h4 id="3-设置hadoop账户为管理员权限"><a href="#3-设置hadoop账户为管理员权限" class="headerlink" title="3. 设置hadoop账户为管理员权限"></a>3. 设置hadoop账户为管理员权限</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo adduser hadoop sudo</div></pre></td></tr></table></figure>
-<p>####4. 切换为hadoop账户<br>执行的命令：</p>
+<h4 id="4-切换为hadoop账户"><a href="#4-切换为hadoop账户" class="headerlink" title="4. 切换为hadoop账户"></a>4. 切换为hadoop账户</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su hadoop</div></pre></td></tr></table></figure>
 <p>之后，输入hadoop的密码， 如果退出当前账号，输入 exit，  当然也可以选择注销当前账户，再重新选择hadoop登录</p>
-<p>###三、 安装一些周边必备软件</p>
-<p>推荐安装Vim、Ruby、SSH等</p>
-<p>####1.安装Vim<br>执行的命令：</p>
+<h3 id="三、-安装一些周边必备软件"><a href="#三、-安装一些周边必备软件" class="headerlink" title="三、 安装一些周边必备软件"></a>三、 安装一些周边必备软件</h3><p>推荐安装Vim、Ruby、SSH等</p>
+<h4 id="1-安装Vim"><a href="#1-安装Vim" class="headerlink" title="1.安装Vim"></a>1.安装Vim</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install vim</div></pre></td></tr></table></figure>
-<p>####2.安装SSH<br>执行的命令：</p>
+<h4 id="2-安装SSH"><a href="#2-安装SSH" class="headerlink" title="2.安装SSH"></a>2.安装SSH</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install openssh-server</div></pre></td></tr></table></figure>
 <p>安装完成后，使用以下命令登录本机<br>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh localhost</div></pre></td></tr></table></figure>
 <p>之后， 弹出的提示信息输入yes，  之后就可以看到我们使用了ssh登录了当前系统，<br>如果退出， 执行exit命令</p>
 <p>当然，这样的登录需要每次都输入密码， 接下来我们配置SSH无密码登录方式</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh localhost</div></pre></td></tr></table></figure>
-<p>####3.设置SSH免密码登录</p>
-<p>执行命令前请先退出刚刚ssh localhost登录的方式，</p>
+<h4 id="3-设置SSH免密码登录"><a href="#3-设置SSH免密码登录" class="headerlink" title="3.设置SSH免密码登录"></a>3.设置SSH免密码登录</h4><p>执行命令前请先退出刚刚ssh localhost登录的方式，</p>
 <p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~<span class="regexp">/.ssh/</span></div><div class="line">ssh-keygen -t rsa         使用RSA方式加密， 生成ssh的秘钥</div><div class="line">cat ./id_rsa.pub <span class="meta">&gt;&gt; </span>./authorized_keys   将公钥copy到authorized_keys文件中，相当于一种自身的授权</div></pre></td></tr></table></figure>
 <p>之前再次输入<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh localhost</div></pre></td></tr></table></figure></p>
 <p>就可以直接登录了</p>
-<p>###四、 安装Oracle的JDK</p>
-<p>安装JDK可以有2种方式安装、 一个是通过ppa（源）方式安装， 另一种是通过下载安装包配置环境安装；</p>
+<h3 id="四、-安装Oracle的JDK"><a href="#四、-安装Oracle的JDK" class="headerlink" title="四、 安装Oracle的JDK"></a>四、 安装Oracle的JDK</h3><p>安装JDK可以有2种方式安装、 一个是通过ppa（源）方式安装， 另一种是通过下载安装包配置环境安装；</p>
 <p>这里为了方便起见，就采用ppa的方式安装，</p>
-<p>####1.添加ppa源</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository <span class="symbol">ppa:</span>webupd8team/java</div><div class="line"></div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure>
-<p>####2.安装oracle-java-installer<br>这里安装的是JDK1.7<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install oracle-java7-installer</div></pre></td></tr></table></figure></p>
+<h4 id="1-添加ppa源"><a href="#1-添加ppa源" class="headerlink" title="1.添加ppa源"></a>1.添加ppa源</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository <span class="symbol">ppa:</span>webupd8team/java</div><div class="line"></div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure>
+<h4 id="2-安装oracle-java-installer"><a href="#2-安装oracle-java-installer" class="headerlink" title="2.安装oracle-java-installer"></a>2.安装oracle-java-installer</h4><p>这里安装的是JDK1.7<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install oracle-java7-installer</div></pre></td></tr></table></figure></p>
 <p>如果有想安装JDK1.8，也可以使用命令<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install oracle-java8-installer</div></pre></td></tr></table></figure></p>
 <p>安装完成之后， 测试JDK<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure></p>
 <p>如果是下载JDK的方式，配置环境变量的方式：</p>
@@ -389,14 +367,11 @@
 <p>一般配置一个全局配置文件  /etc/bash.bashrc</p>
 <p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f93jjfdgpuj20dc02ejs4.jpg" alt=""></p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/bash.bashrc</div></pre></td></tr></table></figure>
-<p>###五、 安装Hadoop2.7</p>
-<p>Hadoop2 下载地址：<a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/hadoop/common/</a></p>
+<h3 id="五、-安装Hadoop2-7"><a href="#五、-安装Hadoop2-7" class="headerlink" title="五、 安装Hadoop2.7"></a>五、 安装Hadoop2.7</h3><p>Hadoop2 下载地址：<a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/hadoop/common/</a></p>
 <p>选择hadoop-2.7.0.tar.gz</p>
 <p>下载好之后</p>
-<p>####1.解压缩到/usr/local目录下</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo tar -zxf ~<span class="regexp">/Donwload/hadoop</span>-<span class="number">2.7</span>.<span class="number">0</span>.tar.gz -C /usr/local    解压到/usr/local中</div><div class="line">cd /usr/local/</div><div class="line">sudo mv ./hadoop-<span class="number">2.7</span>.<span class="number">0</span>/ ./hadoop            将文件夹名改为hadoop</div><div class="line">sudo chown -R hadoop ./hadoop       修改文件权限</div></pre></td></tr></table></figure>
-<p>####2.Hadoop的单机配置</p>
-<p>Hadoop默认模式为非分布式模式，不需要进行其他的配置就可以直接运行，（非分布式也就是Java的单进程，方便开发时调试）</p>
+<h4 id="1-解压缩到-usr-local目录下"><a href="#1-解压缩到-usr-local目录下" class="headerlink" title="1.解压缩到/usr/local目录下"></a>1.解压缩到/usr/local目录下</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo tar -zxf ~<span class="regexp">/Donwload/hadoop</span>-<span class="number">2.7</span>.<span class="number">0</span>.tar.gz -C /usr/local    解压到/usr/local中</div><div class="line">cd /usr/local/</div><div class="line">sudo mv ./hadoop-<span class="number">2.7</span>.<span class="number">0</span>/ ./hadoop            将文件夹名改为hadoop</div><div class="line">sudo chown -R hadoop ./hadoop       修改文件权限</div></pre></td></tr></table></figure>
+<h4 id="2-Hadoop的单机配置"><a href="#2-Hadoop的单机配置" class="headerlink" title="2.Hadoop的单机配置"></a>2.Hadoop的单机配置</h4><p>Hadoop默认模式为非分布式模式，不需要进行其他的配置就可以直接运行，（非分布式也就是Java的单进程，方便开发时调试）</p>
 <p>测试hadoop是否可用</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/hadoop</div><div class="line">mkdir ./input</div><div class="line">cp ./etc/hadoop/*.xml ./input   将配置文件作为输入文件</div><div class="line">./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep ./input ./output <span class="string">'dfs[a-z.]+'</span></div><div class="line">cat ./output/*  查看运行结果</div></pre></td></tr></table></figure>
 <p>执行成功后如下所示，输出了作业的相关信息，输出的结果是符合正则的单词 dfsadmin 出现了1次</p>

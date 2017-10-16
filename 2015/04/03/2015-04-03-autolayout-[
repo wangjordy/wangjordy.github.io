@@ -50,6 +50,21 @@
       
       
         
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
           
         
       
@@ -71,7 +86,7 @@
         
       
     
-      <a class="" href="/categories/swift/">swift</a>
+      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -103,21 +118,6 @@
         
       
     
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/Python/">Python</a>
       
     
@@ -133,97 +133,7 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -266,11 +176,54 @@
         
       
         
-          
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
         
       
     
-      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -300,7 +253,39 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -355,8 +340,7 @@
 <p>在右下角的位置，<br>第一个icon按钮，打开后的功能描述<br><img src="http://ww1.sinaimg.cn/large/62ca154djw1eqslpysiljj20p00d2ae7.jpg" alt="AutoResizing"></p>
 <p>第二个icon按钮，打开后的功能描述<br><img src="http://ww1.sinaimg.cn/large/62ca154djw1eqslsg9q8hj20p00eagol.jpg" alt="AutoResizing"></p>
 <p>第三个icon按钮是用于刷新我们的视图，第4个icon我们暂时用不到，所以这里就不在切图描述了</p>
-<p>##AutoLayout的基本使用</p>
-<p>1、拖拽一个UIView到ViewController的视图中， 如下样式： （要求，这个view居顶部10px，居左20px，宽度200px，高度100px）</p>
+<h2 id="AutoLayout的基本使用"><a href="#AutoLayout的基本使用" class="headerlink" title="AutoLayout的基本使用"></a>AutoLayout的基本使用</h2><p>1、拖拽一个UIView到ViewController的视图中， 如下样式： （要求，这个view居顶部10px，居左20px，宽度200px，高度100px）</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154djw1er0b25kgmzj20gm0hmt8s.jpg" alt="AutoResizing"><br>添加约束的方式：<br><img src="http://ww4.sinaimg.cn/large/62ca154djw1er0b3bfy9gj207e0a6wfe.jpg" alt="AutoResizing"></p>
 <p>上边方格内，红色“I”选中表示添加了这个约束，中间的width和height前面的方格打钩表示添加了宽度和高度的约束；<br>最后点击底部的“Add 4 Constraints”按钮， 点击之后的效果，如下图：</p>
 <p>备注： Update Frames 选择“Items of New Constraints” 表示新添加的约束，会自动刷新当前屏幕上view显示的样式和位置；</p>
@@ -382,8 +366,7 @@
 <p><img src="http://ww4.sinaimg.cn/large/62ca154djw1er0fwu388bj208c0810tf.jpg" alt="AutoResizing"></p>
 <p>如果我们的视图是居中偏左，或者偏右（或者偏上、偏下），都可以修改绿色框内，添加偏移量即可！</p>
 <p>以上是关于UIView添加约束的实现， 同理，自己可以拖拽一个UILabel、UIButton添加约束试试<br>（这里需要说明的一点，由于UILabel、UIButton可以根据title来自适应宽度、高度，也就是内置的contentsize）所以只需要添加UILabel、UIButton的x，y坐标即可！</p>
-<p>##Size Classes的简介</p>
-<p>早期我们创建一个项目选择Devices为Universal时， 默认项目中会有一个“_iphone.xib”, “_ipad.xib”（后期加入storyboard后，是建2个storyboard）</p>
+<h2 id="Size-Classes的简介"><a href="#Size-Classes的简介" class="headerlink" title="Size Classes的简介"></a>Size Classes的简介</h2><p>早期我们创建一个项目选择Devices为Universal时， 默认项目中会有一个“_iphone.xib”, “_ipad.xib”（后期加入storyboard后，是建2个storyboard）</p>
 <p>随着iphone6，iphone6 plus 以及Apple watch的出现， 苹果也是为了将这些视图统一起来，于是ios8中加入Size Classes的概念，</p>
 <p>Size Classes就是对设备尺寸的一个抽象概念， 现在的通常的设备都可以简单看成为： 普通（Regular）、 紧密（Compact）和任意（Any），<br>于是这样就会出现 3*3的一个矩阵形式（一共是9种模式），如下图：</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154djw1er0gsjucltj20ld0acq3r.jpg" alt="AutoResizing"></p>

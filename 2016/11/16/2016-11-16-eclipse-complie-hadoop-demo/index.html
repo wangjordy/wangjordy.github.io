@@ -52,19 +52,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -78,7 +65,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -93,7 +80,20 @@
         
       
     
-      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -119,85 +119,7 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -223,7 +145,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -236,7 +158,46 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -262,7 +223,33 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -307,27 +294,23 @@
         <hr>
         <div class="content markdown"><p>在前几节中，我们主要介绍了在ubuntu环境上安装部署hadoop的环境， 本节将通过一个实例来介绍在eclipse下编写程序，并在hadoop下执行。</p>
 <a id="more"></a>
-<p>###一、 ubuntu安装eclipse</p>
-<p>方法一： 从ubuntu的软件中心</p>
+<h3 id="一、-ubuntu安装eclipse"><a href="#一、-ubuntu安装eclipse" class="headerlink" title="一、 ubuntu安装eclipse"></a>一、 ubuntu安装eclipse</h3><p>方法一： 从ubuntu的软件中心</p>
 <p>方法二： 对于网络不太好的用户，可以直接在eclipse官网上下载<br>下载eclipse的地址 : <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz" target="_blank" rel="external">http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz</a>  </p>
 <p>下载好直接接下到 /opt目录下</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo tar zxvf eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz -C /opt</div></pre></td></tr></table></figure>
-<p>###二、 eclipse安装Hadoop-Eclipse-Plugin</p>
-<p>在配置之前请先参考之前的关于介绍伪分布式的教程安装Hadoop， 并启动hadoop服务。</p>
+<h3 id="二、-eclipse安装Hadoop-Eclipse-Plugin"><a href="#二、-eclipse安装Hadoop-Eclipse-Plugin" class="headerlink" title="二、 eclipse安装Hadoop-Eclipse-Plugin"></a>二、 eclipse安装Hadoop-Eclipse-Plugin</h3><p>在配置之前请先参考之前的关于介绍伪分布式的教程安装Hadoop， 并启动hadoop服务。</p>
 <p>在Eclipse上编译运行MapReduce程序需要安装Hadoop-Eclipse-Plugin，可以在Github上<a href="https://github.com/winghc/hadoop2x-eclipse-plugin" target="_blank" rel="external">https://github.com/winghc/hadoop2x-eclipse-plugin</a> 下载， 下载后将hadoop-eclipse-kepler-plugin-2.6.0.jar包赋值到Eclipse的安装目录plugins文件夹下，</p>
 <p>如果是通过软件中心安装的eclipse应该是在/usr/lib/eclipse目录下</p>
 <p>复制好jar包之后，重启eclipse即可，打开后，会看到</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f9u19kosp7j20dm03dq36.jpg" alt=""></p>
 <p>在这个步骤请一定要先确保之前的hadoop服务已经开启，并且配置好了伪分布式的相关配置；</p>
-<p>####1.  在eclipse的菜单栏选择Window-&gt;Preference</p>
-<p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f9u1j4zcu8j20ih0i176q.jpg" alt=""></p>
+<h4 id="1-在eclipse的菜单栏选择Window-gt-Preference"><a href="#1-在eclipse的菜单栏选择Window-gt-Preference" class="headerlink" title="1.  在eclipse的菜单栏选择Window-&gt;Preference"></a>1.  在eclipse的菜单栏选择Window-&gt;Preference</h4><p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f9u1j4zcu8j20ih0i176q.jpg" alt=""></p>
 <p>注意上图步骤2中，要填写你自己的hadoop路径；</p>
-<p>####2.  切换至Map/Reduce的开发模式视图<br>选择Window-&gt;Open Perspective -&gt; Other 在弹出框中选择Map/Reduce选项；</p>
-<p>####3.  建立Hadoop的连接<br>点击Eclipse右下角的Map/Reduce Locations控制面板， 在面板上点击右键选择New Hadoop Location<br>在弹出来的General选项面板中， General的设置要与Hadoop中的配置一致，  这里使用的伪分布式，填写localhost即可，<br>设置 fs.defaultFS 为 hdfs://localhost:9000， 最终配置如下图：</p>
+<h4 id="2-切换至Map-Reduce的开发模式视图"><a href="#2-切换至Map-Reduce的开发模式视图" class="headerlink" title="2.  切换至Map/Reduce的开发模式视图"></a>2.  切换至Map/Reduce的开发模式视图</h4><p>选择Window-&gt;Open Perspective -&gt; Other 在弹出框中选择Map/Reduce选项；</p>
+<h4 id="3-建立Hadoop的连接"><a href="#3-建立Hadoop的连接" class="headerlink" title="3.  建立Hadoop的连接"></a>3.  建立Hadoop的连接</h4><p>点击Eclipse右下角的Map/Reduce Locations控制面板， 在面板上点击右键选择New Hadoop Location<br>在弹出来的General选项面板中， General的设置要与Hadoop中的配置一致，  这里使用的伪分布式，填写localhost即可，<br>设置 fs.defaultFS 为 hdfs://localhost:9000， 最终配置如下图：</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f9u1qbk2k3j20jh0d9jtm.jpg" alt=""></p>
 <p>Advanced parameters 选项面板是对Hadoop参数进行配置，目前还用不到，直接点击Finish即可；</p>
-<p>###三、 在Eclipse中创建MapReduce的工程</p>
-<p>点击File-&gt;New-&gt; Project 选择Map/Reduce Project, 然后点击Next</p>
+<h3 id="三、-在Eclipse中创建MapReduce的工程"><a href="#三、-在Eclipse中创建MapReduce的工程" class="headerlink" title="三、 在Eclipse中创建MapReduce的工程"></a>三、 在Eclipse中创建MapReduce的工程</h3><p>点击File-&gt;New-&gt; Project 选择Map/Reduce Project, 然后点击Next</p>
 <p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f9u1w4wqe2j20nh0hgmzk.jpg" alt=""></p>
 <p>这里创建一个WordCount的项目名，点击Finish就创建完工程了；</p>
 <p>在项目的src目录下创建一个类， Package为：  org.apache.hadoop.examples；在Name处填写 WordCount。</p>

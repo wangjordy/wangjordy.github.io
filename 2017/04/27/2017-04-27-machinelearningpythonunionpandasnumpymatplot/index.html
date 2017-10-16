@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,22 +69,37 @@
         
       
     
+      <a class="" href="/categories/ios/">ios</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
       
     
       
@@ -131,67 +131,37 @@
         
       
     
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -221,6 +191,36 @@
         
       
     
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/HBase/">HBase</a>
       
     
@@ -236,7 +236,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
       
     
       
@@ -268,37 +268,22 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -343,8 +328,7 @@
         <hr>
         <div class="content markdown"><p>前面我们花了3节的时间介绍了关于机器学习常用的<font color="#008B8B">numpy、pandas、matplotlib</font>库。 今天我们综合介绍一下它们的联合使用。</p>
 <a id="more"></a>
-<p>##关于信用卡欺诈的案例分析</p>
-<p>我们今天读取一个信用卡的统计信息， 来分析样本的信息。</p>
+<h2 id="关于信用卡欺诈的案例分析"><a href="#关于信用卡欺诈的案例分析" class="headerlink" title="关于信用卡欺诈的案例分析"></a>关于信用卡欺诈的案例分析</h2><p>我们今天读取一个信用卡的统计信息， 来分析样本的信息。</p>
 <p>下面的代码中， ‘Class’列的数据信息， 0表示正常，1表示异常， 那么会表现出来这个样本数据是极度的不均衡的数据（均衡的数据，比方一些网站信息统计男女比率等）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">unrate = pandas.read_csv(<span class="string">"xxx.csv"</span>)  //读取某一个csv文件</div><div class="line"></div><div class="line">unrate[<span class="string">'DATE'</span>] = pd.to_datetime(unrate[<span class="string">'DATE'</span>])</div><div class="line"><span class="keyword">print</span> (unrate.head(<span class="number">12</span>))       //打印出来是DataFrame（数据流）</div><div class="line"></div><div class="line">data = pd.read.csv(<span class="string">"creaditcard.csv"</span>)  <span class="comment">#读取信用卡的记录</span></div><div class="line">data.head()</div><div class="line"></div><div class="line"><span class="comment">#对Class列的数据进行排序， 那组数据多就排到最前面</span></div><div class="line">count_classes = pd.value_counts(data[<span class="string">'Class'</span>], sort=<span class="keyword">True</span>).sort_index()</div><div class="line"><span class="comment">#直接用pandas来画图  bar：柱状图</span></div><div class="line">count_classes.plot(kind=<span class="string">'bar'</span>)   </div><div class="line">plt.title(<span class="string">"Fraud class histogram"</span>) <span class="comment">#设置一个标题</span></div><div class="line">plt.xlabel(<span class="string">"Class"</span>)    <span class="comment">#设置横纵坐标</span></div><div class="line">plt.ylable(<span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure>
 <p>通过上图我们可以得到一个柱状图，显示出现正常数据和异常数据之前的分布关系。<br>由于这种极度不均衡的数据，假如一共1000条的数据， 其中0表示的数据有990条， 1表示的数据有10条， 那么在设置训练集中，很容易建立出来一个模型， 要么这个‘class’都是0， 要么这个‘class’的精度是99%， 但在实际中缺没有任何实际的意义。</p>
@@ -354,9 +338,7 @@
 <li><font color="#0000FF">过采样方案</font>（让两端的数据一样的多， 设置将1的条数，变换出来990条， 让1的数据与0的数据一样的多， 再训练模型）</li>
 </ul>
 <p>当然还有其他的方案，比方按照比率关系来采样。</p>
-<p>###预处理的操作</p>
-<p>####1、标准化操作（归一化操作）</p>
-<p>一些特征数据的值差异比较大，  比如：Amount字段， 有的数据是140.3， 有的数据只有2.34， 那么我们通过以下代码操作：</p>
+<h3 id="预处理的操作"><a href="#预处理的操作" class="headerlink" title="预处理的操作"></a>预处理的操作</h3><h4 id="1、标准化操作（归一化操作）"><a href="#1、标准化操作（归一化操作）" class="headerlink" title="1、标准化操作（归一化操作）"></a>1、标准化操作（归一化操作）</h4><p>一些特征数据的值差异比较大，  比如：Amount字段， 有的数据是140.3， 有的数据只有2.34， 那么我们通过以下代码操作：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.pregrocessing <span class="keyword">import</span> StandardSCaler</div><div class="line"></div><div class="line"><span class="comment">#这里我们将原始数据Amount列中的数据，通过StandardSCaler类将Amount里面所有数据转化到-1到1期间的一个值</span></div><div class="line"><span class="comment">#并将转化后的值重新赋值给normAmount列</span></div><div class="line">data[<span class="string">'normAmount'</span>] = StandardScaler().fit_transform(data[<span class="string">'Amount'</span>].reshape(<span class="number">-1</span>,<span class="number">1</span>))</div><div class="line"><span class="comment">#我们将原始不再使用的列去掉</span></div><div class="line">data = data.drop([<span class="string">'Time'</span>, <span class="string">'Amount'</span>], axis=<span class="number">1</span>)</div><div class="line">data.head() <span class="comment">#最后查看一下数据转化后的信息</span></div></pre></td></tr></table></figure>
 <p>将里面一个列的数据，转到到一个区间上。 并删除之前不用关注或者不再使用的列。</p>
 <font color="#FF7F50">重点： 标准化的操作很重要，可以消除数据本身单位造成的影响。</font>   
@@ -367,16 +349,14 @@
 
 <p>(假如不考了w1，w2权重的情况)，  x1代表A列数据特征， x2代表B列数据特征；</p>
 <p>那么由于A,B列的数据值本身的取值范围就不同，  假如在w1=w2的情况， x2如果不做标准化的处理，那么计算出来的结果，会使得这个y更收x2的影响，  所以我们为了保证两者的取值范围相同，就需要先使用这种标准化的预处理的操作。</p>
-<p>####2、下采样方案</p>
-<p>首先将所有class=0的数据，和class=1的数据分开。</p>
+<h4 id="2、下采样方案"><a href="#2、下采样方案" class="headerlink" title="2、下采样方案"></a>2、下采样方案</h4><p>首先将所有class=0的数据，和class=1的数据分开。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#x,y 代表特征和label分开</span></div><div class="line">x = data.ix[:, data.columns != <span class="string">'Class'</span>]</div><div class="line">y = data.ix[:, data.columns == <span class="string">'Class'</span>]</div><div class="line"></div><div class="line"><span class="comment">#统计class==1的个数</span></div><div class="line">number_records_fraud = len(data[]data.Class==<span class="number">1</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#再把所有class等于1的index值都找出来</span></div><div class="line">fraud_indices = np.array(data[data.Class ==<span class="number">1</span>].index)</div><div class="line"><span class="comment">#接着把所有class等于0的index值也找出来</span></div><div class="line">normal_indices = np.array(data[data.Class ==<span class="number">0</span>].index)</div></pre></td></tr></table></figure>
 <p>接着，我们在所有class=0的数据，随机找出来n条数据， （n的值与class=1的所有数据的个数相等）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#在class=0的所有数据集中，随机选出来与class=1的个数相同的 数据来， </span></div><div class="line">random_normal_indices = np.random.choice(normal_indices, number_records_fraud, replace=<span class="keyword">False</span>)</div><div class="line">random_normal_indices = np.array(random_normal_indices) <span class="comment">#最后将选出来的数据 组合为一个numpy的array格式的数据</span></div></pre></td></tr></table></figure>
 <p>最后，我们将class=1和class=0的数据，组合在一起（形成一个新的训练集）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#组合成一个新的训练集</span></div><div class="line">under_sample_indices = np.concatenate([fraud_indices, random_normal_indices])</div><div class="line"></div><div class="line"><span class="comment">#获取到这批新的数据集合</span></div><div class="line">under_sample_data = data.iloc[under_sample_indices,:]</div><div class="line"></div><div class="line"><span class="comment">#这里X和Y的值  都是under_sample的结构（通过下采样的方式得到了）</span></div><div class="line">X_undersample = under_sample_data.ix[:, under_sample_data.columns != <span class="string">'Class'</span>]</div><div class="line">Y_undersample = under_sample_data.ix[:, under_sample_data.columns == <span class="string">'Class'</span>]</div></pre></td></tr></table></figure>
 <p>最后获取了下采样后的class=0和class=1的数据集了</p>
-<p>####3、对采样的数据进行分割</p>
-<p>这里我们使用的一个新的库 sklearn,  比如我们的数据一共有100个， 我们可以通过sklearn，将其中3/4的数据当做训练集， 将1/4的数据当做测试集， 当然这个分割为几份是我们自定义的。</p>
+<h4 id="3、对采样的数据进行分割"><a href="#3、对采样的数据进行分割" class="headerlink" title="3、对采样的数据进行分割"></a>3、对采样的数据进行分割</h4><p>这里我们使用的一个新的库 sklearn,  比如我们的数据一共有100个， 我们可以通过sklearn，将其中3/4的数据当做训练集， 将1/4的数据当做测试集， 当然这个分割为几份是我们自定义的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_testsplit</div><div class="line"></div><div class="line"><span class="comment">#这个是对所有的数据进行一个拆分</span></div><div class="line"><span class="comment">#这个方法就是需要对我们的X,Y进行划分，  并且设置test_size=0.3 设置了测试集占30%， random_state 0表示指定了随机的种子来验证</span></div><div class="line">X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=<span class="number">0.3</span>, random_state=<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="keyword">print</span> (<span class="string">"X的训练集是多少："</span>, len(X_train))</div><div class="line"><span class="keyword">print</span> (<span class="string">"X的测试集是多少："</span>, len(X_test))</div><div class="line"></div><div class="line"><span class="comment">#这里对处理了下采样的数据，进行一个数据拆分</span></div><div class="line">X_train_undersample, X_test_undersample, Y_train_undersample, Y_test_undersample = train_test_split(X_undersample,Y_undersample, test_size=<span class="number">0.3</span>, random_state=<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="keyword">print</span> (<span class="string">"下采样后的X的训练集是多少："</span>, len(X_train_undersample))</div><div class="line"><span class="keyword">print</span> (<span class="string">"下采样后的X的测试集是多少："</span>, len(X_test_undersample))</div></pre></td></tr></table></figure>
 <div>
         <div id="disqus_thread"></div>

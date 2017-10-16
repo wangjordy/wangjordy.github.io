@@ -52,6 +52,19 @@
         
       
     
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
       <a class="" href="/categories/ios/">ios</a>
       
     
@@ -65,7 +78,7 @@
         
       
     
-      <a class="" href="/categories/swift/">swift</a>
+      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -91,19 +104,6 @@
         
       
     
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/Python/">Python</a>
       
     
@@ -117,7 +117,46 @@
         
       
     
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
       <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
       
     
       
@@ -145,46 +184,7 @@
         
       
     
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
       
     
       
@@ -210,7 +210,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
       
     
       
@@ -236,33 +236,20 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -306,8 +293,7 @@
         <h2>2017-7-25</h2>
         <hr>
         <div class="content markdown"><p>本期给大家介绍一下在Ubuntu系统下安装Hive</p>
-<p>##Hive的安装环境</p>
-<ul>
+<h2 id="Hive的安装环境"><a href="#Hive的安装环境" class="headerlink" title="Hive的安装环境"></a>Hive的安装环境</h2><ul>
 <li>Ubuntu16.04</li>
 <li>Hadoop2.7</li>
 <li>JDK 1.7</li>
@@ -317,15 +303,10 @@
 <a id="more"></a>
 <font color="#FF7F50">注：在安装Hive之前，请先将上述的软件安装完成</font>
 
-<p>###一、Mysql中创建hive账号</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">mysql -u root -p</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash">grant all privileges on *.* to hive@<span class="string">"%"</span> identified by <span class="string">"hive"</span> with grant option;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash">flush privileges;</span></div></pre></td></tr></table></figure>
-<p>###二、安装Hive的详细步骤</p>
-<p>####1、安装Hive到 /usr/local/hive环境下</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo tar xvfz apache-hive-2.3.0-bin.tar.gz </div><div class="line">sudo cp -R apache-hive-2.3.0-bin /usr/local/hive</div><div class="line">sudo chmod -R 775 /usr/local/hive/</div><div class="line">sudo chown -R hadoop:hadoop /usr/local/hive</div></pre></td></tr></table></figure>
-<p>####2、修改/etc/profile加入HIVE_HOME的变量</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> HIVE_HOME=/usr/<span class="built_in">local</span>/hive</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HIVE_HOME</span>/bin</div><div class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib:/usr/<span class="built_in">local</span>/hive/lib</div><div class="line"><span class="variable">$source</span> /etc/profile</div></pre></td></tr></table></figure>
-<p>####3、修改hive/conf的文件配置</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp hive-env.sh.template hive-env.sh</div><div class="line">cp hive-default.xml.template hive-site.xml</div></pre></td></tr></table></figure>
+<h3 id="一、Mysql中创建hive账号"><a href="#一、Mysql中创建hive账号" class="headerlink" title="一、Mysql中创建hive账号"></a>一、Mysql中创建hive账号</h3> <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">mysql -u root -p</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash">grant all privileges on *.* to hive@<span class="string">"%"</span> identified by <span class="string">"hive"</span> with grant option;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash">flush privileges;</span></div></pre></td></tr></table></figure>
+<h3 id="二、安装Hive的详细步骤"><a href="#二、安装Hive的详细步骤" class="headerlink" title="二、安装Hive的详细步骤"></a>二、安装Hive的详细步骤</h3><h4 id="1、安装Hive到-usr-local-hive环境下"><a href="#1、安装Hive到-usr-local-hive环境下" class="headerlink" title="1、安装Hive到 /usr/local/hive环境下"></a>1、安装Hive到 /usr/local/hive环境下</h4> <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo tar xvfz apache-hive-2.3.0-bin.tar.gz </div><div class="line">sudo cp -R apache-hive-2.3.0-bin /usr/local/hive</div><div class="line">sudo chmod -R 775 /usr/local/hive/</div><div class="line">sudo chown -R hadoop:hadoop /usr/local/hive</div></pre></td></tr></table></figure>
+<h4 id="2、修改-etc-profile加入HIVE-HOME的变量"><a href="#2、修改-etc-profile加入HIVE-HOME的变量" class="headerlink" title="2、修改/etc/profile加入HIVE_HOME的变量"></a>2、修改/etc/profile加入HIVE_HOME的变量</h4> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> HIVE_HOME=/usr/<span class="built_in">local</span>/hive</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HIVE_HOME</span>/bin</div><div class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib:/usr/<span class="built_in">local</span>/hive/lib</div><div class="line"><span class="variable">$source</span> /etc/profile</div></pre></td></tr></table></figure>
+<h4 id="3、修改hive-conf的文件配置"><a href="#3、修改hive-conf的文件配置" class="headerlink" title="3、修改hive/conf的文件配置"></a>3、修改hive/conf的文件配置</h4> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp hive-env.sh.template hive-env.sh</div><div class="line">cp hive-default.xml.template hive-site.xml</div></pre></td></tr></table></figure>
 <p>修改hive-env.sh文件， 加入代码：</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HADOOP_HOME=/usr/<span class="built_in">local</span>/hadoop</div></pre></td></tr></table></figure>
 <font color="#FF7F50">注： 要配置你自己的hadoop的路径</font>
@@ -336,49 +317,30 @@
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;property&gt; </div><div class="line"> &lt;name&gt;hive.exec.local.scratchdir&lt;/name&gt;</div><div class="line"> &lt;value&gt;/home/hadoop/iotmp&lt;/value&gt;</div><div class="line"> &lt;description&gt;Local scratch space <span class="keyword">for</span> Hive <span class="built_in">jobs</span>&lt;/description&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line"> &lt;name&gt;hive.downloaded.resources.dir&lt;/name&gt;</div><div class="line"> &lt;value&gt;/home/hadoop/iotmp&lt;/value&gt;</div><div class="line"> &lt;description&gt;Temporary <span class="built_in">local</span> directory <span class="keyword">for</span> added resources <span class="keyword">in</span> the remote file system.&lt;/description&gt;</div><div class="line"> &lt;/property&gt;</div></pre></td></tr></table></figure>
 <p> 设置为配置之后， 需要创建这个缓存目录，并修改其文件权限</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /home/hadoop/iotmp </div><div class="line">chmod -R 775 /home/hadoop/iotmp</div></pre></td></tr></table></figure>
-<p>###三、修改hive/bin下的hive-config.sh文件</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm</div><div class="line"><span class="built_in">export</span> HADOOP_HOME=/usr/<span class="built_in">local</span>/hadoop</div><div class="line"><span class="built_in">export</span> HIVE_HOME=/usr/<span class="built_in">local</span>/hive</div></pre></td></tr></table></figure>
+<h3 id="三、修改hive-bin下的hive-config-sh文件"><a href="#三、修改hive-bin下的hive-config-sh文件" class="headerlink" title="三、修改hive/bin下的hive-config.sh文件"></a>三、修改hive/bin下的hive-config.sh文件</h3> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm</div><div class="line"><span class="built_in">export</span> HADOOP_HOME=/usr/<span class="built_in">local</span>/hadoop</div><div class="line"><span class="built_in">export</span> HIVE_HOME=/usr/<span class="built_in">local</span>/hive</div></pre></td></tr></table></figure>
 <font color="#FF7F50">注： 要配置你自己的java和hadoop的路径</font>
 
-<p>###四、下载mysql-connector-java-5.1.42-bin.jar包放到Hive的lib目录下</p>
-<p>###五、在HDFS创建/tmp和/user/hive/warehouse并设置其权限</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hadoop fs -mkdir /tmp</div><div class="line">hadoop fs -mkdir -p /user/hive/warehouse</div><div class="line">hadoop fs -chmod g+w /tmp</div><div class="line">hadoop fs -chmod g+w /user/hive/warehouse</div></pre></td></tr></table></figure>
-<p>###六、初始化Meta数据库</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/hive/lib</div><div class="line">schematool -initSchema -dbType mysql</div></pre></td></tr></table></figure>
+<h3 id="四、下载mysql-connector-java-5-1-42-bin-jar包放到Hive的lib目录下"><a href="#四、下载mysql-connector-java-5-1-42-bin-jar包放到Hive的lib目录下" class="headerlink" title="四、下载mysql-connector-java-5.1.42-bin.jar包放到Hive的lib目录下"></a>四、下载mysql-connector-java-5.1.42-bin.jar包放到Hive的lib目录下</h3><h3 id="五、在HDFS创建-tmp和-user-hive-warehouse并设置其权限"><a href="#五、在HDFS创建-tmp和-user-hive-warehouse并设置其权限" class="headerlink" title="五、在HDFS创建/tmp和/user/hive/warehouse并设置其权限"></a>五、在HDFS创建/tmp和/user/hive/warehouse并设置其权限</h3> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hadoop fs -mkdir /tmp</div><div class="line">hadoop fs -mkdir -p /user/hive/warehouse</div><div class="line">hadoop fs -chmod g+w /tmp</div><div class="line">hadoop fs -chmod g+w /user/hive/warehouse</div></pre></td></tr></table></figure>
+<h3 id="六、初始化Meta数据库"><a href="#六、初始化Meta数据库" class="headerlink" title="六、初始化Meta数据库"></a>六、初始化Meta数据库</h3> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/hive/lib</div><div class="line">schematool -initSchema -dbType mysql</div></pre></td></tr></table></figure>
 <p> 运行后显示<br> <img src="http://ww1.sinaimg.cn/large/62ca154dly1fhvyjrvsz8j20ti0ad77x.jpg" alt=""></p>
 <p> 最后显示<code>schemaTool completed</code>提示语表示安装成功。</p>
-<p>####1、测试hive shell</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hive</div><div class="line">show databases；</div><div class="line">show tables;</div></pre></td></tr></table></figure>
-<p>####2、例：创建table的方式</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE invites (foo INT, bar STRING) PARTITIONED BY (ds STRING);</div></pre></td></tr></table></figure>
+<h4 id="1、测试hive-shell"><a href="#1、测试hive-shell" class="headerlink" title="1、测试hive shell"></a>1、测试hive shell</h4> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hive</div><div class="line">show databases；</div><div class="line">show tables;</div></pre></td></tr></table></figure>
+<h4 id="2、例：创建table的方式"><a href="#2、例：创建table的方式" class="headerlink" title="2、例：创建table的方式"></a>2、例：创建table的方式</h4>  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE invites (foo INT, bar STRING) PARTITIONED BY (ds STRING);</div></pre></td></tr></table></figure>
 <p>如图：</p>
 <p>  <img src="http://ww1.sinaimg.cn/large/62ca154dly1fhvyomdqzvj20jf08eaay.jpg" alt=""></p>
-<p>####3、创建一个 t_hive 的table，并插入数据</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE t_hive (a int, b int, c int) ROW FORMAT DELIMITED FIELDS TERMINATED BY <span class="string">'\t'</span>;</div><div class="line"></div><div class="line">insert into t_hive values (3,4,5);</div></pre></td></tr></table></figure>
-<p>####4、查看表数据</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from t_hive;</div></pre></td></tr></table></figure>
-<p>####5、查看表数据</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">desc t_hive;</div></pre></td></tr></table></figure>
-<p>####6、增加一个column</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive ADD COLUMNS (new_col String);</div><div class="line">desc t_hive;  <span class="comment">#再查看一下表结构</span></div></pre></td></tr></table></figure>
-<p>####7、删除表</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP TABLE t_hadoop;</div></pre></td></tr></table></figure>
-<p>####8、重命名表</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive RENAME TO t_hadoop;</div></pre></td></tr></table></figure>
-<p>####9、创建视图</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE VIEW IF NOT EXISTS t_hive (a int, b int, c int) AS SELECT a,b,c FROM t_hive;</div></pre></td></tr></table></figure>
-<p>####10、删除视图</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP VIEW t_hive;</div></pre></td></tr></table></figure>
-<p>####11、创建函数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE TEMPORARY FIUNCTION aFunc as class_name;</div></pre></td></tr></table></figure>
-<p>####12、删除函数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP TEMPORARY FIUNCTION aFunc;</div></pre></td></tr></table></figure>
-<p>####13、显示分区</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW PARTITIONS t_hive;</div></pre></td></tr></table></figure>
-<p>####14、添加分区</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive ADD PARTITION(ds = <span class="string">'2013-05-07'</span>,country = <span class="string">'china'</span>) LOCATION <span class="string">'/usr/test/data/test.txt'</span>;</div></pre></td></tr></table></figure>
-<p>####15、删除分区</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive DROP PARTITION(ds = <span class="string">'2013-05-07'</span>,country = <span class="string">'china'</span>);</div></pre></td></tr></table></figure>
+<h4 id="3、创建一个-t-hive-的table，并插入数据"><a href="#3、创建一个-t-hive-的table，并插入数据" class="headerlink" title="3、创建一个 t_hive 的table，并插入数据"></a>3、创建一个 t_hive 的table，并插入数据</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE t_hive (a int, b int, c int) ROW FORMAT DELIMITED FIELDS TERMINATED BY <span class="string">'\t'</span>;</div><div class="line"></div><div class="line">insert into t_hive values (3,4,5);</div></pre></td></tr></table></figure>
+<h4 id="4、查看表数据"><a href="#4、查看表数据" class="headerlink" title="4、查看表数据"></a>4、查看表数据</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from t_hive;</div></pre></td></tr></table></figure>
+<h4 id="5、查看表数据"><a href="#5、查看表数据" class="headerlink" title="5、查看表数据"></a>5、查看表数据</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">desc t_hive;</div></pre></td></tr></table></figure>
+<h4 id="6、增加一个column"><a href="#6、增加一个column" class="headerlink" title="6、增加一个column"></a>6、增加一个column</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive ADD COLUMNS (new_col String);</div><div class="line">desc t_hive;  <span class="comment">#再查看一下表结构</span></div></pre></td></tr></table></figure>
+<h4 id="7、删除表"><a href="#7、删除表" class="headerlink" title="7、删除表"></a>7、删除表</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP TABLE t_hadoop;</div></pre></td></tr></table></figure>
+<h4 id="8、重命名表"><a href="#8、重命名表" class="headerlink" title="8、重命名表"></a>8、重命名表</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive RENAME TO t_hadoop;</div></pre></td></tr></table></figure>
+<h4 id="9、创建视图"><a href="#9、创建视图" class="headerlink" title="9、创建视图"></a>9、创建视图</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE VIEW IF NOT EXISTS t_hive (a int, b int, c int) AS SELECT a,b,c FROM t_hive;</div></pre></td></tr></table></figure>
+<h4 id="10、删除视图"><a href="#10、删除视图" class="headerlink" title="10、删除视图"></a>10、删除视图</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP VIEW t_hive;</div></pre></td></tr></table></figure>
+<h4 id="11、创建函数"><a href="#11、创建函数" class="headerlink" title="11、创建函数"></a>11、创建函数</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE TEMPORARY FIUNCTION aFunc as class_name;</div></pre></td></tr></table></figure>
+<h4 id="12、删除函数"><a href="#12、删除函数" class="headerlink" title="12、删除函数"></a>12、删除函数</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP TEMPORARY FIUNCTION aFunc;</div></pre></td></tr></table></figure>
+<h4 id="13、显示分区"><a href="#13、显示分区" class="headerlink" title="13、显示分区"></a>13、显示分区</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW PARTITIONS t_hive;</div></pre></td></tr></table></figure>
+<h4 id="14、添加分区"><a href="#14、添加分区" class="headerlink" title="14、添加分区"></a>14、添加分区</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive ADD PARTITION(ds = <span class="string">'2013-05-07'</span>,country = <span class="string">'china'</span>) LOCATION <span class="string">'/usr/test/data/test.txt'</span>;</div></pre></td></tr></table></figure>
+<h4 id="15、删除分区"><a href="#15、删除分区" class="headerlink" title="15、删除分区"></a>15、删除分区</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE t_hive DROP PARTITION(ds = <span class="string">'2013-05-07'</span>,country = <span class="string">'china'</span>);</div></pre></td></tr></table></figure>
 <div>
         <div id="disqus_thread"></div>
       </div>

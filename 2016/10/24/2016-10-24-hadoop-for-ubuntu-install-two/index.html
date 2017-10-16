@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,7 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -101,7 +86,22 @@
         
       
     
-      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -129,101 +129,11 @@
         
       
         
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
           
         
       
     
-      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="active" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -268,7 +178,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -343,14 +328,12 @@
         <hr>
         <div class="content markdown"><p>上一节我们介绍了Hadoop的单机运行配置，这里我们继续采用单节点以伪分布式的方式来运行，Hadoop进程是以分离的Java进程来运行的，<br>节点即可以作为NameNode也可以作为DataNode， 同时，读取的是HDFS中的文件。</p>
 <a id="more"></a>
-<p>###一、 配置Hadoop伪分布式环境</p>
-<p>####1. 编辑hadoop-env.sh环境配置文件</p>
-<p>执行的命令：</p>
+<h3 id="一、-配置Hadoop伪分布式环境"><a href="#一、-配置Hadoop伪分布式环境" class="headerlink" title="一、 配置Hadoop伪分布式环境"></a>一、 配置Hadoop伪分布式环境</h3><h4 id="1-编辑hadoop-env-sh环境配置文件"><a href="#1-编辑hadoop-env-sh环境配置文件" class="headerlink" title="1. 编辑hadoop-env.sh环境配置文件"></a>1. 编辑hadoop-env.sh环境配置文件</h4><p>执行的命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh</div></pre></td></tr></table></figure>
 <p>打开后注释原来的JAVA_HOME,改为绝对路径，如图：</p>
 <p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f93marha6qj20dq0240t0.jpg" alt=""></p>
 <p>注：这个文件中其他的配置暂时还不需要</p>
-<p>####2. 编辑core-site.xml和hdfs-site.xml<br>这2个文件也都位于 /usr/local/hadoop/etc/hadoop/中，</p>
+<h4 id="2-编辑core-site-xml和hdfs-site-xml"><a href="#2-编辑core-site-xml和hdfs-site-xml" class="headerlink" title="2. 编辑core-site.xml和hdfs-site.xml"></a>2. 编辑core-site.xml和hdfs-site.xml</h4><p>这2个文件也都位于 /usr/local/hadoop/etc/hadoop/中，</p>
 <p>修改core-site.xml，编辑文件，在configuration标签修改为：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;hadoop.tmp.dir&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;file:/usr</span><span class="regexp">/local/hadoop</span><span class="regexp">/tmp&lt;/value</span>&gt;</div><div class="line">             &lt;description&gt;Abase <span class="keyword">for</span> other temporary directories.&lt;<span class="regexp">/description&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;fs.defaultFS&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;hdfs:/</span><span class="regexp">/localhost:9000&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
 <p>同理修改hdfs-site.xml</p>
@@ -362,8 +345,7 @@
 <p>注意： 我们当前是在/usr/local/hadoop/目录操作的命令， 成功的话会看到如下图的提示：</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f93mstw8ctj20v0053aef.jpg" alt=""></p>
 <p>如果出现Error:JAVA_HOME is not set and could not be found. 就说明之前你的JAVA_HOME变量没配置对，</p>
-<p>####3. 开启NameNode和DataNode守护进程</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/start-dfs.sh</div></pre></td></tr></table></figure>
+<h4 id="3-开启NameNode和DataNode守护进程"><a href="#3-开启NameNode和DataNode守护进程" class="headerlink" title="3. 开启NameNode和DataNode守护进程"></a>3. 开启NameNode和DataNode守护进程</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/start-dfs.sh</div></pre></td></tr></table></figure>
 <p>执行命令，如果提示SSH输入yes即可，</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f93mwdfsjqj20ju04676q.jpg" alt=""></p>
 <p>启动时可能会出现如下 WARN 提示：WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform… using builtin-java classes where applicable。该 WARN 提示可以忽略，并不会影响正常使用（该 WARN 可以通过编译 Hadoop 源码解决）。</p>
@@ -373,7 +355,7 @@
 <p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f93mz4iwdvj20a102p0tb.jpg" alt=""></p>
 <p>这时候，通过浏览器访问地址 <a href="http://localhost:50070" target="_blank" rel="external">http://localhost:50070</a> 可以查看NameNode和DataNode的具体信息</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f93n0q5xcbj20wd0r1n3z.jpg" alt=""></p>
-<p>###二、 运行Hadoop伪分布式实例<br>在上一节中，我们使用单机模式grep例子中读取的是本地的数据， 而伪分布式读取的则是HDFS上的数据。 要使用HDFS，首先需要再HDFS中创建用户目录</p>
+<h3 id="二、-运行Hadoop伪分布式实例"><a href="#二、-运行Hadoop伪分布式实例" class="headerlink" title="二、 运行Hadoop伪分布式实例"></a>二、 运行Hadoop伪分布式实例</h3><p>在上一节中，我们使用单机模式grep例子中读取的是本地的数据， 而伪分布式读取的则是HDFS上的数据。 要使用HDFS，首先需要再HDFS中创建用户目录</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -mkdir -p /user/hadoop</div></pre></td></tr></table></figure>
 <p>接着将 ./etc/hadoop 中的 xml 文件作为输入文件复制到分布式文件系统中（也就是将 /usr/local/hadoop/etc/hadoop 上传到HDFS中的 /user/hadoop/input中）</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bin/hdfs dfs -mkdir input</div><div class="line">./bin/hdfs dfs -put ./etc/hadoop/*.xml input</div></pre></td></tr></table></figure>

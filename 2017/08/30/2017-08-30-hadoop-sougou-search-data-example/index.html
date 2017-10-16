@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,97 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Python/">Python</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -206,7 +101,7 @@
         
       
     
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -221,7 +116,22 @@
         
       
     
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -251,7 +161,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -266,7 +176,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -355,16 +340,10 @@
 <p>样例：</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2obgdgadj20ui0gsjzu.jpg" alt=""></p>
 <p>数据去重： 每一个用户ID对于同一个搜索的关键词可能会点击点击几次，  我们的需求是对同一个用户ID的同一个关键词重复的条数去重。</p>
-<p>###新建MapReduce工程</p>
-<p>#####1. 新建MapReduce工程， SougouDemo</p>
-<p>#####2. 将hadoop中的log4j.properties文件放到工程的src文件夹下</p>
-<p>#####3. 新建CleanSameData.java类</p>
-<p>源码：</p>
+<h3 id="新建MapReduce工程"><a href="#新建MapReduce工程" class="headerlink" title="新建MapReduce工程"></a>新建MapReduce工程</h3><h5 id="1-新建MapReduce工程，-SougouDemo"><a href="#1-新建MapReduce工程，-SougouDemo" class="headerlink" title="1. 新建MapReduce工程， SougouDemo"></a>1. 新建MapReduce工程， SougouDemo</h5><h5 id="2-将hadoop中的log4j-properties文件放到工程的src文件夹下"><a href="#2-将hadoop中的log4j-properties文件放到工程的src文件夹下" class="headerlink" title="2. 将hadoop中的log4j.properties文件放到工程的src文件夹下"></a>2. 将hadoop中的log4j.properties文件放到工程的src文件夹下</h5><h5 id="3-新建CleanSameData-java类"><a href="#3-新建CleanSameData-java类" class="headerlink" title="3. 新建CleanSameData.java类"></a>3. 新建CleanSameData.java类</h5><p>源码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.au.example;</div><div class="line"><span class="keyword">import</span> java.io.IOException;  </div><div class="line"><span class="keyword">import</span> java.util.StringTokenizer;  </div><div class="line">  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.TextInputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;  </div><div class="line"><span class="keyword">import</span> org.apache.hadoop.util.GenericOptionsParser;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CleanSameData</span> </span>&#123;</div><div class="line"></div><div class="line">	</div><div class="line">	 <span class="comment">// map将输入中的value复制到输出数据的key上，并直接输出  </span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Map</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">Object</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;  </div><div class="line">  </div><div class="line">        <span class="comment">// 实现map函数  </span></div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(Object key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            <span class="comment">// 将输入的纯文本文件的数据转化成String  </span></div><div class="line">            String line = value.toString();  </div><div class="line">            <span class="comment">// 将输入的数据首先按行进行分割  </span></div><div class="line">            StringTokenizer tokenizerArticle = <span class="keyword">new</span> StringTokenizer(line, <span class="string">"\n"</span>);  </div><div class="line">            <span class="comment">// 分别对每一行进行处理  </span></div><div class="line">            <span class="keyword">while</span> (tokenizerArticle.hasMoreElements()) &#123;  </div><div class="line">                <span class="comment">// 每行按空格划分  </span></div><div class="line">                StringTokenizer tokenizerLine = <span class="keyword">new</span> StringTokenizer(tokenizerArticle.nextToken());  </div><div class="line">                String c1 = tokenizerLine.nextToken();<span class="comment">// time </span></div><div class="line">                String c2 = tokenizerLine.nextToken();<span class="comment">//用户id  </span></div><div class="line">                String c3 = tokenizerLine.nextToken(); <span class="comment">//查询词</span></div><div class="line">                c3 = c3.substring(<span class="number">1</span>, c3.length() - <span class="number">1</span>);  </div><div class="line">                Text newline = <span class="keyword">new</span> Text(c1 + <span class="string">"    "</span> + c2 + <span class="string">"    "</span> +c3);  </div><div class="line">                context.write(newline, <span class="keyword">new</span> Text(<span class="string">""</span>));  </div><div class="line">            &#125;  </div><div class="line">  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">    &#125;  </div><div class="line">	</div><div class="line"> 	 <span class="comment">// reduce将输入中的key复制到输出数据的key上，并直接输出  </span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Reduce</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;  </div><div class="line">        <span class="comment">// 实现reduce函数  </span></div><div class="line">        <span class="meta">@Override</span>  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;Text&gt; values, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;  </div><div class="line">            context.write(key, <span class="keyword">new</span> Text(<span class="string">""</span>));  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		</div><div class="line">		Configuration conf = <span class="keyword">new</span> Configuration();  </div><div class="line">        <span class="comment">// 设置输入输出文件目录  </span></div><div class="line">        String[] ioArgs = <span class="keyword">new</span> String[] &#123; <span class="string">"hdfs://localhost:9000/data_in"</span>, <span class="string">"hdfs://localhost:9000/clean_same_out"</span> &#125;;  </div><div class="line">        String[] otherArgs = <span class="keyword">new</span> GenericOptionsParser(conf, ioArgs).getRemainingArgs();  </div><div class="line">        <span class="keyword">if</span> (otherArgs.length != <span class="number">2</span>) &#123;  </div><div class="line">            System.err.println(<span class="string">"Usage:  &lt;in&gt; &lt;out&gt;"</span>);  </div><div class="line">            System.exit(<span class="number">2</span>);  </div><div class="line">        &#125;  </div><div class="line">        <span class="comment">// 设置一个job  </span></div><div class="line">        Job job = Job.getInstance(conf, <span class="string">"clean same data"</span>);  </div><div class="line">        job.setJarByClass(CleanSameData.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 设置Map、Combine和Reduce处理类  </span></div><div class="line">        job.setMapperClass(Map.class);  </div><div class="line">        job.setCombinerClass(Reduce.class);  </div><div class="line">        job.setReducerClass(Reduce.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 设置输出类型  </span></div><div class="line">        job.setOutputKeyClass(Text.class);  </div><div class="line">        job.setOutputValueClass(Text.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 将输入的数据集分割成小数据块splites，提供一个RecordReder的实现  </span></div><div class="line">        job.setInputFormatClass(TextInputFormat.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 提供一个RecordWriter的实现，负责数据输出  </span></div><div class="line">        job.setOutputFormatClass(TextOutputFormat.class);  </div><div class="line">  </div><div class="line">        <span class="comment">// 设置输入和输出目录  </span></div><div class="line">        FileInputFormat.addInputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">0</span>]));  </div><div class="line">        FileOutputFormat.setOutputPath(job, <span class="keyword">new</span> Path(otherArgs[<span class="number">1</span>]));  </div><div class="line">        System.exit(job.waitForCompletion(<span class="keyword">true</span>) ? <span class="number">0</span> : <span class="number">1</span>);  </div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>#####4. 在hadoop中，新建data_in文件夹,并将下载搜狗数据解压后的文件，上传到hadoop中</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hdfs dfs -mkdir /data_in</div><div class="line">hdfs dfs -put corpus.txt /data_in</div></pre></td></tr></table></figure>
-<p>####5. 执行程序后， 查看结果</p>
-<p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2ok1rnzyj20kc0m243c.jpg" alt=""></p>
+<h5 id="4-在hadoop中，新建data-in文件夹-并将下载搜狗数据解压后的文件，上传到hadoop中"><a href="#4-在hadoop中，新建data-in文件夹-并将下载搜狗数据解压后的文件，上传到hadoop中" class="headerlink" title="4. 在hadoop中，新建data_in文件夹,并将下载搜狗数据解压后的文件，上传到hadoop中"></a>4. 在hadoop中，新建data_in文件夹,并将下载搜狗数据解压后的文件，上传到hadoop中</h5> <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hdfs dfs -mkdir /data_in</div><div class="line">hdfs dfs -put corpus.txt /data_in</div></pre></td></tr></table></figure>
+<h4 id="5-执行程序后，-查看结果"><a href="#5-执行程序后，-查看结果" class="headerlink" title="5. 执行程序后， 查看结果"></a>5. 执行程序后， 查看结果</h4><p><img src="http://ww1.sinaimg.cn/large/62ca154dly1fj2ok1rnzyj20kc0m243c.jpg" alt=""></p>
 <div>
         <div id="disqus_thread"></div>
       </div>

@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,7 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -101,7 +86,22 @@
         
       
     
-      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -129,101 +129,11 @@
         
       
         
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
           
         
       
     
-      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="active" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -268,7 +178,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -346,25 +331,15 @@
 <p>第二个作为Slave节点，  内网的IP地址：<font color="#006400">10.168.13.167</font></p>
 <p>这个IP地址可以自行定义，常见的有192.168网段的IP地址， 只要2台主机可以互相Ping通即可；</p>
 <a id="more"></a>
-<p>##操作流程</p>
-<p>#####1. 选择一台主机作为Master节点</p>
-<p>#####2. 在Master节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7</p>
-<p>#####3. 在Master节点上安装Hadoop配置</p>
-<p>#####4. 在Slave节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7</p>
-<p>#####5. 将Master节点上配置好的Hadoop复制到Slave节点上</p>
-<p>#####6. 在Master节点上开启Hadoop服务</p>
-<p>本节不再介绍JDK和SSH的安装方式，可查看第一节的单机配置的内容</p>
-<p>###一、 网络的配置</p>
-<p>由于我使用的是VMware Fusion安装的虚拟机的方式， 需要先将系统的网络连接方式改为桥接(Bridge)模式，如图：</p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><h5 id="1-选择一台主机作为Master节点"><a href="#1-选择一台主机作为Master节点" class="headerlink" title="1. 选择一台主机作为Master节点"></a>1. 选择一台主机作为Master节点</h5><h5 id="2-在Master节点上新建Hadoop用户，安装SSH-Server，安装Oracle的JDK1-7"><a href="#2-在Master节点上新建Hadoop用户，安装SSH-Server，安装Oracle的JDK1-7" class="headerlink" title="2. 在Master节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7"></a>2. 在Master节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7</h5><h5 id="3-在Master节点上安装Hadoop配置"><a href="#3-在Master节点上安装Hadoop配置" class="headerlink" title="3. 在Master节点上安装Hadoop配置"></a>3. 在Master节点上安装Hadoop配置</h5><h5 id="4-在Slave节点上新建Hadoop用户，安装SSH-Server，安装Oracle的JDK1-7"><a href="#4-在Slave节点上新建Hadoop用户，安装SSH-Server，安装Oracle的JDK1-7" class="headerlink" title="4. 在Slave节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7"></a>4. 在Slave节点上新建Hadoop用户，安装SSH Server，安装Oracle的JDK1.7</h5><h5 id="5-将Master节点上配置好的Hadoop复制到Slave节点上"><a href="#5-将Master节点上配置好的Hadoop复制到Slave节点上" class="headerlink" title="5. 将Master节点上配置好的Hadoop复制到Slave节点上"></a>5. 将Master节点上配置好的Hadoop复制到Slave节点上</h5><h5 id="6-在Master节点上开启Hadoop服务"><a href="#6-在Master节点上开启Hadoop服务" class="headerlink" title="6. 在Master节点上开启Hadoop服务"></a>6. 在Master节点上开启Hadoop服务</h5><p>本节不再介绍JDK和SSH的安装方式，可查看第一节的单机配置的内容</p>
+<h3 id="一、-网络的配置"><a href="#一、-网络的配置" class="headerlink" title="一、 网络的配置"></a>一、 网络的配置</h3><p>由于我使用的是VMware Fusion安装的虚拟机的方式， 需要先将系统的网络连接方式改为桥接(Bridge)模式，如图：</p>
 <p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f95p9i6jqnj20b7045gmb.jpg" alt=""></p>
 <p>注意：  这一步很重要， 否则可能多节点之间不能ping通，</p>
 <font color="#1E90FF" size="4">在ubuntu下设置网络的方式：</font>
 
-<p>####1. 打开系统的设置找到Network(网络配置)</p>
-<p>如图： 点击Option按钮， 选择IPv4 Settings 修改网络配置为手动设置IP地址， 并添加新的IP、子网掩码、网关、DNS<br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95ph30vzgj20ne0lgdkk.jpg" alt=""></p>
-<p>####2. 检查网络配置<br>重启系统或者重启网络之后，通过<code>ifconfig</code> 查看是否ip地址设置正确， 并且2个节点都可以互相ping通</p>
-<p>###二、 设置Hostname</p>
-<p>如果之前配置过Hadoop， 先关闭Hadoop服务器，<code>/usr/local/hadoop/sbin/stop-dfs.sh</code>， 再继续后面的集群配置，<br>为了便于在使用上对节点的区分， 我们先修改节点的主机名</p>
+<h4 id="1-打开系统的设置找到Network-网络配置"><a href="#1-打开系统的设置找到Network-网络配置" class="headerlink" title="1. 打开系统的设置找到Network(网络配置)"></a>1. 打开系统的设置找到Network(网络配置)</h4><p>如图： 点击Option按钮， 选择IPv4 Settings 修改网络配置为手动设置IP地址， 并添加新的IP、子网掩码、网关、DNS<br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95ph30vzgj20ne0lgdkk.jpg" alt=""></p>
+<h4 id="2-检查网络配置"><a href="#2-检查网络配置" class="headerlink" title="2. 检查网络配置"></a>2. 检查网络配置</h4><p>重启系统或者重启网络之后，通过<code>ifconfig</code> 查看是否ip地址设置正确， 并且2个节点都可以互相ping通</p>
+<h3 id="二、-设置Hostname"><a href="#二、-设置Hostname" class="headerlink" title="二、 设置Hostname"></a>二、 设置Hostname</h3><p>如果之前配置过Hadoop， 先关闭Hadoop服务器，<code>/usr/local/hadoop/sbin/stop-dfs.sh</code>， 再继续后面的集群配置，<br>为了便于在使用上对节点的区分， 我们先修改节点的主机名</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/hostname</div></pre></td></tr></table></figure>
 <p>直接将里面的ubuntu改为Master （如果是Slave节点， 改为Slave1）</p>
 <p>接着修改Hosts文件（做IP地址与节点名的映射）<br>通过</p>
@@ -376,39 +351,33 @@
 <p>配置好上述的配置之后， 可以通过命令</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ping Master -c <span class="number">5</span></div><div class="line">ping Slave1 -c <span class="number">5</span></div></pre></td></tr></table></figure>
 <p>检测这2个节点是否可以ping通。 如果没有问题，那我们继续。</p>
-<p>###三、 设置SSH无密码登录节点</p>
-<p>在之前的小节中也有介绍， 这里的操作是要让Master节点可以无密码的方式登录到各个Slave节点上。</p>
+<h3 id="三、-设置SSH无密码登录节点"><a href="#三、-设置SSH无密码登录节点" class="headerlink" title="三、 设置SSH无密码登录节点"></a>三、 设置SSH无密码登录节点</h3><p>在之前的小节中也有介绍， 这里的操作是要让Master节点可以无密码的方式登录到各个Slave节点上。</p>
 <font color="#20B2AA">以下操作在Master节点上：</font>
 
-<p>####1. 生成ssh秘钥</p>
-<p>如果之前有生成过秘钥的，需要先删除之前生成的秘钥文件，因为修改hostname之后， 之前的秘钥就失效了，命令：</p>
+<h4 id="1-生成ssh秘钥"><a href="#1-生成ssh秘钥" class="headerlink" title="1. 生成ssh秘钥"></a>1. 生成ssh秘钥</h4><p>如果之前有生成过秘钥的，需要先删除之前生成的秘钥文件，因为修改hostname之后， 之前的秘钥就失效了，命令：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~<span class="regexp">/.ssh</span></div><div class="line"><span class="regexp">rm ./id</span>_rsa*</div><div class="line">ssh-keygen -t rsa</div><div class="line">cat ./id_rsa.pub <span class="meta">&gt;&gt; </span>./authorized_keys</div></pre></td></tr></table></figure>
 <p>设置好之后， 通过执行<code>ssh Master</code>验证一下（可能需要输入 yes，成功后执行 exit 返回原来的终端，第二次再重试登录，则不再需要输入密码， 最后exit退出)。</p>
-<p>####2. 将Master的公钥分发给Slave1节点</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ~<span class="regexp">/.ssh/id</span>_rsa.pub hadoop@Slave1<span class="symbol">:/home/hadoop/</span></div></pre></td></tr></table></figure>
+<h4 id="2-将Master的公钥分发给Slave1节点"><a href="#2-将Master的公钥分发给Slave1节点" class="headerlink" title="2. 将Master的公钥分发给Slave1节点"></a>2. 将Master的公钥分发给Slave1节点</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ~<span class="regexp">/.ssh/id</span>_rsa.pub hadoop@Slave1<span class="symbol">:/home/hadoop/</span></div></pre></td></tr></table></figure>
 <p>scp完成之后，如下图：</p>
 <p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f95qe58kpcj21ed02uabf.jpg" alt=""></p>
 <font color="#20B2AA">切换到Slave1节点上操作：</font>
 
-<p>####3. 将刚刚Master节点上的公钥添加授权</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir ~<span class="regexp">/.ssh</span></div><div class="line"><span class="regexp">cat ~/id</span>_rsa.pub <span class="meta">&gt;&gt; </span>~<span class="regexp">/.ssh/authorized</span>_keys</div><div class="line">rm ~<span class="regexp">/id_rsa.pub</span></div></pre></td></tr></table></figure>
+<h4 id="3-将刚刚Master节点上的公钥添加授权"><a href="#3-将刚刚Master节点上的公钥添加授权" class="headerlink" title="3. 将刚刚Master节点上的公钥添加授权"></a>3. 将刚刚Master节点上的公钥添加授权</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir ~<span class="regexp">/.ssh</span></div><div class="line"><span class="regexp">cat ~/id</span>_rsa.pub <span class="meta">&gt;&gt; </span>~<span class="regexp">/.ssh/authorized</span>_keys</div><div class="line">rm ~<span class="regexp">/id_rsa.pub</span></div></pre></td></tr></table></figure>
 <p>如果还有其他的Slave节点， 同样的方式，也需要将Master的公钥下发给Slave节点并做这一步的操作。</p>
-<font color="#20B2AA">切换到Master节点上操作：</font><br>####4. 在Master节点上检验是否可以无密码登录<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh Slave1</div></pre></td></tr></table></figure><br><br>如图：<br><br><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f95ql5r6bsj20hj05z765.jpg" alt=""><br><br>表示登录成功。<br><br>###四、 配置PATH变量<br><br>为了方便在任意目录下都能直接使用hadoop、hdfs这样的命令， 需要在Master节点进行配置，<br><br>####1. 编辑.bashrc文件<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim ~<span class="regexp">/.bashrc</span></div></pre></td></tr></table></figure><br><br>打开文件后，在底部加入内容：<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH<span class="symbol">:/usr/local/hadoop/bin</span><span class="symbol">:/usr/local/hadoop/sbin</span></div></pre></td></tr></table></figure><br><br>保存并退出。<br><br>####2. 设置.bashrc文件生效<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~<span class="regexp">/.bashrc</span></div></pre></td></tr></table></figure><br><br>###五、 配置集群环境（Hadoop的环境）<br><br><font color="#20B2AA">切换到Master节点上操作：</font>
+<font color="#20B2AA">切换到Master节点上操作：</font><br>#### 4. 在Master节点上检验是否可以无密码登录<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh Slave1</div></pre></td></tr></table></figure><br><br>如图：<br><br><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f95ql5r6bsj20hj05z765.jpg" alt=""><br><br>表示登录成功。<br><br>### 四、 配置PATH变量<br><br>为了方便在任意目录下都能直接使用hadoop、hdfs这样的命令， 需要在Master节点进行配置，<br><br>#### 1. 编辑.bashrc文件<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim ~<span class="regexp">/.bashrc</span></div></pre></td></tr></table></figure><br><br>打开文件后，在底部加入内容：<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH<span class="symbol">:/usr/local/hadoop/bin</span><span class="symbol">:/usr/local/hadoop/sbin</span></div></pre></td></tr></table></figure><br><br>保存并退出。<br><br>#### 2. 设置.bashrc文件生效<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~<span class="regexp">/.bashrc</span></div></pre></td></tr></table></figure><br><br>### 五、 配置集群环境（Hadoop的环境）<br><br><font color="#20B2AA">切换到Master节点上操作：</font>
 
 <p>修改Hadoop集群/分布式模式，需要修改/usr/local/hadoop/etc/hadoop中的5个配置文件：</p>
 <font color="#228B22"> slaves、core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml </font>
 
-<p>####1. 设置文件slaves</p>
-<p>编辑slaves文件中内容，将原来的localhost删除， 只添加一行内容 Slave1</p>
-<p>####2. 设置文件core-site.xml 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;fs.defaultFS&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;hdfs:/</span><span class="regexp">/Master:9000&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;hadoop.tmp.dir&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">file:</span>/usr/local/hadoop/tmp&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">                &lt;description&gt;Abase for other temporary directories.&lt;/description</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure></p>
-<p>####3. 设置文件 hdfs-site.xml 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> &lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.secondary.http-address&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master:50090&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;dfs.replication&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="number">1</span>&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.name.dir&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;file:/usr</span><span class="regexp">/local/hadoop</span><span class="regexp">/tmp/dfs</span><span class="regexp">/name&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;dfs.datanode.data.dir&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">file:</span>/usr/local/hadoop/tmp/dfs/data&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">&lt;<span class="regexp">/configuration&gt;</span></div></pre></td></tr></table></figure></p>
-<font color="#DAA520">上述配置项dfs.replication 一般设为 3，但我们只有一个 Slave 节点，所以 dfs.replication 的值还是设为 1 </font><br>####4. 设置文件mapred-site.xml（如果没有该文件，需先重命名mapred-site.xml.template为mapred-site.xml） 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.framework.name&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;yarn&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;mapreduce.jobhistory.address&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">Master:</span><span class="number">10020</span>&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master:19888&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure><br><br>####5. 设置文件yarn-site.xml 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;yarn.resourcemanager.hostname&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;mapreduce_shuffle&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">&lt;<span class="regexp">/configuration&gt;</span></div></pre></td></tr></table></figure><br><br>配置好之后， 将Master的/usr/local/Hadoop文件夹打包复制到其他Slave节点上（如果之前有运行过单机或伪分布式，需要先删除之前的临时文件）， 在Master节点上继续执行一下命令：<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd /usr/local</div><div class="line">sudo rm -r ./hadoop/tmp     <span class="comment"># 删除 Hadoop 临时文件</span></div><div class="line">sudo rm -r ./hadoop/logs/*   <span class="comment"># 删除日志文件</span></div><div class="line">tar -zcf ~<span class="regexp">/hadoop.master.tar.gz ./hadoop</span>   <span class="comment"># 先压缩再复制</span></div><div class="line">cd ~</div><div class="line">scp ./hadoop.master.tar.gz <span class="symbol">Slave1:</span>/home/hadoop</div></pre></td></tr></table></figure><br><br><font color="#20B2AA">切换到Slave1节点上操作：</font>
+<h4 id="1-设置文件slaves"><a href="#1-设置文件slaves" class="headerlink" title="1. 设置文件slaves"></a>1. 设置文件slaves</h4><p>编辑slaves文件中内容，将原来的localhost删除， 只添加一行内容 Slave1</p>
+<h4 id="2-设置文件core-site-xml-改为以下的内容"><a href="#2-设置文件core-site-xml-改为以下的内容" class="headerlink" title="2. 设置文件core-site.xml 改为以下的内容"></a>2. 设置文件core-site.xml 改为以下的内容</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;fs.defaultFS&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;hdfs:/</span><span class="regexp">/Master:9000&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;hadoop.tmp.dir&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">file:</span>/usr/local/hadoop/tmp&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">                &lt;description&gt;Abase for other temporary directories.&lt;/description</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
+<h4 id="3-设置文件-hdfs-site-xml-改为以下的内容"><a href="#3-设置文件-hdfs-site-xml-改为以下的内容" class="headerlink" title="3. 设置文件 hdfs-site.xml 改为以下的内容"></a>3. 设置文件 hdfs-site.xml 改为以下的内容</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> &lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.secondary.http-address&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master:50090&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;dfs.replication&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="number">1</span>&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.name.dir&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;file:/usr</span><span class="regexp">/local/hadoop</span><span class="regexp">/tmp/dfs</span><span class="regexp">/name&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;dfs.datanode.data.dir&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">file:</span>/usr/local/hadoop/tmp/dfs/data&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">&lt;<span class="regexp">/configuration&gt;</span></div></pre></td></tr></table></figure>
+<font color="#DAA520">上述配置项dfs.replication 一般设为 3，但我们只有一个 Slave 节点，所以 dfs.replication 的值还是设为 1 </font><br>#### 4. 设置文件mapred-site.xml（如果没有该文件，需先重命名mapred-site.xml.template为mapred-site.xml） 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.framework.name&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;yarn&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;mapreduce.jobhistory.address&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;<span class="symbol">Master:</span><span class="number">10020</span>&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master:19888&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure><br><br>#### 5. 设置文件yarn-site.xml 改为以下的内容<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;yarn.resourcemanager.hostname&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">                &lt;value&gt;Master&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">        &lt;property&gt;</span></div><div class="line"><span class="regexp">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name</span>&gt;</div><div class="line">                &lt;value&gt;mapreduce_shuffle&lt;<span class="regexp">/value&gt;</span></div><div class="line"><span class="regexp">        &lt;/property</span>&gt;</div><div class="line">&lt;<span class="regexp">/configuration&gt;</span></div></pre></td></tr></table></figure><br><br>配置好之后， 将Master的/usr/local/Hadoop文件夹打包复制到其他Slave节点上（如果之前有运行过单机或伪分布式，需要先删除之前的临时文件）， 在Master节点上继续执行一下命令：<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd /usr/local</div><div class="line">sudo rm -r ./hadoop/tmp     <span class="comment"># 删除 Hadoop 临时文件</span></div><div class="line">sudo rm -r ./hadoop/logs/*   <span class="comment"># 删除日志文件</span></div><div class="line">tar -zcf ~<span class="regexp">/hadoop.master.tar.gz ./hadoop</span>   <span class="comment"># 先压缩再复制</span></div><div class="line">cd ~</div><div class="line">scp ./hadoop.master.tar.gz <span class="symbol">Slave1:</span>/home/hadoop</div></pre></td></tr></table></figure><br><br><font color="#20B2AA">切换到Slave1节点上操作：</font>
 
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -r /usr/local/hadoop   删除之前安装过旧的hadoop</div><div class="line">sudo tar -zxf ~<span class="regexp">/hadoop.master.tar.gz -C /usr</span><span class="regexp">/local   解压所到/usr</span><span class="regexp">/local目录下</span></div><div class="line"><span class="regexp">sudo chown -R hadoop /usr</span><span class="regexp">/local/hadoop</span>        设置权限</div></pre></td></tr></table></figure>
 <p>同理， 如果还有其他的Slave节点， 需要重复以上的步骤。</p>
-<p>###六、 验收集群环境</p>
-<p>配置完以上的所有环境之后， 我们进行启动Hadoop服务器，进行验收环境配置是否成功。</p>
-<font color="#20B2AA">切换到Master节点上操作：</font><br>####1. NameNode 的格式化<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hdfs namenode -format</div></pre></td></tr></table></figure><br><br>因修改了Hadoop的配置文件，所以需要先格式化， 之后再重启Hadoop服务，则不用再执行这一步。<br><br>####2. 启动Hadoop服务器<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">start-dfs.sh</div><div class="line">start-yarn.sh</div><div class="line">mr-jobhistory-daemon.sh start historyserver</div></pre></td></tr></table></figure><br><br>通过<code>jps</code>命令，可以查看各个节点启动的进程， 如果启动没问题的话， 在Master节点可以看到的进程，如图：<br><br><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f95re5g10uj207e02yjrr.jpg" alt=""><br><br>在Slave1节点上可以看到的进程，如图：<br><br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95rfzw89vj2084020wem.jpg" alt=""><br><br>上述2个节点，如果缺少任何一个进程都表示配置出错了。<br><br>当然，在Master节点上也可以通过命令 <code>hdfs dfsadmin -report</code> 查看DataNode是否正常启动，如果 Live datanodes 不为 0 ，则说明集群启动成功。  例如：我们只配置了一个Datanodes， 应与下图一致：<br><br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95rjqjls9j20db03bt92.jpg" alt=""><br><br>也可以通过Web页面查看NameNode和DataNode的详细信息， 访问地址：  <a href="http://master:50070/" target="_blank" rel="external">http://master:50070/</a><br><br><br>####3. 通过实例测试环境是否可用<br><br><font color="#20B2AA">在Master节点上操作：</font>
+<h3 id="六、-验收集群环境"><a href="#六、-验收集群环境" class="headerlink" title="六、 验收集群环境"></a>六、 验收集群环境</h3><p>配置完以上的所有环境之后， 我们进行启动Hadoop服务器，进行验收环境配置是否成功。</p>
+<font color="#20B2AA">切换到Master节点上操作：</font><br>#### 1. NameNode 的格式化<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hdfs namenode -format</div></pre></td></tr></table></figure><br><br>因修改了Hadoop的配置文件，所以需要先格式化， 之后再重启Hadoop服务，则不用再执行这一步。<br><br>#### 2. 启动Hadoop服务器<br><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">start-dfs.sh</div><div class="line">start-yarn.sh</div><div class="line">mr-jobhistory-daemon.sh start historyserver</div></pre></td></tr></table></figure><br><br>通过<code>jps</code>命令，可以查看各个节点启动的进程， 如果启动没问题的话， 在Master节点可以看到的进程，如图：<br><br><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f95re5g10uj207e02yjrr.jpg" alt=""><br><br>在Slave1节点上可以看到的进程，如图：<br><br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95rfzw89vj2084020wem.jpg" alt=""><br><br>上述2个节点，如果缺少任何一个进程都表示配置出错了。<br><br>当然，在Master节点上也可以通过命令 <code>hdfs dfsadmin -report</code> 查看DataNode是否正常启动，如果 Live datanodes 不为 0 ，则说明集群启动成功。  例如：我们只配置了一个Datanodes， 应与下图一致：<br><br><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f95rjqjls9j20db03bt92.jpg" alt=""><br><br>也可以通过Web页面查看NameNode和DataNode的详细信息， 访问地址：  <a href="http://master:50070/" target="_blank" rel="external">http://master:50070/</a><br><br><br>#### 3. 通过实例测试环境是否可用<br><br><font color="#20B2AA">在Master节点上操作：</font>
 
 <p>首先， 在HDFS上创建用户目录：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hdfs dfs -mkdir -p /user/hadoop</div></pre></td></tr></table></figure>
@@ -425,8 +394,7 @@
 <p><img src="http://ww2.sinaimg.cn/large/62ca154dgw1f95rvwfxhej20h809jab8.jpg" alt=""></p>
 <p>当然我们也可以通过控制台查看，执行完后结果：</p>
 <p><img src="http://ww3.sinaimg.cn/large/62ca154dgw1f95rwz8ogsj20fq02uwep.jpg" alt=""></p>
-<p>####4. 关闭Hadoop的操作</p>
-<p>如果想要关闭Hadoop的话， 在Master节点上执行</p>
+<h4 id="4-关闭Hadoop的操作"><a href="#4-关闭Hadoop的操作" class="headerlink" title="4. 关闭Hadoop的操作"></a>4. 关闭Hadoop的操作</h4><p>如果想要关闭Hadoop的话， 在Master节点上执行</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">stop-yarn.sh</div><div class="line">stop-dfs.sh</div><div class="line">mr-jobhistory-daemon.sh stop historyserver</div></pre></td></tr></table></figure>
 <p>以上就是所有Hadoop的集群搭建了。</p>
 <div>

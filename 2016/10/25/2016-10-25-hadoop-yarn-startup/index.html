@@ -54,21 +54,6 @@
         
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -84,7 +69,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -101,7 +86,22 @@
         
       
     
-      <a class="active" href="/categories/Hadoop/">Hadoop</a>
+      <a class="active" href="/categories/hadoop/">hadoop</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -129,101 +129,11 @@
         
       
         
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
           
         
       
     
-      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="active" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -268,7 +178,52 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -298,7 +253,37 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -341,25 +326,20 @@
         <h1>Ubuntu 安装Hadoop2.7《三》YARN的启动配置</h1>
         <h2>2016-10-25</h2>
         <hr>
-        <div class="content markdown"><p>###一、简介</p>
-<p>我们Hadoop早期的版本是JobTracker和TraskTracker，那么在2.0版本之后，使用新的MapReduce框架，加入（YARN—Yet Another Resource Negotiator）, YARN是运行在MapReduce之上，负责资源的管理和任务调度，从MapReduce分离出来的YARN,提供了高可用性、高扩展性。</p>
+        <div class="content markdown"><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>我们Hadoop早期的版本是JobTracker和TraskTracker，那么在2.0版本之后，使用新的MapReduce框架，加入（YARN—Yet Another Resource Negotiator）, YARN是运行在MapReduce之上，负责资源的管理和任务调度，从MapReduce分离出来的YARN,提供了高可用性、高扩展性。</p>
 <p>在上一节中我们通过伪分布式只是启动了MapReduce， 现在我们通过启动YARN，来看看YARN的配置吧。</p>
 <a id="more"></a>
-<p>###二、配置</p>
-<p>####1. 首先重命名配置文件mapred-site.xml.template</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv ./etc/hadoop/mapred-site.xml.template ./etc/hadoop/mapred-site.xml</div></pre></td></tr></table></figure>
-<p>####2. 修改配置文件mapred-site.xml</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gedit ./etc/hadoop/mapred-site.xml</div></pre></td></tr></table></figure>
+<h3 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h3><h4 id="1-首先重命名配置文件mapred-site-xml-template"><a href="#1-首先重命名配置文件mapred-site-xml-template" class="headerlink" title="1. 首先重命名配置文件mapred-site.xml.template"></a>1. 首先重命名配置文件mapred-site.xml.template</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv ./etc/hadoop/mapred-site.xml.template ./etc/hadoop/mapred-site.xml</div></pre></td></tr></table></figure>
+<h4 id="2-修改配置文件mapred-site-xml"><a href="#2-修改配置文件mapred-site-xml" class="headerlink" title="2. 修改配置文件mapred-site.xml"></a>2. 修改配置文件mapred-site.xml</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gedit ./etc/hadoop/mapred-site.xml</div></pre></td></tr></table></figure>
 <p>编辑这个文件内容如下</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;mapreduce.framework.name&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;yarn&lt;/value</span>&gt;</div><div class="line">        &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
-<p>####3. 修改配置文件yarn-site.xml</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;yarn.nodemanager.aux-services&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;mapreduce_shuffle&lt;/value</span>&gt;</div><div class="line">            &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
-<p>####4. 启动YARN<br>启动YARN之前， 先输入命令jps查看HDFS是否已经启动（可以通过<code>./sbin/start-dfs.sh</code>启动）</p>
+<h4 id="3-修改配置文件yarn-site-xml"><a href="#3-修改配置文件yarn-site-xml" class="headerlink" title="3. 修改配置文件yarn-site.xml"></a>3. 修改配置文件yarn-site.xml</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;yarn.nodemanager.aux-services&lt;<span class="regexp">/name&gt;</span></div><div class="line"><span class="regexp">             &lt;value&gt;mapreduce_shuffle&lt;/value</span>&gt;</div><div class="line">            &lt;<span class="regexp">/property&gt;</span></div><div class="line"><span class="regexp">&lt;/configuration</span>&gt;</div></pre></td></tr></table></figure>
+<h4 id="4-启动YARN"><a href="#4-启动YARN" class="headerlink" title="4. 启动YARN"></a>4. 启动YARN</h4><p>启动YARN之前， 先输入命令jps查看HDFS是否已经启动（可以通过<code>./sbin/start-dfs.sh</code>启动）</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/start-yarn.sh</div></pre></td></tr></table></figure>
 <p>启动完yarn之后， 输入命令jps，查看进程，如图：</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dgw1f94ay7q3nlj20dr03iq3m.jpg" alt=""></p>
 <p>可以看到多了ResourceManager和NodeManager 两个进程</p>
-<p>####5. 启动历史的服务器，方便web中查看任务运行情况<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/mr-jobhistory-daemon.sh start historyserver</div></pre></td></tr></table></figure></p>
+<h4 id="5-启动历史的服务器，方便web中查看任务运行情况"><a href="#5-启动历史的服务器，方便web中查看任务运行情况" class="headerlink" title="5. 启动历史的服务器，方便web中查看任务运行情况"></a>5. 启动历史的服务器，方便web中查看任务运行情况</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./sbin/mr-jobhistory-daemon.sh start historyserver</div></pre></td></tr></table></figure>
 <p>如图：</p>
 <p><img src="http://ww4.sinaimg.cn/large/62ca154dgw1f94bc99sdwj20ok014wf7.jpg" alt=""></p>
 <p>启动完之后， 通过浏览器，访问<a href="http://localhost:8088/cluster" target="_blank" rel="external">http://localhost:8088/cluster</a>  如图：</p>
@@ -368,8 +348,7 @@
 <p>在YARN主要是为了资源管理与任务调度， 如果是在单机上执行不但体现不出来价值，反而会因为多加的新的YARN进程，让程序执行稍慢一些，</p>
 <font color="#DC143C">注意： 如果不启动YARN的配置，需要将mapred-site.xml 重命名，改成 mapred-site.xml.template。</font>
 
-<p>####6. 关闭YARN</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./sbin/stop-yarn.sh</div><div class="line">./sbin/mr-jobhistory-daemon.sh stop historyserver</div></pre></td></tr></table></figure>
+<h4 id="6-关闭YARN"><a href="#6-关闭YARN" class="headerlink" title="6. 关闭YARN"></a>6. 关闭YARN</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./sbin/stop-yarn.sh</div><div class="line">./sbin/mr-jobhistory-daemon.sh stop historyserver</div></pre></td></tr></table></figure>
 <div>
         <div id="disqus_thread"></div>
       </div>

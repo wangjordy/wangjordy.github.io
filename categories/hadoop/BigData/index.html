@@ -50,17 +50,6 @@
       
       
     
-      <a class="" href="/categories/ios/">ios</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
       <a class="" href="/categories/swift/">swift</a>
       
     
@@ -72,75 +61,7 @@
       
       
     
-      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
-      <a class="" href="/categories/Python/">Python</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-        
-      
-      
-      
-      
-    
-      <a class="active" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      <a class="" href="/categories/ios/">ios</a>
       
     
       
@@ -162,7 +83,7 @@
       
       
     
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      <a class="" href="/categories/ios/Objective-C/">Objective-C</a>
       
     
       
@@ -173,7 +94,20 @@
       
       
     
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+        
+      
+      
+      
+      
+    
+      <a class="active" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -195,7 +129,7 @@
       
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -206,7 +140,40 @@
       
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -228,7 +195,29 @@
       
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -296,17 +285,8 @@
     <h1><a href="/2016/10/25/2016-10-25-hadoop-yarn-startup/">Ubuntu 安装Hadoop2.7《三》YARN的启动配置</a></h1>
     <h2>2016-10-25</h2>
     <hr>
-    <div class="post markdown"><p>###一、简介</p>
-<p>我们Hadoop早期的版本是JobTracker和TraskTracker，那么在2.0版本之后，使用新的MapReduce框架，加入（YARN—Yet Another Resource Negotiator）, YARN是运行在MapReduce之上，负责资源的管理和任务调度，从MapReduce分离出来的YARN,提供了高可用性、高扩展性。</p>
+    <div class="post markdown"><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>我们Hadoop早期的版本是JobTracker和TraskTracker，那么在2.0版本之后，使用新的MapReduce框架，加入（YARN—Yet Another Resource Negotiator）, YARN是运行在MapReduce之上，负责资源的管理和任务调度，从MapReduce分离出来的YARN,提供了高可用性、高扩展性。</p>
 <p>在上一节中我们通过伪分布式只是启动了MapReduce， 现在我们通过启动YARN，来看看YARN的配置吧。</p></div>
-  </li>
-  
-  <li>
-    <h1><a href="/2016/10/24/2016-10-24-hadoop-for-ubuntu-install/">Ubuntu 安装Hadoop2.7《一》单机配置</a></h1>
-    <h2>2016-10-24</h2>
-    <hr>
-    <div class="post markdown"><p>###一、环境介绍<br>使用Ubuntu16.04， Hadoop2.7版本， JDK使用1.7版本 （这里可以选择自己的Hadoop2.x版本，或者JDK 1.x版本）</p>
-<p>本教程是在VMware Fusion上安装的Ubuntu16.04桌面版系统，</p></div>
   </li>
   
   <li>
@@ -314,6 +294,14 @@
     <h2>2016-10-24</h2>
     <hr>
     <div class="post markdown"><p>上一节我们介绍了Hadoop的单机运行配置，这里我们继续采用单节点以伪分布式的方式来运行，Hadoop进程是以分离的Java进程来运行的，<br>节点即可以作为NameNode也可以作为DataNode， 同时，读取的是HDFS中的文件。</p></div>
+  </li>
+  
+  <li>
+    <h1><a href="/2016/10/24/2016-10-24-hadoop-for-ubuntu-install/">Ubuntu 安装Hadoop2.7《一》单机配置</a></h1>
+    <h2>2016-10-24</h2>
+    <hr>
+    <div class="post markdown"><h3 id="一、环境介绍"><a href="#一、环境介绍" class="headerlink" title="一、环境介绍"></a>一、环境介绍</h3><p>使用Ubuntu16.04， Hadoop2.7版本， JDK使用1.7版本 （这里可以选择自己的Hadoop2.x版本，或者JDK 1.x版本）</p>
+<p>本教程是在VMware Fusion上安装的Ubuntu16.04桌面版系统，</p></div>
   </li>
   
 </ul>

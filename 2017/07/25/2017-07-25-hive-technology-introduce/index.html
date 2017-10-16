@@ -52,6 +52,19 @@
         
       
     
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
       <a class="" href="/categories/ios/">ios</a>
       
     
@@ -65,7 +78,7 @@
         
       
     
-      <a class="" href="/categories/swift/">swift</a>
+      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -91,19 +104,6 @@
         
       
     
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/Python/">Python</a>
       
     
@@ -117,7 +117,46 @@
         
       
     
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
       <a class="" href="/categories/ios/facebook/">facebook</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
       
     
       
@@ -145,46 +184,7 @@
         
       
     
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
       
     
       
@@ -210,7 +210,7 @@
         
       
     
-      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
+      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
       
     
       
@@ -236,33 +236,20 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/hadoop-code/">hadoop code</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+    
+      <a class="" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -306,41 +293,30 @@
         <h2>2017-7-25</h2>
         <hr>
         <div class="content markdown"><p>上一节我们介绍了Hive的安装配置， 本节我们将简单介绍一下Hive的一些基础知识。</p>
-<p>##Hive关于内部表、外部表、分区和分桶概念</p>
-<p>####一、内部表</p>
-<p>一般说Hive的表通常指的就是内部表。</p>
+<h2 id="Hive关于内部表、外部表、分区和分桶概念"><a href="#Hive关于内部表、外部表、分区和分桶概念" class="headerlink" title="Hive关于内部表、外部表、分区和分桶概念"></a>Hive关于内部表、外部表、分区和分桶概念</h2><h4 id="一、内部表"><a href="#一、内部表" class="headerlink" title="一、内部表"></a>一、内部表</h4><p>一般说Hive的表通常指的就是内部表。</p>
 <p>Hive的表在HDFS中都有相应的目录来存储表的数据，目录的路径，也是我们上节在<font color="#FF7F50">hive-site.xml</font>文件<br>中关于<code>hive.metastore.warehouse.dir</code>的上配置， 默认我们放在<code>/user/hive/warehouse</code>路径下。<br><a id="more"></a><br>比如我们有一个表<font color="#0099ff"><code>t_hive</code></font>， 那么在HDFS中会创建 <code>/user/hive/warehouse/t_hive</code>目录。 <font color="#0099ff"><code>t_hive</code></font>表中所有的数据也就存在这个目录中。</p>
-<p>####二、外部表</p>
-<p>Hive的外部表与内部表很相似，只是在建表时可以指定加载的HDFS目录， 也可以不指定（根据需要时再加载）。</p>
+<h4 id="二、外部表"><a href="#二、外部表" class="headerlink" title="二、外部表"></a>二、外部表</h4><p>Hive的外部表与内部表很相似，只是在建表时可以指定加载的HDFS目录， 也可以不指定（根据需要时再加载）。</p>
 <p>如果外部表使用Hive命令删除表分区，对应的HDFS文件是不会被删除的， 外部表比较灵活，既可以关联HDFS文件也可以关联HBSE表。</p>
-<p>####三、分区</p>
-<p>在Hive中表的每一个分区对应表内的相应的目录，所有分区的数据都存储在对应的目录中， 比如<font color="#0099ff"><code>t_hive</code></font>表中的column <code>a</code>就对应有a的分区。</p>
-<p>####四、桶</p>
-<p>桶的概念主要为了并行， 它是指，对指定的column计算hash值， 根据hash值来切分数据， 每一个桶对应一个文件， 比方<font color="#0099ff"><code>t_hive</code></font>的a column分散到10个桶中， 首先对id列的值进行hash计算，根据hash值将数据数据分散到不同的桶中。  （一般情况下，建议分桶设置不要太大）</p>
-<p>##Hive中文件存储常见的几种格式</p>
-<p>####一、textfile</p>
-<p>textfile是默认格式，建表时如果不指定的话，默认为textfile， 它的存储方式是 <font color="#008B8B">行存储</font></p>
+<h4 id="三、分区"><a href="#三、分区" class="headerlink" title="三、分区"></a>三、分区</h4><p>在Hive中表的每一个分区对应表内的相应的目录，所有分区的数据都存储在对应的目录中， 比如<font color="#0099ff"><code>t_hive</code></font>表中的column <code>a</code>就对应有a的分区。</p>
+<h4 id="四、桶"><a href="#四、桶" class="headerlink" title="四、桶"></a>四、桶</h4><p>桶的概念主要为了并行， 它是指，对指定的column计算hash值， 根据hash值来切分数据， 每一个桶对应一个文件， 比方<font color="#0099ff"><code>t_hive</code></font>的a column分散到10个桶中， 首先对id列的值进行hash计算，根据hash值将数据数据分散到不同的桶中。  （一般情况下，建议分桶设置不要太大）</p>
+<h2 id="Hive中文件存储常见的几种格式"><a href="#Hive中文件存储常见的几种格式" class="headerlink" title="Hive中文件存储常见的几种格式"></a>Hive中文件存储常见的几种格式</h2><h4 id="一、textfile"><a href="#一、textfile" class="headerlink" title="一、textfile"></a>一、textfile</h4><p>textfile是默认格式，建表时如果不指定的话，默认为textfile， 它的存储方式是 <font color="#008B8B">行存储</font></p>
 <p>优点： 可以直接读取。</p>
 <p>缺点： 磁盘开销比较大，数据解析开销大， 压缩的text文件，hive无法进行合并和拆分</p>
-<p>####二、sequencefile</p>
-<p>sequencefile是二进制的文件， 它是以<key,value>的形式存储， 它的存储方式是 <font color="#008B8B">行存储</font></key,value></p>
+<h4 id="二、sequencefile"><a href="#二、sequencefile" class="headerlink" title="二、sequencefile"></a>二、sequencefile</h4><p>sequencefile是二进制的文件， 它是以<key,value>的形式存储， 它的存储方式是 <font color="#008B8B">行存储</font></key,value></p>
 <p>优点：可以分割，压缩， 全表查询效率高</p>
 <p>缺点：存储空间消耗最大</p>
 <p>一般选择block压缩，文件和Hadoop api中的mapfile是相互兼容的。EQUENCEFILE将数据以<key,value>的形式序列化到文件中。序列化和反序列化使用Hadoop 的标准的Writable 接口实现。key为空，用value 存放实际的值， 这样可以避免map 阶段的排序过程。三种压缩选择：NONE, RECORD, BLOCK。 Record压缩率低，一般建议使用BLOCK压缩。使用时设置参数，</key,value></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SET hive.exec.compress.output=true;  </div><div class="line">SET io.seqfile.compression.type=BLOCK; -- NONE/RECORD/BLOCK  </div><div class="line">create table test2(str STRING)  STORED AS SEQUENCEFILE;</div></pre></td></tr></table></figure>
-<p>####三、rcfile<br>rcfile是采用<font color="#008B8B">行列存储相结合的方式</font> </p>
+<h4 id="三、rcfile"><a href="#三、rcfile" class="headerlink" title="三、rcfile"></a>三、rcfile</h4><p>rcfile是采用<font color="#008B8B">行列存储相结合的方式</font> </p>
 <p>首先，将数据按行分块，保证同一个record在同一个块上，表面读一个record需要读取多个block。</p>
 <p>其次，块数据列式存储，有利于数据压缩和快速的列存取，</p>
 <p>优点： 压缩快， 快速列存取， 读记录尽量涉及到的block最少 ，读取需要的列只需要读取每个row group 的头部定义。</p>
 <p>缺点：读取全量数据的操作 性能可能比sequencefile没有明显的优势。但是如果指定一列的话，效率最高</p>
-<p>####四、orc</p>
-<p>orc将数据<font color="#008B8B">按行分块，每块按照列存储</font></p>
+<h4 id="四、orc"><a href="#四、orc" class="headerlink" title="四、orc"></a>四、orc</h4><p>orc将数据<font color="#008B8B">按行分块，每块按照列存储</font></p>
 <p>效率比rcfile高,是rcfile的改良版本。</p>
 <p>优点： 压缩快 快速列存取</p>
-<p>####五、自定义格式</p>
-<p>用户可以通过 inputformat和outputformat来自定义输入输出的格式。</p>
-<p>###总结：</p>
-<p>textfile 存储空间消耗比较大，并且压缩的text 无法分割和合并 查询的效率最低,可以直接存储，加载数据的速度最高</p>
+<h4 id="五、自定义格式"><a href="#五、自定义格式" class="headerlink" title="五、自定义格式"></a>五、自定义格式</h4><p>用户可以通过 inputformat和outputformat来自定义输入输出的格式。</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>textfile 存储空间消耗比较大，并且压缩的text 无法分割和合并 查询的效率最低,可以直接存储，加载数据的速度最高</p>
 <p>sequencefile 存储空间消耗最大,压缩的文件可以分割和合并 查询效率高，需要通过text文件转化来加载</p>
 <p>rcfile 存储空间最小，查询的效率最高 ，需要通过text文件转化来加载，加载的速度最低</p>
 <div>

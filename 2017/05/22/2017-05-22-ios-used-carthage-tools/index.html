@@ -50,6 +50,23 @@
       
       
         
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
           
         
       
@@ -75,7 +92,7 @@
         
       
     
-      <a class="" href="/categories/swift/">swift</a>
+      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -111,24 +128,41 @@
         
       
     
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/Python/">Python</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
       
     
       
@@ -164,24 +198,24 @@
         
       
     
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
       
     
       
@@ -215,94 +249,7 @@
         
       
     
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/HBase/">HBase</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/ios/Objective-C/Xcode/">Xcode</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-    
-      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
       
@@ -336,7 +283,43 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -393,31 +376,23 @@
 <p>使用<code>Carthage</code>会帮助我们下载并编译好framework供我们使用，相当于一个去中心化的<code>Cocoa</code>依赖管理工具， 当然目前它是从ios8之后开始支持的， 如果你的工程还需要支持更低版本，还是绕路用<code>CocoaPods</code>吧，  或者可以<code>Carthage</code>制作好的framework添加到工程里使用也行。</p>
 <p>建议使用<code>HomeBrew</code>的方式下载安装<font color="#008B8B" size="4">Carthage</font>；</p>
 <p>如果<code>Homebrew</code>不会安装，可以自行翻看我早期的blog，或者自行google；</p>
-<p>##安装方法：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install carthag</div></pre></td></tr></table></figure>
+<h2 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install carthag</div></pre></td></tr></table></figure>
 <p>安装好之后，我们就开始来将facebook的FBMemoryProfiler工具集成到我们的项目中，</p>
-<p>####一、新建好自己的项目工程</p>
-<p>####二、进入项目工程所在的文件夹，然后新建空文件Cartfile</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch Cartfile</div></pre></td></tr></table></figure>
-<p>####三、使用xcode打开这个文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open -a Xcode Cartfile</div></pre></td></tr></table></figure>
-<p>####四、在打开的文件中输入</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">github <span class="string">"facebook/FBMemoryProfiler"</span></div></pre></td></tr></table></figure>
+<h4 id="一、新建好自己的项目工程"><a href="#一、新建好自己的项目工程" class="headerlink" title="一、新建好自己的项目工程"></a>一、新建好自己的项目工程</h4><h4 id="二、进入项目工程所在的文件夹，然后新建空文件Cartfile"><a href="#二、进入项目工程所在的文件夹，然后新建空文件Cartfile" class="headerlink" title="二、进入项目工程所在的文件夹，然后新建空文件Cartfile"></a>二、进入项目工程所在的文件夹，然后新建空文件Cartfile</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch Cartfile</div></pre></td></tr></table></figure>
+<h4 id="三、使用xcode打开这个文件"><a href="#三、使用xcode打开这个文件" class="headerlink" title="三、使用xcode打开这个文件"></a>三、使用xcode打开这个文件</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open -a Xcode Cartfile</div></pre></td></tr></table></figure>
+<h4 id="四、在打开的文件中输入"><a href="#四、在打开的文件中输入" class="headerlink" title="四、在打开的文件中输入"></a>四、在打开的文件中输入</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">github <span class="string">"facebook/FBMemoryProfiler"</span></div></pre></td></tr></table></figure>
 <p>添加完成之后，保存并退出。</p>
 <font color="#FF7F50"> 注意： 如果想要添加其他的类库， 就可以在这个文件中另起一行，输入其他的url地址 </font>
 
-<p>####四、在终端执行命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">carthage update --configuration Debug</div></pre></td></tr></table></figure>
+<h4 id="四、在终端执行命令"><a href="#四、在终端执行命令" class="headerlink" title="四、在终端执行命令"></a>四、在终端执行命令</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">carthage update --configuration Debug</div></pre></td></tr></table></figure>
 <p>执行成功后，就会看到在工程根目录下多了2个文件和一个文件夹</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffu67rb5pxj20bi03mq36.jpg" alt=""></p>
 <p>并且在Carthage文件夹里会有Build和Checkouts2个文件夹， 其中Build里面会保存我们编译好的framework，如图：</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffu69catrfj20yc0e00vo.jpg" alt=""></p>
-<p>####五、打开工程，将上述framework添加到项目中</p>
-<p>点击<code>项目名称</code>-&gt; <code>target</code> -&gt; <code>Gerneral</code>，在最底部找到<code>Linked Frameworks and Libraries</code>，</p>
+<h4 id="五、打开工程，将上述framework添加到项目中"><a href="#五、打开工程，将上述framework添加到项目中" class="headerlink" title="五、打开工程，将上述framework添加到项目中"></a>五、打开工程，将上述framework添加到项目中</h4><p>点击<code>项目名称</code>-&gt; <code>target</code> -&gt; <code>Gerneral</code>，在最底部找到<code>Linked Frameworks and Libraries</code>，</p>
 <p>然后将上述的3个framework拖到此区域内。</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffu6bpjurtj20ve03p3yx.jpg" alt=""></p>
-<p>####六、在xcode的菜单上，选择“Build Phases”，并添加一个新的“Run Script”，并添加命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/bin/carthage copy-frameworks</div></pre></td></tr></table></figure>
+<h4 id="六、在xcode的菜单上，选择“Build-Phases”，并添加一个新的“Run-Script”，并添加命令"><a href="#六、在xcode的菜单上，选择“Build-Phases”，并添加一个新的“Run-Script”，并添加命令" class="headerlink" title="六、在xcode的菜单上，选择“Build Phases”，并添加一个新的“Run Script”，并添加命令"></a>六、在xcode的菜单上，选择“Build Phases”，并添加一个新的“Run Script”，并添加命令</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/bin/carthage copy-frameworks</div></pre></td></tr></table></figure>
 <font color="#FF7F50"> 注意：如果之前已经创建过Run script，也可以新建一个新Run script </font>
 
 <p>然后点击<code>Input Files</code>下面的+号为每一个framework添加条目：</p>
@@ -425,12 +400,10 @@
 <p>参考下图：</p>
 <p><img src="http://ww1.sinaimg.cn/large/62ca154dly1ffu6go2a3xj21om0zmk02.jpg" alt=""></p>
 <p>以上是我们需要配置的信息，接下来，我们在工程中添加必要的代码</p>
-<p>####1、在<code>main.m</code>文件中添加<code>FBRetainCycleDetector</code>的hook，同时也要开启<code>FBAllocationTracker</code>的生成追踪：</p>
-<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBAllocationTracker/FBAllocationTrackerManager.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBRetainCycleDetector/FBRetainCycleDetector.h&gt;</span></span></div><div class="line"><span class="meta">#endif</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">        [FBAssociationManager hook];</div><div class="line">        [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];</div><div class="line">        [[FBAllocationTrackerManager sharedManager] enableGenerations];</div><div class="line"><span class="meta">#endif</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="1、在main-m文件中添加FBRetainCycleDetector的hook，同时也要开启FBAllocationTracker的生成追踪："><a href="#1、在main-m文件中添加FBRetainCycleDetector的hook，同时也要开启FBAllocationTracker的生成追踪：" class="headerlink" title="1、在main.m文件中添加FBRetainCycleDetector的hook，同时也要开启FBAllocationTracker的生成追踪："></a>1、在<code>main.m</code>文件中添加<code>FBRetainCycleDetector</code>的hook，同时也要开启<code>FBAllocationTracker</code>的生成追踪：</h4><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBAllocationTracker/FBAllocationTrackerManager.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBRetainCycleDetector/FBRetainCycleDetector.h&gt;</span></span></div><div class="line"><span class="meta">#endif</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">        [FBAssociationManager hook];</div><div class="line">        [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];</div><div class="line">        [[FBAllocationTrackerManager sharedManager] enableGenerations];</div><div class="line"><span class="meta">#endif</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <font color="#FF7F50"> 注意： 我们只在Debug模式下才开启<code>FBMemoryProfiler</code></font>
 
-<p>####2、在<code>AppDelegate.m</code>中添加代码：</p>
-<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBMemoryProfiler/FBMemoryProfiler.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBRetainCycleDetector/FBRetainCycleDetector.h&gt;</span></span></div><div class="line"><span class="meta">#endif</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></div><div class="line">&#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">    FBMemoryProfiler *memoryProfiler;</div><div class="line"><span class="meta">#endif</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">    memoryProfiler = [FBMemoryProfiler new];</div><div class="line">    [memoryProfiler enable];</div><div class="line"><span class="meta">#endif</span></div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="2、在AppDelegate-m中添加代码："><a href="#2、在AppDelegate-m中添加代码：" class="headerlink" title="2、在AppDelegate.m中添加代码："></a>2、在<code>AppDelegate.m</code>中添加代码：</h4><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBMemoryProfiler/FBMemoryProfiler.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;FBRetainCycleDetector/FBRetainCycleDetector.h&gt;</span></span></div><div class="line"><span class="meta">#endif</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></div><div class="line">&#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">    FBMemoryProfiler *memoryProfiler;</div><div class="line"><span class="meta">#endif</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line"><span class="meta">#if DEBUG</span></div><div class="line">    memoryProfiler = [FBMemoryProfiler new];</div><div class="line">    [memoryProfiler enable];</div><div class="line"><span class="meta">#endif</span></div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>最后编译运行，就会看到在项目中有一个悬浮窗，标记着我们当前APP的运行的内存打开，点开之后，可以查看是否有循环引用等功能。</p>
 <div>
         <div id="disqus_thread"></div>

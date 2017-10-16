@@ -50,6 +50,21 @@
       
       
         
+      
+        
+      
+    
+      <a class="" href="/categories/swift/">swift</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
           
         
       
@@ -71,7 +86,7 @@
         
       
     
-      <a class="" href="/categories/swift/">swift</a>
+      <a class="" href="/categories/hadoop/">hadoop</a>
       
     
       
@@ -103,21 +118,6 @@
         
       
     
-      <a class="" href="/categories/Hadoop/">Hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
       <a class="" href="/categories/Python/">Python</a>
       
     
@@ -133,97 +133,7 @@
         
       
     
-      <a class="" href="/categories/ios/facebook/">facebook</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hive/">Hive</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Hadoop/BigData/">BigData</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/hadoop/">hadoop</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
-      
-    
-      
-      
-      
-      
-      
-      
-      
-        
-      
-        
-      
-    
-      <a class="" href="/categories/HBase/">HBase</a>
+      <a class="" href="/categories/hadoop/BigData/">BigData</a>
       
     
       
@@ -253,7 +163,7 @@
         
       
     
-      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      <a class="" href="/categories/ios/facebook/">facebook</a>
       
     
       
@@ -266,11 +176,54 @@
         
       
         
-          
+      
+    
+      <a class="" href="/categories/Machinelearning/">Machinelearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
         
       
     
-      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
+      <a class="" href="/categories/Hive/">Hive</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/Zookeeper/">Zookeeper</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
+      <a class="" href="/categories/HBase/">HBase</a>
       
     
       
@@ -300,7 +253,39 @@
         
       
     
+      <a class="" href="/categories/Python/MachineLearning/">MachineLearning</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+      
+    
       <a class="" href="/categories/ios/Objective-C/Xcode/shell/">shell</a>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+        
+      
+        
+          
+        
+      
+    
+      <a class="active" href="/categories/ios/facebook/Objective-C/">Objective-C</a>
       
     
   </div>
@@ -371,7 +356,7 @@
 <p><img src="http://ww2.sinaimg.cn/large/62ca154djw1er0ir677c5j206r05eaab.jpg" alt="haroopad icon"></p>
 <p>如果我们选中了Spacing to nearest neighbor下面的 Constrain to margins 这个框，<br>就表示系统默认会给view1相对于superview的间距是16（如果我们的在上面的框中添加了左侧的约束是0的情况下），<br>如果不理解，请看下图，</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154djw1er0iuyu4ppj20zh0bq75g.jpg" alt="haroopad icon"></p>
-<p>###动态添加删除约束<br>如果我们要添加一个约束到superview上，可以通过<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[superview <span class="symbol">addConstraint:</span> constraint];</div></pre></td></tr></table></figure></p>
+<h3 id="动态添加删除约束"><a href="#动态添加删除约束" class="headerlink" title="动态添加删除约束"></a>动态添加删除约束</h3><p>如果我们要添加一个约束到superview上，可以通过<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[superview <span class="symbol">addConstraint:</span> constraint];</div></pre></td></tr></table></figure></p>
 <p>或者添加一组约束的方式：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[superview <span class="symbol">addConstraints:</span> constraints];</div></pre></td></tr></table></figure></p>
 <p>如果要删除一个约束，可以通过<br>removeConstraint方法</p>
 <p>最后记得在更改约束的地方调用setNeedsUpdateConstraints即可。</p>
@@ -379,8 +364,7 @@
 <p>layoutIfNeed和setNeedsLayout方法的区别：</p>
 <p>其实这2个方法，比较类似于我们之前接触过UIView的重绘调用的<br>displayIfNeed 和 setNeedsDisplay</p>
 <p>其中，setNeedsLayout表示立即执行， 而layoutIfNeed表示等UIKit空闲的时候才会执行。</p>
-<p>###AutoLayout的动画</p>
-<p>动画一般有2种方式来实现：</p>
+<h3 id="AutoLayout的动画"><a href="#AutoLayout的动画" class="headerlink" title="AutoLayout的动画"></a>AutoLayout的动画</h3><p>动画一般有2种方式来实现：</p>
 <ul>
 <li>移除旧的约束，添加新的约束；</li>
 <li>动态修改约束的constant常数；</li>
@@ -388,8 +372,7 @@
 <p>通常我们使用第二种偏多一些，一般在xib中，将对应的约束声明一个IBOutlet NSLayoutConstraint，然后在需要添加动画的地方，修改<br>constant值，代码如下：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[UIView <span class="symbol">animateWithDuration:</span><span class="number">0</span>.<span class="number">3</span>f <span class="symbol">animations:</span>^&#123;</div><div class="line">        [<span class="keyword">self</span>.commentViewHeightLayoutConstraint <span class="symbol">setConstant:</span><span class="number">300</span>];</div><div class="line">        [<span class="keyword">self</span>.view layoutIfNeeded];</div><div class="line">    &#125; <span class="symbol">completion:</span>^(BOOL finished) &#123;</div><div class="line"></div><div class="line">    &#125;];</div></pre></td></tr></table></figure>
 <p>注意：使用NSLayoutConstraint的方式，与frame的方式做动画不同的地方，是需要调用layoutIfNeeded，否则这个动画不会生效，而是直接会设置commentViewHeightLayoutConstraint的constant值为300。</p>
-<p>###IOS6与IOS7，8的兼容问题</p>
-<p>尽管现在ios6在市场占的份额越来越低了，基本新软件的最低适配都是ios7开始的，但是有一些公司还是要兼容IOS6版本。<br>对于AutoLayout之前，我们的做法</p>
+<h3 id="iOS6与iOS7，8的兼容问题"><a href="#iOS6与iOS7，8的兼容问题" class="headerlink" title="iOS6与iOS7，8的兼容问题"></a>iOS6与iOS7，8的兼容问题</h3><p>尽管现在iOS6在市场占的份额越来越低了，基本新软件的最低适配都是iOS7开始的，但是有一些公司还是要兼容iOS6版本。<br>对于AutoLayout之前，我们的做法</p>
 <p><img src="http://ww2.sinaimg.cn/large/62ca154djw1er0jv4j26xj206u0b0q3h.jpg" alt="haroopad icon"></p>
 <p>动态这个deltas值即可， 如果使用AutoLayout则不在有这种偏移量了，那么如何适配ios6，ios7关于屏幕状态的20px呢？</p>
 <p>我这里推荐2种做法，仅供大家参考：</p>
