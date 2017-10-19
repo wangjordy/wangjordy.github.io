@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>AutoLayout教程 (二) | Jordy攻城狮的时光感言</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明： 先看一段代码： 12345678NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1">
+  <meta name="description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AutoLayout教程 (二)">
 <meta property="og:url" content="http://yoursite.com/2015/04/10/2015-04-10-autolayout-two/index.html">
 <meta property="og:site_name" content="Jordy攻城狮的时光感言">
-<meta property="og:description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明： 先看一段代码： 12345678NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1">
+<meta property="og:description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明：">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/62ca154djw1er0hv5k5a1j20fr08adhc.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/62ca154djw1er0i9wcsxgj20gh0353yq.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/62ca154djw1er0iboes1yj20b60bmmyq.jpg">
@@ -26,10 +26,10 @@
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/62ca154djw1er0iuyu4ppj20zh0bq75g.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/62ca154djw1er0jv4j26xj206u0b0q3h.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/62ca154djw1er0k3q5zjoj206z06omxn.jpg">
-<meta property="og:updated_time" content="2017-10-16T08:21:01.000Z">
+<meta property="og:updated_time" content="2017-10-19T10:22:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AutoLayout教程 (二)">
-<meta name="twitter:description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明： 先看一段代码： 12345678NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1">
+<meta name="twitter:description" content="上一讲在AutoLayout教程 (一)中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念， 今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明：">
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/62ca154djw1er0hv5k5a1j20fr08adhc.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jordy攻城狮的时光感言" type="application/atom+xml">
@@ -192,6 +192,7 @@
       
         <p>上一讲在<a href="http://wangjordy.github.io/blog/2015/04/03/autolayout-%5B%3F%5D/" target="_blank" rel="external">AutoLayout教程 (一)</a>中，我们简单介绍了一下AutoLayout的基本用法还有Size Classes的一些概念，</p>
 <p>今天我们主要从代码的角度，来解说一下AutoLayout以及它里面的属性说明：</p>
+<a id="more"></a>
 <p>先看一段代码：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">NSLayoutConstraint *constraint = [NSLayoutConstraint <span class="symbol">constraintWithItem:</span>view1</div><div class="line">                                                            <span class="symbol">attribute:</span>NSLayoutAttributeTop</div><div class="line">                                                            <span class="symbol">relatedBy:</span>NSLayoutRelationEqual</div><div class="line">                                                               <span class="symbol">toItem:</span><span class="keyword">self</span>.view</div><div class="line">                                                            <span class="symbol">attribute:</span>NSLayoutAttributeTop</div><div class="line">                                                           <span class="symbol">multiplier:</span><span class="number">1.0</span>f</div><div class="line">                                                             <span class="symbol">constant:</span><span class="number">20.0</span>f];</div><div class="line">[<span class="keyword">self</span>.view <span class="symbol">addConstraint:</span>constraint];</div></pre></td></tr></table></figure>
 <p>通过下图的公式来看：<br><img src="http://ww3.sinaimg.cn/large/62ca154djw1er0hv5k5a1j20fr08adhc.jpg" alt="haroopad icon"><br>A表示我们要添加约束到那个视图上（对于上述代码A=view1）， view1下面的NSLayoutAttributeTop表示<br>A的顶部约束相对于B视图（toItem： 相对于上述代码B=self.view）的NSLayoutAttributeTop属性（顶部），<br>距离是20px。m是一个等比例系数，constant表示常数。</p>

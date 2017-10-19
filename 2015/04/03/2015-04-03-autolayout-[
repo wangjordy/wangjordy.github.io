@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>AutoLayout教程 (一) | Jordy攻城狮的时光感言</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：  1234567•	UIViewAutoresizingNone view的frame不会随superview的改变而改变•	UIViewAutoresizingFlexibleLeftMargin 自动调整view与su">
+  <meta name="description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AutoLayout教程 (一)">
 <meta property="og:url" content="http://yoursite.com/2015/04/03/2015-04-03-autolayout-[">
 <meta property="og:site_name" content="Jordy攻城狮的时光感言">
-<meta property="og:description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：  1234567•	UIViewAutoresizingNone view的frame不会随superview的改变而改变•	UIViewAutoresizingFlexibleLeftMargin 自动调整view与su">
+<meta property="og:description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/62ca154djw1eqslg6yyt4j20im07r75q.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/62ca154djw1eqsllh0pkvj20an0gv0tk.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/62ca154djw1eqslpysiljj20p00d2ae7.jpg">
@@ -32,10 +32,10 @@
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/62ca154djw1er0gwd1xmhj20ir0n8wf0.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/62ca154djw1er0h0mgf02j206j08hglq.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/62ca154djw1er0h3e04j7j20780aeaar.jpg">
-<meta property="og:updated_time" content="2017-10-16T08:20:04.000Z">
+<meta property="og:updated_time" content="2017-10-19T10:22:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AutoLayout教程 (一)">
-<meta name="twitter:description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：  1234567•	UIViewAutoresizingNone view的frame不会随superview的改变而改变•	UIViewAutoresizingFlexibleLeftMargin 自动调整view与su">
+<meta name="twitter:description" content="在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing自动拉伸高度即可： 如图：">
 <meta name="twitter:image" content="http://ww4.sinaimg.cn/large/62ca154djw1eqslg6yyt4j20im07r75q.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jordy攻城狮的时光感言" type="application/atom+xml">
@@ -199,6 +199,7 @@
         <p>在iphone6， iphone6 plus出现之前，iphone设备的宽度是320，高度稍有不同， 一般我们简单的做法是使用AutoResizing<br>自动拉伸高度即可：</p>
 <p>如图：</p>
 <p><img src="http://ww4.sinaimg.cn/large/62ca154djw1eqslg6yyt4j20im07r75q.jpg" alt="AutoResizing"></p>
+<a id="more"></a>
 <figure class="highlight cos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">•	UIViewAutoresizingNone <span class="keyword">view</span>的frame不会随superview的改变而改变</div><div class="line">•	UIViewAutoresizingFlexibleLeftMargin 自动调整<span class="keyword">view</span>与superview左边的距离保证右边距离不变</div><div class="line">•	UIViewAutoresizingFlexibleWidth 自动调整<span class="keyword">view</span>的宽，保证与superView的左右边距不变</div><div class="line">•	UIViewAutoresizingFlexibleRightMargin 自动调整<span class="keyword">view</span>与superview右边的距离保证左边距不变</div><div class="line">•	UIViewAutoresizingFlexibleTopMargin 自动调整<span class="keyword">view</span>与superview顶部的距离保证底部距离不变</div><div class="line">•	UIViewAutoresizingFlexibleHeight 自动调整<span class="keyword">view</span>的高，保证与superView的顶部和底部距离不变</div><div class="line">•	UIViewAutoresizingFlexibleBottomMargin 自动调整<span class="keyword">view</span>与superview底部部的距离保证顶部距离不变</div></pre></td></tr></table></figure>
 <p>由于AutoResizing很难能做视图与视图之间的间距，比如下图：</p>
 <p><img src="http://ww4.sinaimg.cn/large/62ca154djw1eqsllh0pkvj20an0gv0tk.jpg" alt="AutoResizing"></p>
