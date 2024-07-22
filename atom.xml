@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jordy攻城狮的时光感言</title>
+  <icon>http://wangjordy.github.io/icon.png</icon>
+  <subtitle>非淡泊无以明志，非宁静无以致远</subtitle>
+  <link href="http://wangjordy.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://wangjordy.github.io/"/>
+  <updated>2024-07-22T12:06:48.107Z</updated>
+  <id>http://wangjordy.github.io/</id>
+  
+  <author>
+    <name>Jordy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cplus</title>
+    <link href="http://wangjordy.github.io/2024/07/22/cplus/"/>
+    <id>http://wangjordy.github.io/2024/07/22/cplus/</id>
+    <published>2024-07-22T02:54:41.000Z</published>
+    <updated>2024-07-22T12:06:48.107Z</updated>
+    
+    
+    
+    
+    
+    <category term="C++" scheme="http://wangjordy.github.io/tags/C/"/>
+    
+    <category term="开发" scheme="http://wangjordy.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++获取手机网卡IP地址</title>
+    <link href="http://wangjordy.github.io/2024/07/20/2024-07-20-cplusgetphoneipaddress/"/>
+    <id>http://wangjordy.github.io/2024/07/20/2024-07-20-cplusgetphoneipaddress/</id>
+    <published>2024-07-20T04:35:49.000Z</published>
+    <updated>2024-07-22T12:11:54.476Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;随着鸿蒙系统系统的推出， 移动端的维护成本也越来越高，  应运而生的跨平台技术也向2个领域分化，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个方向是：以ReactNative，Flutter，Weex等技术的跨平台技术，主要应用于业务场景的开发；&lt;/li&gt;
+&lt;li&gt;第二个方向是: </summary>
+        
+      
+    
+    
+    
+    <category term="C++" scheme="http://wangjordy.github.io/categories/C/"/>
+    
+    <category term="C++移动开发" scheme="http://wangjordy.github.io/categories/C-%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MapReduce实战练习: MapReduce的多个job的串联执行(四)</title>
+    <link href="http://wangjordy.github.io/2017/08/31/2017-08-31-multiple-job-execute/"/>
+    <id>http://wangjordy.github.io/2017/08/31/2017-08-31-multiple-job-execute/</id>
+    <published>2017-08-31T07:44:09.000Z</published>
+    <updated>2024-07-22T12:06:48.107Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;书接上文，我们将前3篇文章中创建的几个job，综合在一起顺序执行：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hadoop" scheme="http://wangjordy.github.io/categories/hadoop/"/>
+    
+    <category term="hadoop code" scheme="http://wangjordy.github.io/categories/hadoop/hadoop-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MapReduce实战练习: MapReduce计算结果保存到Mysql数据库（三）</title>
+    <link href="http://wangjordy.github.io/2017/08/31/2017-08-31-mapreduce-result-save-to-mysql/"/>
+    <id>http://wangjordy.github.io/2017/08/31/2017-08-31-mapreduce-result-save-to-mysql/</id>
+    <published>2017-08-31T02:25:04.000Z</published>
+    <updated>2024-07-22T12:06:48.107Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;书接上文，上篇我们介绍了hadoop获取了排名前100的热搜词， 这里我们将介绍关于计算结果保存到Mysql数据库中。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hadoop" scheme="http://wangjordy.github.io/categories/hadoop/"/>
+    
+    <category term="hadoop code" scheme="http://wangjordy.github.io/categories/hadoop/hadoop-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MapReduce实战练习: 使用搜狗实验数据对搜词热度排序（二）</title>
+    <link href="http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-sougou-topkeyword/"/>
+    <id>http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-sougou-topkeyword/</id>
+    <published>2017-08-30T10:04:26.000Z</published>
+    <updated>2024-07-22T12:06:48.107Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我们接着上一篇《&lt;a href=&quot;http://wangjordy.github.io/blog/2017/08/30/hadoop-sougou-search-data-example/&quot;&gt;MapReduce实战练习: 使用搜狗实验数据对数据去重&lt;/a&gt;》 接着讲解关于对keyword（热搜词）的top100计算&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hadoop" scheme="http://wangjordy.github.io/categories/hadoop/"/>
+    
+    <category term="hadoop code" scheme="http://wangjordy.github.io/categories/hadoop/hadoop-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MapReduce实战练习: 使用搜狗实验数据对数据去重（一）</title>
+    <link href="http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-sougou-search-data-example/"/>
+    <id>http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-sougou-search-data-example/</id>
+    <published>2017-08-30T08:51:55.000Z</published>
+    <updated>2024-07-22T12:06:48.107Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上一篇我们使用自己创作的数据文件，对文件进行了去重、排序、求平均数的操作， 今天我们通过搜狗提供的数据来做一个去重的操作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hadoop" scheme="http://wangjordy.github.io/categories/hadoop/"/>
+    
+    <category term="hadoop code" scheme="http://wangjordy.github.io/categories/hadoop/hadoop-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Eclipse 实现关于MapReduce的实例： 排序、求平均数</title>
+    <link href="http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-eclipse-sort-average-mapredure/"/>
+    <id>http://wangjordy.github.io/2017/08/30/2017-08-30-hadoop-eclipse-sort-average-mapredure/</id>
+    <published>2017-08-30T06:18:05.000Z</published>
+    <updated>2024-07-22T12:06:48.106Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前端时间我们介绍过在eclipse里运行hadoop自带的关于wordcount的实例， 今天我们在原来的基础上继续介绍关于一些MapReduce的代码编程案例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hadoop" scheme="http://wangjordy.github.io/categories/hadoop/"/>
+    
+    <category term="hadoop code" scheme="http://wangjordy.github.io/categories/hadoop/hadoop-code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HBase的安装教程</title>
+    <link href="http://wangjordy.github.io/2017/08/29/2017-08-29-hbase-install/"/>
+    <id>http://wangjordy.github.io/2017/08/29/2017-08-29-hbase-install/</id>
+    <published>2017-08-29T06:25:16.000Z</published>
+    <updated>2024-07-22T12:06:48.106Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;HBase是一个分布式、面向列存储的数据库， 我们知道HBase的设计与Google的BigTable一样， HBase是在HDFS之上提供了类似Bigtable的能力。&lt;/p&gt;
+&lt;p&gt;&lt;font color=#D19275&gt;HBase是建立在Hadoop文件系统上支持支持横向扩展的数据库， 它利用HDFS提供了容错的能力，人们可以直接或者通过HBase的存储HDFS数据。&lt;/p&gt;
+&lt;p&gt;使用HBase在HDFS读取消费&amp;#x2F;随机访问数据。 HDBase在HDFS基础上，提供了读写访问。&lt;br&gt;&lt;/font&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HBase" scheme="http://wangjordy.github.io/categories/HBase/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Zookeeper的安装教程</title>
+    <link href="http://wangjordy.github.io/2017/08/29/2017-08-29-zooker-install/"/>
+    <id>http://wangjordy.github.io/2017/08/29/2017-08-29-zooker-install/</id>
+    <published>2017-08-29T03:25:16.000Z</published>
+    <updated>2024-07-22T12:06:48.106Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Zookeeper是一个面向分布式系统的协调服务， 它本身也是一个分布式的应用程序， 用于管理大型主机。&lt;br&gt;在分布式环境中协调和管理服务是一个复杂的过程， Zookeeper通过其简单的架构和API解决了这个问题。&lt;/p&gt;
+&lt;p&gt;它的一个设计模型如下图：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Zookeeper" scheme="http://wangjordy.github.io/categories/Zookeeper/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>修复jupyter notebook的问题</title>
+    <link href="http://wangjordy.github.io/2017/07/26/2017-07-26-refix-anaconda-for-mac/"/>
+    <id>http://wangjordy.github.io/2017/07/26/2017-07-26-refix-anaconda-for-mac/</id>
+    <published>2017-07-26T09:41:00.000Z</published>
+    <updated>2024-07-22T12:06:48.106Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前几天刚升级了Mac OS系统之后， 今天运行Anaconda中的jupyter notebook, 结果在控制台打印出来&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;execution error: “&lt;span class=&quot;string&quot;&gt;&amp;quot;http://localhost:8888/tree?token=.....&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;注：token后面东东我没写上去。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Machinelearning" scheme="http://wangjordy.github.io/categories/Machinelearning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hive的基础知识总结</title>
+    <link href="http://wangjordy.github.io/2017/07/25/2017-07-25-hive-technology-introduce/"/>
+    <id>http://wangjordy.github.io/2017/07/25/2017-07-25-hive-technology-introduce/</id>
+    <published>2017-07-25T10:03:34.000Z</published>
+    <updated>2024-07-22T12:06:48.106Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上一节我们介绍了Hive的安装配置， 本节我们将简单介绍一下Hive的一些基础知识。&lt;/p&gt;
+&lt;p&gt;##Hive关于内部表、外部表、分区和分桶概念&lt;/p&gt;
+&lt;p&gt;####一、内部表&lt;/p&gt;
+&lt;p&gt;一般说Hive的表通常指的就是内部表。&lt;/p&gt;
+&lt;p&gt;Hive的表在HDFS中都有相应的目录来存储表的数据，目录的路径，也是我们上节在&lt;font color=#FF7F50&gt;hive-site.xml&lt;/font&gt;文件&lt;br&gt;中关于&lt;code&gt;hive.metastore.warehouse.dir&lt;/code&gt;的上配置， 默认我们放在&lt;code&gt;/user/hive/warehouse&lt;/code&gt;路径下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hive" scheme="http://wangjordy.github.io/categories/Hive/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hive for Ubuntu 安装</title>
+    <link href="http://wangjordy.github.io/2017/07/25/2017-07-25-hive-for-ubuntu-install/"/>
+    <id>http://wangjordy.github.io/2017/07/25/2017-07-25-hive-for-ubuntu-install/</id>
+    <published>2017-07-25T02:00:36.000Z</published>
+    <updated>2024-07-22T12:06:48.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本期给大家介绍一下在Ubuntu系统下安装Hive&lt;/p&gt;
+&lt;p&gt;##Hive的安装环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu16.04&lt;/li&gt;
+&lt;li&gt;Hadoop2.7&lt;/li&gt;
+&lt;li&gt;JDK 1.7&lt;/li&gt;
+&lt;li&gt;Hive 2.3&lt;/li&gt;
+&lt;li&gt;Mysql&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Hive" scheme="http://wangjordy.github.io/categories/Hive/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ios关于Core SpotLight的使用</title>
+    <link href="http://wangjordy.github.io/2017/06/09/2017-06-09-ioscorespotlight/"/>
+    <id>http://wangjordy.github.io/2017/06/09/2017-06-09-ioscorespotlight/</id>
+    <published>2017-06-09T08:30:19.000Z</published>
+    <updated>2024-07-22T12:06:48.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;SpotLight已经推出来很久了， 从ios9苹果推出了一些新的API之后，我们可以将App的部分内容通过建立索引，然后在Spotlight上搜索结果， 并且完全可以根据你的需求来设定跳转的页面， 以及Spotlight页面显示的内容设置 。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ios" scheme="http://wangjordy.github.io/categories/ios/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ios使用Facebook的Infer工具</title>
+    <link href="http://wangjordy.github.io/2017/05/23/2017-05-23-facebook-infer-install/"/>
+    <id>http://wangjordy.github.io/2017/05/23/2017-05-23-facebook-infer-install/</id>
+    <published>2017-05-23T08:41:51.000Z</published>
+    <updated>2024-07-22T12:06:48.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上一节我们提到了Facebook的一个关于检测内存泄漏的重要工具是&lt;code&gt;FBRetainCycleDetector&lt;/code&gt;， 今天我们继续介绍Facebook的另一个重要工具  &lt;font color=#008B8B size=4&gt;Infter&lt;/font&gt;  &lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=#008B8B size=4&gt;Infter&lt;/font&gt;是一个静态分析工具， 它可以分析的编程语言有： Objective-C， Java还有C，&lt;/p&gt;
+&lt;p&gt;通过它对代码的静态分析，来报告潜在的问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ios" scheme="http://wangjordy.github.io/categories/ios/"/>
+    
+    <category term="facebook" scheme="http://wangjordy.github.io/categories/ios/facebook/"/>
+    
+    <category term="Objective-C" scheme="http://wangjordy.github.io/categories/ios/facebook/Objective-C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ios中使用FBMemoryProfiler工具</title>
+    <link href="http://wangjordy.github.io/2017/05/22/2017-05-22-ios-used-carthage-tools/"/>
+    <id>http://wangjordy.github.io/2017/05/22/2017-05-22-ios-used-carthage-tools/</id>
+    <published>2017-05-22T06:58:46.000Z</published>
+    <updated>2024-07-22T12:06:48.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Facebook最早开源过&lt;code&gt;FBRetainCycleDetector&lt;/code&gt;, 这已经是2016年4月推出&lt;code&gt;FBMemoryProfiler&lt;/code&gt;的前身了， 最新的&lt;code&gt;FBMemoryProfiler&lt;/code&gt;提供了很多的交互界面和更多一些的功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ios" scheme="http://wangjordy.github.io/categories/ios/"/>
+    
+    <category term="facebook" scheme="http://wangjordy.github.io/categories/ios/facebook/"/>
+    
+    <category term="Objective-C" scheme="http://wangjordy.github.io/categories/ios/facebook/Objective-C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习---关于前面学习几个库的综合使用</title>
+    <link href="http://wangjordy.github.io/2017/04/27/2017-04-27-machinelearningpythonunionpandasnumpymatplot/"/>
+    <id>http://wangjordy.github.io/2017/04/27/2017-04-27-machinelearningpythonunionpandasnumpymatplot/</id>
+    <published>2017-04-27T11:11:17.000Z</published>
+    <updated>2024-07-22T12:06:48.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前面我们花了3节的时间介绍了关于机器学习常用的&lt;font color=#008B8B&gt;numpy、pandas、matplotlib&lt;/font&gt;库。 今天我们综合介绍一下它们的联合使用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="http://wangjordy.github.io/categories/Python/"/>
+    
+    <category term="MachineLearning" scheme="http://wangjordy.github.io/categories/Python/MachineLearning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习---关于Matplotlib画图的使用</title>
+    <link href="http://wangjordy.github.io/2017/04/26/2017-04-26-machinelearningpythoncase/"/>
+    <id>http://wangjordy.github.io/2017/04/26/2017-04-26-machinelearningpythoncase/</id>
+    <published>2017-04-26T06:27:58.000Z</published>
+    <updated>2024-07-22T12:06:48.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上一节中，我们介绍了关于Python中一个很重要的库&lt;font color=#008B8B&gt;Pandas&lt;/font&gt;， 今天我们继续学习关于&lt;font color=#008B8B&gt; Matplotlib &lt;/font&gt;中如何画图的教程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="http://wangjordy.github.io/categories/Python/"/>
+    
+    <category term="MachineLearning" scheme="http://wangjordy.github.io/categories/Python/MachineLearning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习---关于常用的一些python库的介绍说明</title>
+    <link href="http://wangjordy.github.io/2017/04/20/2017-04-20-machinelearningpythonintroduce/"/>
+    <id>http://wangjordy.github.io/2017/04/20/2017-04-20-machinelearningpythonintroduce/</id>
+    <published>2017-04-20T02:33:12.000Z</published>
+    <updated>2024-07-22T12:06:48.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;书接上文，上一讲我们主要介绍了，机器学习中关于Python的环境搭建和一些基础Python语法以及numpy库的一些简单的使用，今天我们继续再学习一些有关Python库的基础知识。&lt;/p&gt;
+&lt;p&gt;我们首先来看一下，机器学习中常用的另一个常见的库 &lt;font color=#008B8B&gt;Pandas&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=#008B8B&gt;Pandas&lt;/font&gt;有2个独有的基本数据结构： Series 和 DataFrame， 这使得不论是读取还是写入等处理数据，使得我们用起来很方便， 下面用例子给大家介绍：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="http://wangjordy.github.io/categories/Python/"/>
+    
+    <category term="MachineLearning" scheme="http://wangjordy.github.io/categories/Python/MachineLearning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习---入门（安装篇）</title>
+    <link href="http://wangjordy.github.io/2017/03/25/2017-03-25-machinelearninginstallpro/"/>
+    <id>http://wangjordy.github.io/2017/03/25/2017-03-25-machinelearninginstallpro/</id>
+    <published>2017-03-25T09:31:30.000Z</published>
+    <updated>2024-07-22T12:06:48.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;之前一直在学习关于数据挖掘的理论知识， 今天开始接触一下关于它的一个分支—机器学习。&lt;/p&gt;
+&lt;p&gt;机器学习简单的来说就是通过历史数据，通过一些数据分析的技术，建立一个“数据模型”， 当有新的数据通过这个数据模型，可以进行相应的预测。&lt;/p&gt;
+&lt;p&gt;常用的学习主要分为三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有监督学习：  分类、 回归&lt;/li&gt;
+&lt;li&gt;无监督学习：  聚类&lt;/li&gt;
+&lt;li&gt;半监督学习：  结合&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="http://wangjordy.github.io/categories/Python/"/>
+    
+    <category term="MachineLearning" scheme="http://wangjordy.github.io/categories/Python/MachineLearning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 安装Eclipse,并执行MapReduce的实例</title>
+    <link href="http://wangjordy.github.io/2016/11/16/2016-11-16-eclipse-complie-hadoop-demo/"/>
+    <id>http://wangjordy.github.io/2016/11/16/2016-11-16-eclipse-complie-hadoop-demo/</id>
+    <published>2016-11-16T08:16:19.000Z</published>
+    <updated>2024-07-22T12:06:48.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在前几节中，我们主要介绍了在ubuntu环境上安装部署hadoop的环境， 本节将通过一个实例来介绍在eclipse下编写程序，并在hadoop下执行。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hadoop" scheme="http://wangjordy.github.io/categories/Hadoop/"/>
+    
+    
+  </entry>
+  
+</feed>
