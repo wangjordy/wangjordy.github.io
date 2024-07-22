@@ -111,7 +111,7 @@ theme: yilia #landscape
 deploy:
   type: git
   repo: git@github.com:wangjordy/wangjordy.github.io.git
-  branch: master
+  branch: main
 
 sitemap:
     path: sitemap.xml
@@ -119,35 +119,44 @@ baidusitemap:
     path: baidusitemap.xm
 
 feed:
-    type: atom
-    path: atom.xml
-    limit: 100
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
 
 sns:
   - name: 'weibo'
     link: ''
     icon: ''  # Use the default icon if no this field.
   - name: 'github'
-    link: ''
+    link: 'https://github.com/wangjordy'
   - name: 'mail'
     link: 'wangjordy@gmail.com'  # Must be a email address.
 # Now, the `douban`, `facebook`, `github`, `mail`, `weibo` has default icon.
 
-# jsonContent:
-#     meta: false
-#     pages: false
-#     posts:
-#       title: true
-#       date: true
-#       path: true
-#       text: false
-#       raw: false
-#       content: false
-#       slug: false
-#       updated: false
-#       comments: false
-#       link: false
-#       permalink: false
-#       excerpt: false
-#       categories: false
-#       tags: true
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
